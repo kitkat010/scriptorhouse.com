@@ -1473,3 +1473,18 @@ opacity:0;
 }
 
 
+.breadcrumb {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,.55);
+  font-size: 14px;
+}
+.breadcrumb a {
+  color: rgba(255,255,255,.7);
+  transition: .3s ease;
+}
+.breadcrumb a:hover {
+  color: var(--primary);
+}
