@@ -11,6 +11,28 @@
 }
 
 /*======================================================
+  BREADCRUMB
+======================================================*/
+
+.breadcrumb{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-bottom:30px;
+    color:rgba(255,255,255,.55);
+    font-size:14px;
+}
+
+.breadcrumb a{
+    color:rgba(255,255,255,.7);
+    transition:.3s ease;
+}
+
+.breadcrumb a:hover{
+    color:var(--contact-gold);
+}
+
+/*======================================================
   HERO
 ======================================================*/
 
@@ -991,6 +1013,56 @@ to{
 }
 
 /*======================================================
+RESPONSIVE - HERO
+======================================================*/
+
+@media (max-width:992px){
+
+.contact-hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:60px;
+}
+
+.breadcrumb,
+.contact-hero-buttons{
+    justify-content:center;
+}
+
+.contact-hero-content p,
+.contact-hero-note{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.contact-hero-note{
+    text-align:left;
+}
+
+.concierge-card{
+    width:100%;
+    max-width:420px;
+}
+
+}
+
+@media (max-width:600px){
+
+.contact-hero-content h1{
+    font-size:50px;
+}
+
+.contact-hero-buttons{
+    flex-direction:column;
+}
+
+.concierge-card{
+    padding:36px;
+}
+
+}
+
+/*======================================================
 RESPONSIVE
 ======================================================*/
 
@@ -1470,21 +1542,4 @@ opacity:0;
     .security-panel {
         padding: 35px;
     }
-}
-
-
-.breadcrumb {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 30px;
-  color: rgba(255,255,255,.55);
-  font-size: 14px;
-}
-.breadcrumb a {
-  color: rgba(255,255,255,.7);
-  transition: .3s ease;
-}
-.breadcrumb a:hover {
-  color: var(--primary);
 }
