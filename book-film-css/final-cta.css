@@ -1,0 +1,91 @@
+/* ===========================
+   FINAL CTA
+=========================== */
+
+.book-film-cta-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255,200,0,.18), transparent 36%),
+    radial-gradient(circle at 50% 90%, rgba(109,20,20,.22), transparent 36%),
+    linear-gradient(to bottom, #090909, #030303);
+  text-align: center;
+  overflow: hidden;
+}
+
+.book-film-cta-strip {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: 42px;
+  opacity: .12;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,.75) 0 18px,
+      transparent 18px 42px
+    );
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.book-film-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  margin: auto;
+}
+
+.book-film-cta-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 6vw, 90px);
+  line-height: 1.02;
+  margin: 28px 0;
+}
+
+.book-film-cta-content h2::first-line {
+  color: var(--primary);
+}
+
+.book-film-cta-content p {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,.78);
+}
+
+.book-film-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+}
+
+.book-film-cta-note {
+  max-width: 760px;
+  margin: auto;
+  padding: 24px 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,200,0,.18);
+  color: rgba(255,255,255,.68);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .book-film-cta-content h2 {
+    font-size: 46px;
+  }
+
+  .book-film-cta-content p {
+    font-size: 16px;
+  }
+
+  .book-film-cta-buttons {
+    flex-direction: column;
+  }
+}

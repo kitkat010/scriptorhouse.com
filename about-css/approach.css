@@ -1,0 +1,173 @@
+.approach-section {
+  background: #080808;
+  overflow: hidden;
+}
+
+.approach-header {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.approach-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 6vw, 82px);
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+
+.approach-header p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* TIMELINE */
+.approach-timeline {
+  margin-top: 90px;
+  position: relative;
+  display: grid;
+  gap: 36px;
+}
+
+.approach-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 200, 0, .75),
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* CARDS */
+.approach-step {
+  width: calc(50% - 55px);
+  padding: 38px;
+  border-radius: 30px;
+  position: relative;
+  transition: .4s ease;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .25);
+}
+
+.approach-step:hover {
+  transform: translateY(-10px);
+}
+
+/* LEFT / RIGHT POSITION */
+.approach-step:nth-child(odd) {
+  margin-right: auto;
+}
+
+.approach-step:nth-child(even) {
+  margin-left: auto;
+}
+
+/* ALTERNATING CARD COLORS */
+.approach-step:nth-child(odd) {
+  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #111;
+}
+
+.approach-step:nth-child(even) {
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+  color: var(--white);
+}
+
+/* DOTS */
+.approach-step::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  width: 18px;
+  height: 18px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255,200,0,.5);
+}
+
+.approach-step:nth-child(odd)::after {
+  right: -64px;
+}
+
+.approach-step:nth-child(even)::after {
+  left: -64px;
+}
+
+/* TEXT */
+.approach-step span {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.approach-step:nth-child(odd) span {
+  color: #7a5200;
+}
+
+.approach-step:nth-child(even) span {
+  color: var(--primary);
+}
+
+.approach-step h3 {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.approach-step:nth-child(odd) h3 {
+  color: #111;
+}
+
+.approach-step:nth-child(even) h3 {
+  color: var(--white);
+}
+
+.approach-step p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.approach-step:nth-child(odd) p {
+  color: #2f2f2f;
+}
+
+.approach-step:nth-child(even) p {
+  color: rgba(255,255,255,.75);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .approach-timeline::before {
+    left: 12px;
+  }
+
+  .approach-step {
+    width: 100%;
+    margin-left: 45px !important;
+  }
+
+  .approach-step::after {
+    left: -42px !important;
+    right: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .approach-step {
+    padding: 30px;
+  }
+
+  .approach-header p {
+    font-size: 16px;
+  }
+}

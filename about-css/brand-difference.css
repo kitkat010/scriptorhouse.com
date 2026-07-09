@@ -1,0 +1,118 @@
+.brand-difference-section {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255,200,0,.08), transparent 35%),
+    #080808;
+  overflow: hidden;
+}
+
+.brand-difference-header {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.brand-difference-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+
+.brand-difference-header h2::first-line {
+  color: var(--primary);
+}
+
+.brand-difference-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.brand-card {
+  padding: 50px;
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: var(--shadow);
+  transition: .4s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255,200,0,.32);
+}
+
+.brand-card.films {
+  background:
+    linear-gradient(145deg, rgba(255,200,0,.12), rgba(255,255,255,.02));
+  border-color: rgba(255,200,0,.22);
+}
+
+.brand-label {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.brand-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.brand-card p {
+  font-size: 16px;
+  margin-bottom: 34px;
+}
+
+.brand-card ul {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+
+.brand-card li {
+  position: relative;
+  padding-left: 32px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.6;
+}
+
+.brand-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.brand-link {
+  color: var(--primary);
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: .3s ease;
+}
+
+.brand-link:hover {
+  color: var(--white);
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .brand-difference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-card {
+    padding: 34px;
+  }
+}

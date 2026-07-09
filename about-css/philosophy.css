@@ -1,0 +1,93 @@
+.philosophy-section {
+  background:
+    radial-gradient(circle at 50% 25%, rgba(255, 200, 0, .08), transparent 34%),
+    #111111;
+  overflow: hidden;
+}
+
+.philosophy-header {
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+}
+
+.philosophy-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.philosophy-header h2::first-line {
+  color: var(--primary);
+}
+
+.philosophy-header p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.philosophy-grid {
+  margin-top: 85px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.philosophy-card {
+  min-height: 260px;
+  padding: 34px 26px;
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.05), rgba(255,255,255,.018));
+  border: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .4s ease;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(255,200,0,.32);
+  background: rgba(255,200,0,.06);
+}
+
+.philosophy-card i {
+  color: var(--primary);
+  font-size: 32px;
+}
+
+.philosophy-card h3 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.philosophy-note {
+  max-width: 860px;
+  margin: 80px auto 0;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.25;
+  color: var(--white);
+}
+
+@media (max-width: 1100px) {
+  .philosophy-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-card {
+    min-height: 190px;
+    text-align: center;
+    align-items: center;
+  }
+}

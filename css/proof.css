@@ -1,0 +1,132 @@
+.proof-section {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 200, 0, .09), transparent 32%),
+    linear-gradient(to bottom, #080808, #111111);
+  overflow: hidden;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.proof-image {
+  min-height: 720px;
+  border-radius: 38px;
+  background:
+    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.65)),
+    #1b1b1b;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.poster-placeholder {
+  height: 100%;
+  min-height: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center, rgba(255,200,0,.16), transparent 45%),
+    linear-gradient(145deg, #1b1b1b, #070707);
+  text-align: center;
+  padding: 40px;
+}
+
+.poster-placeholder span {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 72px);
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.poster-placeholder small {
+  margin-top: 18px;
+  color: var(--text);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.proof-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.proof-content p {
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.proof-content strong {
+  color: var(--primary);
+}
+
+.awards-box {
+  margin: 42px 0;
+  padding: 38px;
+  border-radius: 30px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,200,0,.18);
+}
+
+.awards-box h3 {
+  color: var(--primary);
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.awards-box ul {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.awards-box li {
+  position: relative;
+  padding-left: 32px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.awards-box li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.proof-disclaimer {
+  font-size: 14px !important;
+  color: var(--muted) !important;
+  border-left: 3px solid var(--primary);
+  padding-left: 18px;
+}
+
+@media (max-width: 1100px) {
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-image,
+  .poster-placeholder {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .proof-image,
+  .poster-placeholder {
+    min-height: 360px;
+  }
+
+  .awards-box {
+    padding: 28px;
+  }
+}

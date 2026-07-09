@@ -1,0 +1,121 @@
+.publishing-support-section {
+  background: #0b0b0b;
+  overflow: hidden;
+}
+
+.publishing-support-header {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.publishing-support-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 76px);
+  line-height: 1.05;
+  margin: 24px 0;
+}
+
+.publishing-support-header h2::first-line {
+  color: var(--primary);
+}
+
+.publishing-support-header p {
+  max-width: 760px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,.76);
+}
+
+/* SUPPORT LIST */
+
+.support-list {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  gap: 18px;
+}
+
+.support-item {
+  display: grid;
+  grid-template-columns: 90px 280px 1fr;
+  gap: 28px;
+  align-items: center;
+
+  padding: 28px 34px;
+  border-radius: 24px;
+
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+
+  transition: .35s ease;
+}
+
+.support-item:hover {
+  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  color: #111;
+  transform: translateX(10px);
+  box-shadow: 0 20px 45px rgba(255,200,0,.16);
+}
+
+.support-item span {
+  color: var(--primary);
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.support-item h3 {
+  font-size: 24px;
+  color: var(--white);
+}
+
+.support-item p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.68);
+}
+
+.support-item:hover span {
+  color: #7a5200;
+}
+
+.support-item:hover h3,
+.support-item:hover p {
+  color: #111;
+}
+
+.support-note {
+  max-width: 820px;
+  margin: 60px auto 0;
+  padding-left: 22px;
+  border-left: 4px solid var(--primary);
+  color: rgba(255,255,255,.7);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .support-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .support-item:hover {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 600px) {
+  .publishing-support-header p {
+    font-size: 16px;
+  }
+
+  .support-item {
+    padding: 26px;
+  }
+}

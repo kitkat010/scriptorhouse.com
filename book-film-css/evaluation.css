@@ -1,0 +1,93 @@
+/* ===========================
+   STORY EVALUATION
+=========================== */
+
+.story-evaluation-section {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255, 200, 0, .09), transparent 34%),
+    linear-gradient(to bottom, #090909, #050505);
+  overflow: hidden;
+}
+
+.story-evaluation-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.story-evaluation-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 78px);
+  line-height: 1.05;
+  margin: 24px 0 28px;
+}
+
+.story-evaluation-content h2::first-line {
+  color: var(--primary);
+}
+
+.story-evaluation-content > p {
+  max-width: 780px;
+  margin: 0 auto 55px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,.76);
+}
+
+/* KEYWORDS */
+
+.evaluation-keywords {
+  max-width: 980px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.evaluation-keywords span {
+  padding: 18px 24px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  color: rgba(255,255,255,.82);
+  font-weight: 800;
+  transition: .35s ease;
+}
+
+.evaluation-keywords span:hover {
+  background: var(--primary);
+  color: #111;
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(255,200,0,.16);
+}
+
+/* QUOTE */
+
+.story-evaluation-quote {
+  max-width: 850px;
+  margin: 70px auto 0;
+  padding-left: 24px;
+  border-left: 4px solid var(--primary);
+  text-align: left;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.35;
+  color: var(--white);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .story-evaluation-content > p {
+    font-size: 16px;
+  }
+
+  .evaluation-keywords span {
+    width: 100%;
+  }
+
+  .story-evaluation-quote {
+    font-size: 26px;
+  }
+}

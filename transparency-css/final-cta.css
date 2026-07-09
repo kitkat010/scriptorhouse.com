@@ -1,0 +1,177 @@
+/* ===========================
+   FINAL CTA
+=========================== */
+
+.transparency-cta-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 50% 35%,rgba(255,200,0,.18),transparent 35%),
+    linear-gradient(to bottom,#090909,#030303);
+
+}
+
+.transparency-cta-bg{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,.015) 0 2px,
+        transparent 2px 90px
+    );
+
+    opacity:.35;
+
+}
+
+.transparency-cta-content{
+
+    position:relative;
+    z-index:2;
+
+    max-width:920px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.transparency-cta-content h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,6vw,90px);
+
+    line-height:1.02;
+
+    margin:26px 0;
+
+}
+
+.transparency-cta-content h2::first-line{
+
+    color:var(--primary);
+
+}
+
+.transparency-cta-content p{
+
+    max-width:760px;
+
+    margin:auto auto 42px;
+
+    font-size:18px;
+
+    line-height:1.85;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.transparency-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:60px;
+
+}
+
+/* PROMISE */
+
+.cta-promise{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+.cta-promise div{
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.cta-promise div:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(255,200,0,.22);
+
+}
+
+.cta-promise i{
+
+    font-size:34px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.cta-promise span{
+
+    display:block;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.88);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+.cta-promise{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.transparency-cta-content p{
+
+font-size:16px;
+
+}
+
+.transparency-cta-buttons{
+
+flex-direction:column;
+
+}
+
+}

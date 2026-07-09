@@ -1,0 +1,153 @@
+/* ===========================
+   HOLLYWOOD REALITY
+=========================== */
+
+.hollywood-reality-section {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 200, 0, .09), transparent 34%),
+    linear-gradient(to bottom, #050505, #090909);
+  overflow: hidden;
+}
+
+.hollywood-reality-header {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.hollywood-reality-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 78px);
+  line-height: 1.05;
+  margin: 24px 0;
+}
+
+.hollywood-reality-header h2::first-line {
+  color: var(--primary);
+}
+
+.hollywood-reality-header p {
+  max-width: 780px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,.76);
+}
+
+/* BOARD */
+
+.reality-board {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-radius: 38px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.09);
+  box-shadow: var(--shadow);
+}
+
+.reality-card {
+  min-height: 360px;
+  padding: 42px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+  border-right: 1px solid rgba(255,255,255,.08);
+  transition: .35s ease;
+}
+
+.reality-card:last-child {
+  border-right: none;
+}
+
+.reality-card.gold {
+  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  color: #111;
+}
+
+.reality-card:hover {
+  transform: translateY(-8px);
+  z-index: 2;
+}
+
+.reality-card span {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.reality-card.gold span {
+  color: #7a5200;
+}
+
+.reality-card h3 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.reality-card.gold h3 {
+  color: #111;
+}
+
+.reality-card p {
+  color: rgba(255,255,255,.7);
+  line-height: 1.8;
+}
+
+.reality-card.gold p {
+  color: #2f2f2f;
+}
+
+/* STATEMENT */
+
+.reality-statement {
+  max-width: 900px;
+  margin: 70px auto 0;
+  padding: 34px 40px;
+  border-radius: 28px;
+  background: rgba(255,200,0,.07);
+  border: 1px solid rgba(255,200,0,.2);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(24px, 3vw, 28px);
+  line-height: 1.35;
+  text-align: center;
+  color: var(--white);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .reality-board {
+    grid-template-columns: 1fr;
+  }
+
+  .reality-card {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .reality-card:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hollywood-reality-header p {
+    font-size: 16px;
+  }
+
+  .reality-card {
+    padding: 32px;
+  }
+
+  .reality-statement {
+    padding: 28px;
+    font-size: 26px;
+  }
+}

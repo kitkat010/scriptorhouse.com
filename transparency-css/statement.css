@@ -1,0 +1,66 @@
+/* ===========================
+   TRANSPARENCY STATEMENT
+=========================== */
+
+.transparency-statement-section {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255,200,0,.08), transparent 34%),
+    #080808;
+  overflow: hidden;
+}
+
+.statement-wrap {
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+}
+
+.statement-seal {
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 45px rgba(255,200,0,.18);
+}
+
+.statement-seal i {
+  color: #111;
+  font-size: 38px;
+}
+
+.statement-wrap h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 6vw, 82px);
+  line-height: 1.05;
+  margin: 24px 0;
+}
+
+.statement-wrap h2::first-line {
+  color: var(--primary);
+}
+
+.statement-lead {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.35;
+  color: var(--white);
+  margin-bottom: 34px;
+}
+
+.statement-wrap p:not(.statement-lead) {
+  max-width: 780px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(255,255,255,.72);
+}
+
+@media (max-width: 600px) {
+  .statement-wrap p:not(.statement-lead) {
+    font-size: 16px;
+  }
+}

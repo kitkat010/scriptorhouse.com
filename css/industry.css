@@ -1,0 +1,133 @@
+/* ===========================
+   INDUSTRY REALITY
+=========================== */
+
+.industry-section {
+    background:
+        linear-gradient(
+            to bottom,
+            #111111,
+            #080808
+        );
+}
+
+.industry-content {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.industry-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+.industry-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   COMPARISON
+=========================== */
+
+.comparison-grid {
+    margin-top: 90px;
+
+    display: grid;
+    grid-template-columns: 1fr 120px 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.comparison-card {
+    padding: 60px;
+    border-radius: 35px;
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.4);
+
+    transition: .4s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-10px);
+}
+
+.old-way {
+    background:
+        linear-gradient(
+            145deg,
+            #1b1b1b,
+            #111111
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+}
+
+.new-way {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,200,0,.15),
+            rgba(255,200,0,.05)
+        );
+
+    border:
+        1px solid rgba(255,200,0,.25);
+}
+
+.comparison-label {
+    color: var(--primary);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.comparison-card h3 {
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.4;
+}
+
+.comparison-arrow {
+    font-size: 80px;
+    color: var(--primary);
+    text-align: center;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:992px) {
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-arrow {
+        transform: rotate(90deg);
+        font-size: 60px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .comparison-card {
+        padding: 40px;
+        min-height: auto;
+    }
+
+    .industry-content p {
+        font-size: 16px;
+    }
+}

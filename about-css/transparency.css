@@ -1,0 +1,211 @@
+.transparency-section{
+    background:#0b0b0b;
+    position:relative;
+    overflow:hidden;
+}
+
+.transparency-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at center,
+    rgba(255,200,0,.08),
+    transparent 40%);
+    pointer-events:none;
+}
+
+.transparency-header{
+    text-align:center;
+    max-width:820px;
+    margin:auto;
+    margin-bottom:80px;
+    position:relative;
+    z-index:2;
+}
+
+.transparency-header h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(48px,6vw,82px);
+    line-height:1.05;
+    margin-bottom:24px;
+}
+
+.transparency-header h2::first-line{
+    color:var(--primary);
+}
+
+.transparency-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.transparency-card{
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+}
+
+.transparency-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.transparency-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.transparency-title i{
+
+    font-size:34px;
+
+}
+
+.positive i{
+
+    color:#4ade80;
+
+}
+
+.negative i{
+
+    color:#ffb800;
+
+}
+
+.transparency-title h3{
+
+    font-size:30px;
+
+}
+
+.transparency-card ul{
+
+    display:grid;
+
+    gap:18px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.transparency-card li{
+
+    position:relative;
+
+    padding-left:34px;
+
+    color:rgba(255,255,255,.78);
+
+    line-height:1.7;
+
+}
+
+.positive li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:#4ade80;
+
+    font-weight:700;
+
+}
+
+.negative li::before{
+
+    content:"✕";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.transparency-footer{
+
+    margin-top:90px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.transparency-footer p{
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    margin-bottom:16px;
+
+}
+
+.transparency-footer h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(38px,5vw,70px);
+
+    line-height:1.1;
+
+}
+
+@media(max-width:900px){
+
+.transparency-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.transparency-card{
+
+padding:32px;
+
+}
+
+}

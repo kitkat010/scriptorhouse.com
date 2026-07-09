@@ -1,0 +1,45 @@
+.security-section {
+    background: #090909;
+}
+
+.security-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 60px;
+    text-align: center;
+    border-radius: 32px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,200,0,.15);
+}
+
+.security-card i {
+    font-size: 58px;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.security-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 62px);
+    margin-bottom: 20px;
+}
+
+.security-card p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.75);
+}
+
+@media (max-width: 768px) {
+
+    .security-card {
+        padding: 40px 28px;
+    }
+
+    .security-card h2 {
+        font-size: 42px;
+    }
+
+}

@@ -1,0 +1,81 @@
+.what-section {
+  background:
+    radial-gradient(circle at 80% 30%, rgba(255, 200, 0, .08), transparent 30%),
+    #080808;
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.what-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.what-content p {
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.what-checklist {
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 34px;
+  padding: 45px;
+  box-shadow: var(--shadow);
+}
+
+.what-checklist ul {
+  list-style: none;
+  display: grid;
+  gap: 18px;
+}
+
+.what-checklist li {
+  position: relative;
+  padding-left: 38px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.what-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--primary);
+  color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+@media (max-width: 992px) {
+  .what-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .what-checklist {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .what-checklist {
+    padding: 30px;
+  }
+}

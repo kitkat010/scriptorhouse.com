@@ -1,0 +1,128 @@
+.process-section {
+  background:
+    linear-gradient(
+      to bottom,
+      #111111,
+      #080808
+    );
+}
+
+.process-header {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.process-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 72px);
+  margin-bottom: 30px;
+}
+
+.process-grid {
+  margin-top: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===========================
+   PROCESS CARD
+=========================== */
+
+.process-card {
+
+  padding: 45px;
+  border-radius: 35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #FFD54A,
+      #F5BE18
+    );
+
+  border: 1px solid rgba(255,255,255,.18);
+
+  color: #111;
+
+  transition: .4s ease;
+
+  box-shadow:
+    0 20px 45px rgba(255,200,0,.15);
+
+}
+
+.process-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 30px 60px rgba(255,200,0,.28);
+
+}
+
+/* ===========================
+   NUMBER
+=========================== */
+
+.process-number {
+
+  color: #7A5200;
+
+  font-size: 50px;
+
+  font-weight: 800;
+
+  margin-bottom: 25px;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.process-card h3 {
+
+  font-size: 28px;
+
+  color: #111;
+
+  margin-bottom: 18px;
+
+}
+
+/* ===========================
+   DESCRIPTION
+=========================== */
+
+.process-card p {
+
+  color: #2F2F2F;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
