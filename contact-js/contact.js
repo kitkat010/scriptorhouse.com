@@ -63,6 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!concierge) return;
 
+        if (window.innerWidth <= 992) {
+            concierge.style.transform = "";
+            return;
+        }
+
         const y = window.scrollY * 0.18;
 
         concierge.style.transform =

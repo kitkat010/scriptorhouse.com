@@ -1088,6 +1088,18 @@ RESPONSIVE
 
     top:auto;
 
+    text-align:center;
+
+}
+
+.form-intro-note{
+
+    text-align:left;
+
+    max-width:600px;
+
+    margin:0 auto;
+
 }
 
 }
