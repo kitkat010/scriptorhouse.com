@@ -5,6 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!overlay || !numberEl) return;
 
+  // Check if countdown has already run in this session
+  const hasVisited = sessionStorage.getItem("hasVisitedIndex");
+
+  if (hasVisited === "true") {
+    // Skip countdown loader and immediately reveal hero content
+    overlay.style.display = "none";
+    if (heroContent) {
+      heroContent.style.opacity = "1";
+      heroContent.style.transform = "translateY(0)";
+      heroContent.classList.add("show");
+    }
+    return;
+  }
+
   // Make sure hero text is hidden initially during the countdown
   if (heroContent) {
     heroContent.style.opacity = "0";
@@ -22,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       clearInterval(interval);
       overlay.classList.add("fade-out");
+      
+      // Save state so we skip countdown next time
+      sessionStorage.setItem("hasVisitedIndex", "true");
       
       // Reveal the main hero text as the overlay starts fading out
       setTimeout(() => {

@@ -1,13 +1,13 @@
 // Scroll reveal animation with Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
   const revealElements = document.querySelectorAll(".fade-up, .fade-left, .fade-right, .scale-up, .pop-in, .slide-left, .slide-right");
-  
+
   const observerOptions = {
     root: null,
     rootMargin: "0px 0px -80px 0px", // Trigger when the element is 80px into the viewport
     threshold: 0.15
   };
-  
+
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, observerOptions);
-  
+
   revealElements.forEach(el => {
     observer.observe(el);
   });
@@ -55,16 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Read the text strings or HTML from the element itself
     const originalHTML = el.innerHTML.trim();
     const strings = [originalHTML];
-    
+
     // Homepage loops infinitely, sub-pages type once
     const isHomepage = !!document.getElementById("heroVideo");
     const loop = isHomepage;
     const backDelay = 2500;
-    
+
     if (typeof Typed !== 'undefined') {
       // Clear content before Typed.js starts to prevent layout flash
       el.innerHTML = "";
-      
+
       new Typed(el, {
         strings: strings,
         typeSpeed: 50,
