@@ -1,76 +1,76 @@
-.mission-section{
-    background:#111111;
+.mission-section {
+    background: #111111;
 }
 
-.mission-intro{
-    text-align:center;
-    margin-bottom:90px;
+.mission-intro {
+    text-align: center;
+    margin-bottom: 90px;
 }
 
-.mission-intro h2{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(52px,7vw,96px);
-    line-height:.95;
+.mission-intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(52px, 7vw, 96px);
+    line-height: .95;
 }
 
-.mission-intro h2::first-line{
-    color:var(--primary);
+.mission-intro h2::first-line {
+    color: var(--primary);
 }
 
-.mission-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
-.mission-image{
-    position:relative;
+.mission-image {
+    position: relative;
 }
 
-.mission-image img{
-    width:100%;
-    border-radius:32px;
-    display:block;
-    box-shadow:var(--shadow);
+.mission-image img {
+    width: 80%;
+    border-radius: 32px;
+    display: block;
+    box-shadow: var(--shadow);
 }
 
-.mission-content p{
-    font-size:18px;
-    margin-bottom:28px;
-    color:rgba(255,255,255,.75);
+.mission-content p {
+    font-size: 18px;
+    margin-bottom: 28px;
+    color: rgba(255, 255, 255, .75);
 }
 
-.mission-line{
-    width:80px;
-    height:3px;
-    background:var(--primary);
-    margin:40px 0;
+.mission-line {
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+    margin: 40px 0;
 }
 
-.mission-content h4{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(30px,4vw,48px);
-    line-height:1.2;
-    color:var(--white);
+.mission-content h4 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    color: var(--white);
 }
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
-.mission-grid{
-grid-template-columns:1fr;
-}
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
 
-.mission-intro{
-margin-bottom:60px;
-}
+    .mission-intro {
+        margin-bottom: 60px;
+    }
 
-.mission-content{
-text-align:center;
-}
+    .mission-content {
+        text-align: center;
+    }
 
-.mission-line{
-margin:40px auto;
-}
+    .mission-line {
+        margin: 40px auto;
+    }
 
 }

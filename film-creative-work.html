@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -29,12 +32,20 @@
 
 <body>
 
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glows">
+    <div class="glow-blob glow-1"></div>
+    <div class="glow-blob glow-2"></div>
+    <div class="glow-blob glow-3"></div>
+    <div class="glow-blob glow-4"></div>
+  </div>
+
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
 
       <a href="index.html" class="site-logo">
-        <img src="images/logo.png" alt="Scriptor House Logo">
+        <img src="asset/logo-nbg.png" alt="Scriptor House Logo">
       </a>
 
       <nav class="nav-menu" id="navMenu">
@@ -43,10 +54,7 @@
         <a href="services.html">Partnership Publishing</a>
         <a href="book-to-film.html">Book-to-Film</a>
         <a href="film-creative-work.html" class="active">Film & Creative Work</a>
-        <a href="author-transparency.html">Transparency</a>
-        
-        <a href="faq.html">FAQs</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contacts</a>
       </nav>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
@@ -78,28 +86,28 @@
 
     <div class="container film-hero-container">
 
-      <div class="film-hero-content fade-up">
+      <div class="film-hero-content">
 
-        <div class="breadcrumb">
+        <div class="breadcrumb fade-up">
           <a href="index.html">Home</a>
           <span>/</span>
           <span>Film & Creative Work</span>
         </div>
 
-        <span class="section-tag">Creative Development</span>
+        <span class="section-tag fade-up delay-1">Creative Development</span>
 
-        <h1>
+        <h1 class="typewriter">
           Stories<br>
           Beyond<br>
           The Page
         </h1>
 
-        <p class="film-hero-subtitle">
+        <p class="film-hero-subtitle fade-up delay-3">
           Some stories continue into creative development, cinematic presentation,
           and new possibilities beyond publication.
         </p>
 
-        <div class="film-hero-buttons">
+        <div class="film-hero-buttons fade-up delay-4">
           <a href="#featured-work" class="btn">View Featured Work</a>
           <a href="https://scriptorhousefilms.com" target="_blank" class="btn btn-outline">
             Visit Scriptor House Films
@@ -202,316 +210,308 @@
 
 
 
-<!-- ========================= -->
-<!-- FEATURED CREATIVE PROPERTY -->
-<!-- ========================= -->
-<section class="featured-work-section" id="featured-work">
+  <!-- ========================= -->
+  <!-- FEATURED CREATIVE PROPERTY -->
+  <!-- ========================= -->
+  <section class="featured-work-section" id="featured-work">
 
-  <div class="film-grain"></div>
+    <div class="film-grain"></div>
 
-  <div class="container">
+    <div class="container">
 
-    <div class="featured-work-header fade-up">
-      <span class="section-tag">Featured Creative Property</span>
+      <div class="featured-work-header fade-up">
+        <span class="section-tag">Featured Creative Property</span>
 
-      <h2>
-        Education of a Teacher
-      </h2>
+        <h2>
+          Education of a Teacher
+        </h2>
 
-      <p>
-        A short film by Noel Nation, presented as a featured example of creative storytelling beyond the printed page.
-      </p>
-    </div>
+        <p>
+          A short film by Noel Nation, presented as a featured example of creative storytelling beyond the printed page.
+        </p>
+      </div>
 
-    <div class="featured-cinema-layout">
+      <div class="featured-cinema-layout">
 
-      <!-- LEFT: POSTER -->
-      <div class="featured-poster fade-up">
-        <img
-          src="images/2x3.jpg"
-          alt="Education of a Teacher official movie poster with award laurels"
-        >
+        <!-- LEFT: POSTER -->
+        <div class="featured-poster fade-up">
+          <img src="images/2x3.jpg" alt="Education of a Teacher official movie poster with award laurels">
 
-        <!-- <div class="poster-meta">
+          <!-- <div class="poster-meta">
           <span>Short Film</span>
           <strong>Official Poster</strong>
         </div> -->
 
-        
 
-        <div class="noel-profile">
 
-          <div class="noel-photo">
-            <img src="images/noel-nation.jpeg" alt="Noel Nation">
+          <div class="noel-profile">
+
+            <div class="noel-photo">
+              <img src="images/noel-nation.jpeg" alt="Noel Nation">
+            </div>
+
+            <div>
+              <span>Author • Story Creator</span>
+              <h4>Noel Nation</h4>
+              <p>
+                Noel Nation is the author and creative voice behind
+                <em>Education of a Teacher</em>.
+              </p>
+            </div>
+
           </div>
+        </div>
 
-          <div>
-            <span>Author • Story Creator</span>
-            <h4>Noel Nation</h4>
+        <!-- RIGHT: FEATURE DETAILS -->
+        <div class="featured-details fade-up">
+
+          <div class="film-title-block">
+            <span>Official Creative Work</span>
+
+            <h3>
+              The Education of a Teacher
+            </h3>
+
             <p>
-              Noel Nation is the author and creative voice behind
-              <em>Education of a Teacher</em>.
+              A featured short film connected to Noel Nation’s creative vision and the broader Scriptor House
+              story-development pathway.
             </p>
           </div>
 
+          <!-- CREATOR PROFILE -->
+
+
+          <!-- TRAILER -->
+          <div class="trailer-feature">
+
+            <div class="trailer-heading">
+              <span>Watch</span>
+              <h4>Official Movie Trailer</h4>
+            </div>
+
+            <div class="trailer-video">
+
+              <video controls preload="metadata" poster="">
+                <source src="videos/trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+            </div>
+
+          </div>
+
+          <!-- FACTS -->
+          <div class="featured-facts">
+
+            <div>
+              <span>Format</span>
+              <strong>Short Film</strong>
+            </div>
+
+            <div>
+              <span>Creator</span>
+              <strong>Noel Nation</strong>
+            </div>
+
+            <div>
+              <span>Material</span>
+              <strong>Trailer • Poster • Certificates</strong>
+            </div>
+
+          </div>
+
+
+
         </div>
+
       </div>
 
-      <!-- RIGHT: FEATURE DETAILS -->
-      <div class="featured-details fade-up">
+      <!-- RECOGNITION -->
+      <div class="recognition-wrap fade-up">
 
-        <div class="film-title-block">
-          <span>Official Creative Work</span>
+        <div class="recognition-copy">
+          <span class="section-tag">Recognition</span>
 
           <h3>
-            The Education of a Teacher
+            Award Laurels, Certificates,
+            and Success Story
           </h3>
 
           <p>
-            A featured short film connected to Noel Nation’s creative vision and the broader Scriptor House story-development pathway.
+            This creative work includes official promotional materials, award-laurel poster artwork, certificates, and a
+            documented success story.
           </p>
         </div>
 
-        <!-- CREATOR PROFILE -->
-        
+        <div class="recognition-grid">
 
-        <!-- TRAILER -->
-        <div class="trailer-feature">
+          <a href="images/poster.png" class="recognition-card" target="_blank">
+            <i class="fa-solid fa-award"></i>
+            <h4>Award Laurels</h4>
+            <p>View the official poster with laurels.</p>
+          </a>
 
-          <div class="trailer-heading">
-            <span>Watch</span>
-            <h4>Official Movie Trailer</h4>
-          </div>
+          <a href="files/certificates.png" class="recognition-card" target="_blank">
+            <i class="fa-solid fa-certificate"></i>
+            <h4>Certificates</h4>
+            <p>Open Noel certificate materials.</p>
+          </a>
 
-          <div class="trailer-video">
-
-            <video
-              controls
-              preload="metadata"
-              poster=""
-            >
-              <source
-                src="videos/trailer.mp4"
-                type="video/mp4"
-              >
-              Your browser does not support the video tag.
-            </video>
-
-          </div>
+          <a href="files/story.pdf" class="recognition-card" target="_blank">
+            <i class="fa-solid fa-file-lines"></i>
+            <h4>Success Story</h4>
+            <p>Read the documented creative journey.</p>
+          </a>
 
         </div>
 
-        <!-- FACTS -->
-        <div class="featured-facts">
+      </div>
 
-          <div>
-            <span>Format</span>
-            <strong>Short Film</strong>
-          </div>
+      <!-- OPTIONAL MOVIE FILE -->
+      <div class="full-film-note fade-up">
 
-          <div>
-            <span>Creator</span>
-            <strong>Noel Nation</strong>
-          </div>
+        <i class="fa-solid fa-film"></i>
 
-          <div>
-            <span>Material</span>
-            <strong>Trailer • Poster • Certificates</strong>
-          </div>
-
+        <div>
+          <h4>Full Film Available Internally</h4>
+          <p>
+            The full movie file may be linked or embedded later if Scriptor House approves public viewing.
+          </p>
         </div>
 
-        
-
       </div>
 
-    </div>
-
-    <!-- RECOGNITION -->
-    <div class="recognition-wrap fade-up">
-
-      <div class="recognition-copy">
-        <span class="section-tag">Recognition</span>
-
-        <h3>
-          Award Laurels, Certificates,
-          and Success Story
-        </h3>
-
-        <p>
-          This creative work includes official promotional materials, award-laurel poster artwork, certificates, and a documented success story.
-        </p>
-      </div>
-
-      <div class="recognition-grid">
-
-        <a href="images/poster.png" class="recognition-card" target="_blank">
-          <i class="fa-solid fa-award"></i>
-          <h4>Award Laurels</h4>
-          <p>View the official poster with laurels.</p>
-        </a>
-
-        <a href="files/certificates.png" class="recognition-card" target="_blank">
-          <i class="fa-solid fa-certificate"></i>
-          <h4>Certificates</h4>
-          <p>Open Noel certificate materials.</p>
-        </a>
-
-        <a href="files/story.pdf" class="recognition-card" target="_blank">
-          <i class="fa-solid fa-file-lines"></i>
-          <h4>Success Story</h4>
-          <p>Read the documented creative journey.</p>
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- OPTIONAL MOVIE FILE -->
-    <div class="full-film-note fade-up">
-
-      <i class="fa-solid fa-film"></i>
-
-      <div>
-        <h4>Full Film Available Internally</h4>
-        <p>
-          The full movie file may be linked or embedded later if Scriptor House approves public viewing.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- <div class="featured-work-disclaimer fade-up">
+      <!-- <div class="featured-work-disclaimer fade-up">
       This featured work is presented as an example of creative output. It does not guarantee that any author project will receive producer interest, production, financing, distribution, awards, or commercial success.
     </div> -->
 
-  </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- OUTREACH VS PRODUCTION -->
-<!-- ========================= -->
-<section class="outreach-section">
-
-  <div class="container">
-
-    <div class="outreach-header fade-up">
-
-      <span class="section-tag">
-        Clear Distinction
-      </span>
-
-      <h2>
-        Hollywood Outreach Is Not The Same As Film Production.
-      </h2>
-
-      <p>
-        Scriptor House helps prepare and position creative properties for professional consideration.
-        Film production belongs to a separate pathway through Scriptor House Films.
-      </p>
-
     </div>
 
-    <div class="outreach-grid">
+  </section>
 
-      <div class="outreach-card fade-up">
+  <!-- ========================= -->
+  <!-- OUTREACH VS PRODUCTION -->
+  <!-- ========================= -->
+  <section class="outreach-section">
 
-        <div class="slate-label">
-          Scriptor House
-        </div>
+    <div class="container">
 
-        <h3>
-          Development & Outreach
-        </h3>
+      <div class="outreach-header fade-up">
 
-        <ul>
-          <li>Story evaluation</li>
-          <li>Adaptation direction</li>
-          <li>Creative packaging</li>
-          <li>Producer-facing preparation</li>
-          <li>Strategic presentation support</li>
-        </ul>
+        <span class="section-tag">
+          Clear Distinction
+        </span>
+
+        <h2>
+          Hollywood Outreach Is Not The Same As Film Production.
+        </h2>
+
+        <p>
+          Scriptor House helps prepare and position creative properties for professional consideration.
+          Film production belongs to a separate pathway through Scriptor House Films.
+        </p>
 
       </div>
 
-      <div class="outreach-card production fade-up">
+      <div class="outreach-grid">
 
-        <div class="slate-label">
+        <div class="outreach-card fade-up">
+
+          <div class="slate-label">
+            Scriptor House
+          </div>
+
+          <h3>
+            Development & Outreach
+          </h3>
+
+          <ul>
+            <li>Story evaluation</li>
+            <li>Adaptation direction</li>
+            <li>Creative packaging</li>
+            <li>Producer-facing preparation</li>
+            <li>Strategic presentation support</li>
+          </ul>
+
+        </div>
+
+        <div class="outreach-card production fade-up">
+
+          <div class="slate-label">
+            Scriptor House Films
+          </div>
+
+          <h3>
+            Film Production Pathway
+          </h3>
+
+          <ul>
+            <li>Author-funded film production path</li>
+            <li>Screenplay direction</li>
+            <li>Production coordination</li>
+            <li>Film completion support</li>
+            <li>Marketing and visibility after completion</li>
+          </ul>
+
+          <a href="https://scriptorhousefilms.com" target="_blank" class="outreach-link">
+            Visit Scriptor House Films
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- SCRIPTOR HOUSE FILMS BRIDGE -->
+  <!-- ========================= -->
+  <section class="films-bridge-section">
+
+    <div class="bridge-spotlight"></div>
+
+    <div class="container">
+
+      <div class="films-bridge-content fade-up">
+
+        <span class="section-tag">
           Scriptor House Films
+        </span>
+
+        <h2>
+          Looking To Produce
+          Your Own Film?
+        </h2>
+
+        <p>
+          Scriptor House helps authors evaluate, develop, package, and position their stories.
+          For authors who are ready to move into an author-funded production pathway,
+          Scriptor House Films provides a separate path from story to screen.
+        </p>
+
+        <div class="bridge-note">
+          You do not need to arrive with a screenplay, producer, director, or film team already in place.
+          The production budget and related project costs remain the responsibility of the author or project owner.
         </div>
 
-        <h3>
-          Film Production Pathway
-        </h3>
+        <div class="films-bridge-buttons">
+          <a href="https://scriptorhousefilms.com" target="_blank" class="btn">
+            Visit Scriptor House Films
+          </a>
 
-        <ul>
-          <li>Author-funded film production path</li>
-          <li>Screenplay direction</li>
-          <li>Production coordination</li>
-          <li>Film completion support</li>
-          <li>Marketing and visibility after completion</li>
-        </ul>
-
-        <a href="https://scriptorhousefilms.com" target="_blank" class="outreach-link">
-          Visit Scriptor House Films
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
+          <a href="contact.html" class="btn btn-outline">
+            Contact Scriptor House
+          </a>
+        </div>
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SCRIPTOR HOUSE FILMS BRIDGE -->
-<!-- ========================= -->
-<section class="films-bridge-section">
-
-  <div class="bridge-spotlight"></div>
-
-  <div class="container">
-
-    <div class="films-bridge-content fade-up">
-
-      <span class="section-tag">
-        Scriptor House Films
-      </span>
-
-      <h2>
-        Looking To Produce
-        Your Own Film?
-      </h2>
-
-      <p>
-        Scriptor House helps authors evaluate, develop, package, and position their stories.
-        For authors who are ready to move into an author-funded production pathway,
-        Scriptor House Films provides a separate path from story to screen.
-      </p>
-
-      <div class="bridge-note">
-        You do not need to arrive with a screenplay, producer, director, or film team already in place.
-        The production budget and related project costs remain the responsibility of the author or project owner.
-      </div>
-
-      <div class="films-bridge-buttons">
-        <a href="https://scriptorhousefilms.com" target="_blank" class="btn">
-          Visit Scriptor House Films
-        </a>
-
-        <a href="contact.html" class="btn btn-outline">
-          Contact Scriptor House
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 
 
@@ -521,7 +521,7 @@
     <div class="container footer-grid">
 
       <div>
-        <img src="images/logo.png" alt="Scriptor House Logo">
+        <img src="asset/logo-nbg.png" alt="Scriptor House Logo">
         <p>Address Here</p>
       </div>
 
@@ -529,22 +529,23 @@
         <h4>Quick Links</h4>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="partnership-publishing.html">Partnership Publishing</a>
+        <a href="services.html">Partnership Publishing</a>
+        <a href="book-to-film.html">Book-to-Film</a>
         <a href="film-creative-work.html">Film & Creative Work</a>
         <a href="author-transparency.html">Transparency</a>
-        
         <a href="faq.html">FAQs</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contacts</a>
       </div>
 
       <div>
         <h4>Follow Us</h4>
 
         <div class="footer-socials">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/scriptorhouse" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/scriptorhouse/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCgkE9I_5vwfgI7lJMgqnI3A" target="_blank"><i
+              class="fa-brands fa-youtube"></i></a>
+          <a href="https://x.com/scriptorh" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -558,7 +559,7 @@
 
         <p>
           <i class="fa-solid fa-phone"></i>
-          +1 (209) 554-8271
+          +1 (562) 647 0112
         </p>
       </div>
 
@@ -569,11 +570,13 @@
     </div>
 
   </footer>
- 
+
   <!-- JS -->
   <script src="js/header.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="js/footer.js"></script>
 
 </body>
+
 </html>

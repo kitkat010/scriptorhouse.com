@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
   <!-- Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Shared CSS -->
   <link rel="stylesheet" href="css/global.css">
@@ -42,12 +39,20 @@
 
 <body>
 
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glows">
+    <div class="glow-blob glow-1"></div>
+    <div class="glow-blob glow-2"></div>
+    <div class="glow-blob glow-3"></div>
+    <div class="glow-blob glow-4"></div>
+  </div>
+
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
 
       <a href="index.html" class="site-logo">
-        <img src="images/logo.png" alt="Scriptor House Logo">
+        <img src="asset/logo-nbg.png" alt="Scriptor House Logo">
       </a>
 
       <nav class="nav-menu" id="navMenu">
@@ -56,10 +61,7 @@
         <a href="services.html">Partnership Publishing</a>
         <a href="book-to-film.html">Book-to-Film</a>
         <a href="film-creative-work.html">Film & Creative Work</a>
-        <a href="author-transparency.html">Transparency</a>
-        
-        <a href="faq.html">FAQs</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contacts</a>
       </nav>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
@@ -79,28 +81,28 @@
 
     <div class="container about-hero-grid">
 
-      <div class="about-hero-content fade-up">
+      <div class="about-hero-content">
 
-        <div class="breadcrumb">
+        <div class="breadcrumb fade-up">
           <a href="index.html">Home</a>
           <span>/</span>
           <span>About</span>
         </div>
 
-        <span class="section-tag">
+        <span class="section-tag fade-up delay-1">
           About Scriptor House
         </span>
 
-        <h1>
+        <h1 class="typewriter">
           From Story<br>
           To Creative Property
         </h1>
 
-        <p class="about-hero-subtitle">
+        <p class="about-hero-subtitle fade-up delay-3">
           Helping authors develop, position, and professionally present their creative work.
         </p>
 
-        <div class="about-hero-buttons">
+        <div class="about-hero-buttons fade-up delay-4">
           <a href="contact.html" class="btn">Submit Your Manuscript</a>
           <a href="services.html" class="btn btn-outline">Explore Our Services</a>
         </div>
@@ -114,7 +116,7 @@
       <div class="about-hero-visual fade-up">
 
         <div class="about-visual-card">
-          <img src="images/about-hero.jpg" alt="Author story development">
+          <img src="images/story-development.jpg" alt="Author story development">
 
           <div class="about-visual-overlay">
             <span>Story</span>
@@ -129,548 +131,240 @@
 
   </section>
 
-<!-- ========================= -->
-<!-- WHO WE ARE -->
-<!-- ========================= -->
-<section class="who-section">
+  <!-- ========================= -->
+  <!-- WHO WE ARE -->
+  <!-- ========================= -->
+  <section class="who-section">
 
-  <div class="container who-grid">
+    <div class="container who-grid">
 
-    <div class="who-label fade-up">
-      <span class="section-tag">Who We Are</span>
-      <h2>
-        A narrative development company for authors with serious creative goals.
-      </h2>
-    </div>
-
-    <div class="who-content fade-up">
-      <p>
-        Scriptor House LLC is a narrative development and intellectual property
-        positioning company dedicated to helping authors transform original stories
-        into professionally structured creative properties.
-      </p>
-
-      <p>
-        We work with authors, storytellers, entrepreneurs, leaders, and creators
-        who want their books and stories to be developed with care, structure,
-        and long-term value.
-      </p>
-
-      <p>
-        Our work may include publishing support, editorial guidance, book design
-        coordination, market positioning, cinematic development, producer-facing
-        preparation, and strategic presentation.
-      </p>
-
-      <div class="who-highlight">
-        To help the author's work become clearer, stronger, and more professionally
-        prepared for the path ahead.
+      <div class="who-label fade-up">
+        <span class="section-tag">Who We Are</span>
+        <h2>
+          A narrative development company for authors with serious creative goals.
+        </h2>
       </div>
+
+      <div class="who-content fade-up">
+        <p>
+          Scriptor House LLC is a narrative development and intellectual property
+          positioning company dedicated to helping authors transform original stories
+          into professionally structured creative properties.
+        </p>
+
+        <p>
+          We work with authors, storytellers, entrepreneurs, leaders, and creators
+          who want their books and stories to be developed with care, structure,
+          and long-term value.
+        </p>
+
+        <p>
+          Our work may include publishing support, editorial guidance, book design
+          coordination, market positioning, cinematic development, producer-facing
+          preparation, and strategic presentation.
+        </p>
+
+        <div class="who-highlight">
+          To help the author's work become clearer, stronger, and more professionally
+          prepared for the path ahead.
+        </div>
+      </div>
+
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <!-- ========================= -->
+  <!-- OUR MISSION -->
+  <!-- ========================= -->
 
-<!-- ========================= -->
-<!-- OUR MISSION -->
-<!-- ========================= -->
-
-<section class="mission-section">
+  <section class="mission-section">
 
     <div class="container">
 
-        <div class="mission-intro fade-up">
+      <div class="mission-intro fade-up">
 
-            <span class="section-tag">
-                Our Mission
-            </span>
-
-            <h2>
-                We Believe<br>
-                Stories Matter.
-            </h2>
-
-        </div>
-
-        <div class="mission-grid">
-
-            <div class="mission-image fade-up">
-
-                <img src="images/mission.jpg" alt="Author writing">
-
-            </div>
-
-            <div class="mission-content fade-up">
-
-                <p>
-                    Every story has the power to inspire, preserve memory,
-                    challenge perspective, and create meaningful connection.
-                </p>
-
-                <p>
-                    Our mission is to help authors develop, publish,
-                    and position their work with professional care,
-                    creative respect, and long-term vision.
-                </p>
-
-                <p>
-                    We believe the strongest stories are not rushed.
-                    They are refined, strengthened, and prepared with
-                    intention before they reach the world.
-                </p>
-
-                <div class="mission-line"></div>
-
-                <h4>
-                    Every manuscript deserves
-                    the opportunity to become
-                    its strongest version.
-                </h4>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- WHAT WE DO -->
-<!-- ========================= -->
-
-<section class="services-preview-section">
-
-    <div class="container">
-
-        <div class="services-preview-header fade-up">
-
-            <span class="section-tag">
-                What We Do
-            </span>
-
-            <h2>
-                Helping Authors Build
-                Stronger Creative Properties
-            </h2>
-
-            <p>
-                Every project is different.
-                We help authors choose the professional path
-                that best fits their story and long-term goals.
-            </p>
-
-        </div>
-
-        <div class="services-preview-grid">
-
-            <!-- Card 1 -->
-
-            <div class="service-preview-card fade-up">
-
-                <div class="service-icon">
-                    <i class="fa-solid fa-book-open"></i>
-                </div>
-
-                <h3>
-                    Publishing
-                    Support
-                </h3>
-
-                <p>
-                    Editorial planning, publishing guidance,
-                    formatting, design coordination,
-                    and professional preparation.
-                </p>
-
-                <a href="services.html">
-                    Learn More
-                </a>
-
-            </div>
-
-            <!-- Card 2 -->
-
-            <div class="service-preview-card fade-up">
-
-                <div class="service-icon">
-                    <i class="fa-solid fa-feather-pointed"></i>
-                </div>
-
-                <h3>
-                    Story
-                    Development
-                </h3>
-
-                <p>
-                    Structure, pacing,
-                    manuscript refinement,
-                    positioning,
-                    and creative direction.
-                </p>
-
-                <a href="services.html">
-                    Learn More
-                </a>
-
-            </div>
-
-            <!-- Card 3 -->
-
-            <div class="service-preview-card fade-up">
-
-                <div class="service-icon">
-                    <i class="fa-solid fa-film"></i>
-                </div>
-
-                <h3>
-                    Book-to-Film &
-                    Intellectual Property
-                </h3>
-
-                <p>
-                    Evaluate stories for cinematic potential,
-                    prepare professional presentation materials,
-                    and position projects for industry consideration.
-                </p>
-
-                <a href="services.html">
-                    Learn More
-                </a>
-
-            </div>
-
-            <!-- Card 4 -->
-
-            <div class="service-preview-card fade-up">
-
-                <div class="service-icon">
-                    <i class="fa-solid fa-bullhorn"></i>
-                </div>
-
-                <h3>
-                    Marketing &
-                    Visibility
-                </h3>
-
-                <p>
-                    Author branding,
-                    visibility strategy,
-                    promotional planning,
-                    and professional positioning.
-                </p>
-
-                <a href="services.html">
-                    Learn More
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- OUR PHILOSOPHY -->
-<!-- ========================= -->
-<section class="philosophy-section">
-
-  <div class="container">
-
-    <div class="philosophy-header fade-up">
-
-      <span class="section-tag">
-        Our Philosophy
-      </span>
-
-      <h2>
-        Every Story Has Value.
-        Not Every Story Needs the Same Path.
-      </h2>
-
-      <p>
-        We believe in evaluating the material, understanding the author's goals,
-        and recommending a path that fits the project.
-      </p>
-
-    </div>
-
-    <div class="philosophy-grid">
-
-      <div class="philosophy-card fade-up">
-        <i class="fa-solid fa-pen-nib"></i>
-        <h3>Creative Integrity</h3>
-      </div>
-
-      <div class="philosophy-card fade-up">
-        <i class="fa-solid fa-award"></i>
-        <h3>Professional Standards</h3>
-      </div>
-
-      <div class="philosophy-card fade-up">
-        <i class="fa-solid fa-fingerprint"></i>
-        <h3>Author Ownership</h3>
-      </div>
-
-      <div class="philosophy-card fade-up">
-        <i class="fa-solid fa-comments"></i>
-        <h3>Clear Communication</h3>
-      </div>
-
-      <div class="philosophy-card fade-up">
-        <i class="fa-solid fa-seedling"></i>
-        <h3>Long-Term Value</h3>
-      </div>
-
-    </div>
-
-    <div class="philosophy-note fade-up">
-      We help authors create work they can stand behind, not work that is rushed into the marketplace.
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- OUR APPROACH -->
-<!-- ========================= -->
-<section class="approach-section">
-
-  <div class="container">
-
-    <div class="approach-header fade-up">
-      <span class="section-tag">
-        Our Approach
-      </span>
-
-      <h2>
-        A Structured Path From Manuscript to Market
-      </h2>
-
-      <p>
-        Scriptor House helps simplify the creative process by giving authors
-        a clearer path from review to presentation.
-      </p>
-    </div>
-
-    <div class="approach-timeline">
-
-      <div class="approach-step fade-up">
-        <span>01</span>
-        <h3>Review</h3>
-        <p>
-          We review the manuscript, concept, or project information to understand
-          its current stage, strengths, challenges, and professional needs.
-        </p>
-      </div>
-
-      <div class="approach-step fade-up">
-        <span>02</span>
-        <h3>Strategy</h3>
-        <p>
-          We help identify the most appropriate path based on the material,
-          the author’s goals, and the project’s readiness.
-        </p>
-      </div>
-
-      <div class="approach-step fade-up">
-        <span>03</span>
-        <h3>Development</h3>
-        <p>
-          We assist with the preparation needed to strengthen the work, including
-          editorial planning, publishing support, cinematic packaging, or market positioning.
-        </p>
-      </div>
-
-      <div class="approach-step fade-up">
-        <span>04</span>
-        <h3>Presentation</h3>
-        <p>
-          We help prepare the project for its intended audience, whether readers,
-          retailers, reviewers, media contacts, producers, or industry professionals.
-        </p>
-      </div>
-
-      <div class="approach-step fade-up">
-        <span>05</span>
-        <h3>Follow-Through</h3>
-        <p>
-          We communicate with the author throughout the process so expectations,
-          deliverables, and next steps remain clear.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- CREATIVE PROPERTY -->
-<!-- ========================= -->
-
-<section class="creative-property-section">
-
-    <div class="container">
-
-        <div class="creative-property-content fade-up">
-
-            <span class="section-tag">
-                Our Perspective
-            </span>
-
-            <h2>
-
-                A Book
-
-                <span>Is Not</span>
-
-                Only A File
-
-                <span>To Upload.</span>
-
-            </h2>
-
-            <div class="creative-divider"></div>
-
-            <h3>
-
-                It Is A
-
-                <span>Creative Property.</span>
-
-            </h3>
-
-            <p>
-
-                A professionally developed story has value beyond
-                the printed page. It can become intellectual property,
-                creative opportunity, and long-term legacy.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- CREATIVE OUTPUT -->
-<!-- ========================= -->
-<section class="creative-output-section">
-
-  <div class="container">
-
-    <div class="creative-output-header fade-up">
-      <span class="section-tag">Creative Output</span>
-
-      <h2>
-        Stories That Reach<br>
-        Beyond The Page
-      </h2>
-
-      <p>
-        Behind every story is a creator. Behind every creative property is a journey.
-      </p>
-    </div>
-
-    <div class="creative-showcase">
-
-      <!-- AUTHOR PROFILE -->
-      <div class="author-card fade-up">
-
-        <div class="author-photo-wrap">
-          <img
-            src="images/noel-nation.jpg"
-            alt="Noel Nation"
-            class="author-photo"
-          >
-        </div>
-
-        <h3>Noel Nation</h3>
-
-        <span class="author-role">
-          Author • Storyteller • Screenwriter
+        <span class="section-tag">
+          Our Mission
         </span>
 
-        <div class="author-divider"></div>
-
-        <div class="author-info">
-
-          <div>
-            <strong>Known For</strong>
-            <span>Education of a Teacher</span>
-          </div>
-
-          <div>
-            <strong>Creative Focus</strong>
-            <span>Books • Screenplays • Film</span>
-          </div>
-
-          <div>
-            <strong>Genres</strong>
-            <span>Drama • Inspirational</span>
-          </div>
-
-          <div>
-            <strong>Profile</strong>
-            <span>Author connected to a developed creative property.</span>
-          </div>
-
-        </div>
-
-        <a href="#" class="author-link">
-          View Noel Nation on IMDb
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <h2>
+          We Believe<br>
+          Stories Matter.
+        </h2>
 
       </div>
 
-      <!-- FILM / TRAILER -->
-      <div class="film-card fade-up">
+      <div class="mission-grid">
 
-        <span class="film-tag">
-          <i class="fa-solid fa-clapperboard"></i>
-          Short Film
-        </span>
+        <div class="mission-image fade-up">
 
-        <h3>Education of a Teacher</h3>
-
-        <p>
-          A narrative short film connected with Noel Nation’s creative work,
-          reflecting the bridge from written story to cinematic presentation.
-        </p>
-
-        <div class="film-video">
-
-          <!-- Replace this image with actual trailer iframe later -->
-          <img src="images/teacher-film.jpg" alt="Education of a Teacher Trailer">
-
-          <button class="play-button" aria-label="Play trailer">
-            <i class="fa-solid fa-play"></i>
-          </button>
+          <img src="images/author-write.jpg" alt="Author writing">
 
         </div>
 
-        <div class="film-info-box">
+        <div class="mission-content fade-up">
 
-          <div>
-            <h4>About the Film</h4>
-            <p>
-              Education of a Teacher represents the kind of creative bridge
-              Scriptor House believes in: from manuscript to development,
-              from story to screen, and from written work to cinematic presentation.
-            </p>
+          <p>
+            Every story has the power to inspire, preserve memory,
+            challenge perspective, and create meaningful connection.
+          </p>
+
+          <p>
+            Our mission is to help authors develop, publish,
+            and position their work with professional care,
+            creative respect, and long-term vision.
+          </p>
+
+          <p>
+            We believe the strongest stories are not rushed.
+            They are refined, strengthened, and prepared with
+            intention before they reach the world.
+          </p>
+
+          <div class="mission-line"></div>
+
+          <h4>
+            Every manuscript deserves
+            the opportunity to become
+            its strongest version.
+          </h4>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- WHAT WE DO -->
+  <!-- ========================= -->
+
+  <section class="services-preview-section">
+
+    <div class="container">
+
+      <div class="services-preview-header fade-up">
+
+        <span class="section-tag">
+          What We Do
+        </span>
+
+        <h2>
+          Helping Authors Build
+          Stronger Creative Properties
+        </h2>
+
+        <p>
+          Every project is different.
+          We help authors choose the professional path
+          that best fits their story and long-term goals.
+        </p>
+
+      </div>
+
+      <div class="services-preview-grid">
+
+        <!-- Card 1 -->
+
+        <div class="service-preview-card fade-up">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-book-open"></i>
           </div>
 
-          <a href="film-creative-work.html" class="btn">
-            Explore Film
+          <h3>
+            Publishing
+            Support
+          </h3>
+
+          <p>
+            Editorial planning, publishing guidance,
+            formatting, design coordination,
+            and professional preparation.
+          </p>
+
+          <a href="services.html">
+            Learn More
+          </a>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="service-preview-card fade-up">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-feather-pointed"></i>
+          </div>
+
+          <h3>
+            Story
+            Development
+          </h3>
+
+          <p>
+            Structure, pacing,
+            manuscript refinement,
+            positioning,
+            and creative direction.
+          </p>
+
+          <a href="services.html">
+            Learn More
+          </a>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="service-preview-card fade-up">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-film"></i>
+          </div>
+
+          <h3>
+            Book-to-Film &
+            Intellectual Property
+          </h3>
+
+          <p>
+            Evaluate stories for cinematic potential,
+            prepare professional presentation materials,
+            and position projects for industry consideration.
+          </p>
+
+          <a href="services.html">
+            Learn More
+          </a>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="service-preview-card fade-up">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+
+          <h3>
+            Marketing &
+            Visibility
+          </h3>
+
+          <p>
+            Author branding,
+            visibility strategy,
+            promotional planning,
+            and professional positioning.
+          </p>
+
+          <a href="services.html">
+            Learn More
           </a>
 
         </div>
@@ -679,346 +373,652 @@
 
     </div>
 
-  </div>
+  </section>
 
-</section>
-
-<!-- ========================= -->
-<!-- TRANSPARENCY -->
-<!-- ========================= -->
-
-<section class="transparency-section">
+  <!-- ========================= -->
+  <!-- OUR PHILOSOPHY -->
+  <!-- ========================= -->
+  <section class="philosophy-section">
 
     <div class="container">
 
-        <div class="transparency-header fade-up">
+      <div class="philosophy-header fade-up">
 
-            <span class="section-tag">
-                Transparency
-            </span>
+        <span class="section-tag">
+          Our Philosophy
+        </span>
 
-            <h2>
-                Clear Expectations.<br>
-                Honest Guidance.
-            </h2>
+        <h2>
+          Every Story Has Value.
+          Not Every Story Needs the Same Path.
+        </h2>
 
-            <p>
-                We believe every author deserves honesty before making creative decisions.
-            </p>
+        <p>
+          We believe in evaluating the material, understanding the author's goals,
+          and recommending a path that fits the project.
+        </p>
+
+      </div>
+
+      <div class="philosophy-grid">
+
+        <div class="philosophy-card fade-up">
+          <i class="fa-solid fa-pen-nib"></i>
+          <h3>Creative Integrity</h3>
+        </div>
+
+        <div class="philosophy-card fade-up">
+          <i class="fa-solid fa-award"></i>
+          <h3>Professional Standards</h3>
+        </div>
+
+        <div class="philosophy-card fade-up">
+          <i class="fa-solid fa-fingerprint"></i>
+          <h3>Author Ownership</h3>
+        </div>
+
+        <div class="philosophy-card fade-up">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Clear Communication</h3>
+        </div>
+
+        <div class="philosophy-card fade-up">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Long-Term Value</h3>
+        </div>
+
+      </div>
+
+      <div class="philosophy-note fade-up">
+        We help authors create work they can stand behind, not work that is rushed into the marketplace.
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- OUR APPROACH -->
+  <!-- ========================= -->
+  <section class="approach-section">
+
+    <div class="container">
+
+      <div class="approach-header fade-up">
+        <span class="section-tag">
+          Our Approach
+        </span>
+
+        <h2>
+          A Structured Path From Manuscript to Market
+        </h2>
+
+        <p>
+          Scriptor House helps simplify the creative process by giving authors
+          a clearer path from review to presentation.
+        </p>
+      </div>
+
+      <div class="approach-timeline">
+
+        <div class="approach-step fade-up">
+          <span>01</span>
+          <h3>Review</h3>
+          <p>
+            We review the manuscript, concept, or project information to understand
+            its current stage, strengths, challenges, and professional needs.
+          </p>
+        </div>
+
+        <div class="approach-step fade-up">
+          <span>02</span>
+          <h3>Strategy</h3>
+          <p>
+            We help identify the most appropriate path based on the material,
+            the author’s goals, and the project’s readiness.
+          </p>
+        </div>
+
+        <div class="approach-step fade-up">
+          <span>03</span>
+          <h3>Development</h3>
+          <p>
+            We assist with the preparation needed to strengthen the work, including
+            editorial planning, publishing support, cinematic packaging, or market positioning.
+          </p>
+        </div>
+
+        <div class="approach-step fade-up">
+          <span>04</span>
+          <h3>Presentation</h3>
+          <p>
+            We help prepare the project for its intended audience, whether readers,
+            retailers, reviewers, media contacts, producers, or industry professionals.
+          </p>
+        </div>
+
+        <div class="approach-step fade-up">
+          <span>05</span>
+          <h3>Follow-Through</h3>
+          <p>
+            We communicate with the author throughout the process so expectations,
+            deliverables, and next steps remain clear.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- CREATIVE PROPERTY -->
+  <!-- ========================= -->
+
+  <section class="creative-property-section">
+
+    <div class="container">
+
+      <div class="creative-property-content fade-up">
+
+        <span class="section-tag">
+          Our Perspective
+        </span>
+
+        <h2>
+
+          A Book
+
+          <span>Is Not</span>
+
+          Only A File
+
+          <span>To Upload.</span>
+
+        </h2>
+
+        <div class="creative-divider"></div>
+
+        <h3>
+
+          It Is A
+
+          <span>Creative Property.</span>
+
+        </h3>
+
+        <p>
+
+          A professionally developed story has value beyond
+          the printed page. It can become intellectual property,
+          creative opportunity, and long-term legacy.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- CREATIVE OUTPUT -->
+  <!-- ========================= -->
+  <section class="creative-output-section">
+
+    <div class="container">
+
+      <div class="creative-output-header fade-up">
+        <span class="section-tag">Creative Output</span>
+
+        <h2>
+          Stories That Reach<br>
+          Beyond The Page
+        </h2>
+
+        <p>
+          Behind every story is a creator. Behind every creative property is a journey.
+        </p>
+      </div>
+
+      <div class="creative-showcase">
+
+        <!-- AUTHOR PROFILE -->
+        <div class="author-card fade-up">
+
+          <div class="author-photo-wrap">
+            <img src="images/noel-nation.jpeg" alt="Noel Nation" class="author-photo">
+          </div>
+
+          <h3>Noel Nation</h3>
+
+          <span class="author-role">
+            Author • Storyteller • Screenwriter
+          </span>
+
+          <div class="author-divider"></div>
+
+          <div class="author-info">
+
+            <div>
+              <strong>Known For</strong>
+              <span>Education of a Teacher</span>
+            </div>
+
+            <div>
+              <strong>Creative Focus</strong>
+              <span>Books • Screenplays • Film</span>
+            </div>
+
+            <div>
+              <strong>Genres</strong>
+              <span>Drama • Inspirational</span>
+            </div>
+
+            <div>
+              <strong>Profile</strong>
+              <span>Author connected to a developed creative property.</span>
+            </div>
+
+          </div>
+
+          <a href="#" class="author-link">
+            View Noel Nation on IMDb
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
         </div>
 
-        <div class="transparency-grid">
+        <!-- FILM / TRAILER -->
+        <div class="film-card fade-up">
 
-            <!-- LEFT -->
+          <span class="film-tag">
+            <i class="fa-solid fa-clapperboard"></i>
+            Short Film
+          </span>
 
-            <div class="transparency-card positive fade-up">
+          <h3>Education of a Teacher</h3>
 
-                <div class="transparency-title">
+          <p>
+            A narrative short film connected with Noel Nation’s creative work,
+            reflecting the bridge from written story to cinematic presentation.
+          </p>
 
-                    <i class="fa-solid fa-circle-check"></i>
+          <div class="film-video">
 
-                    <h3>
-                        What We Provide
-                    </h3>
+            <!-- Replace this image with actual trailer iframe later -->
+            <img src="images/16x9.jpg" alt="Education of a Teacher Trailer">
 
-                </div>
+            <button class="play-button" aria-label="Play trailer">
+              <i class="fa-solid fa-play"></i>
+            </button>
 
-                <ul>
+          </div>
 
-                    <li>Professional publishing guidance</li>
+          <div class="film-info-box">
 
-                    <li>Story development and editorial support</li>
-
-                    <li>Hollywood development evaluation</li>
-
-                    <li>Creative positioning</li>
-
-                    <li>Marketing consultation</li>
-
-                    <li>Producer presentation preparation</li>
-
-                    <li>Clear communication throughout the process</li>
-
-                </ul>
-
+            <div>
+              <h4>About the Film</h4>
+              <p>
+                Education of a Teacher represents the kind of creative bridge
+                Scriptor House believes in: from manuscript to development,
+                from story to screen, and from written work to cinematic presentation.
+              </p>
             </div>
 
-            <!-- RIGHT -->
+            <a href="film-creative-work.html" class="btn">
+              Explore Film
+            </a>
 
-            <div class="transparency-card negative fade-up">
-
-                <div class="transparency-title">
-
-                    <i class="fa-solid fa-shield-halved"></i>
-
-                    <h3>
-                        What We Never Promise
-                    </h3>
-
-                </div>
-
-                <ul>
-
-                    <li>Guaranteed publishing</li>
-
-                    <li>Guaranteed producer acceptance</li>
-
-                    <li>Guaranteed movie production</li>
-
-                    <li>Guaranteed studio interest</li>
-
-                    <li>Guaranteed bestseller status</li>
-
-                    <li>Guaranteed financial success</li>
-
-                    <li>Guaranteed commercial results</li>
-
-                </ul>
-
-            </div>
+          </div>
 
         </div>
 
-        <div class="transparency-footer fade-up">
+      </div>
 
-            <p>
+    </div>
 
-                Our commitment is simple.
+  </section>
 
-            </p>
+  <!-- ========================= -->
+  <!-- TRANSPARENCY -->
+  <!-- ========================= -->
+
+  <section class="transparency-section">
+
+    <div class="container">
+
+      <div class="transparency-header fade-up">
+
+        <span class="section-tag">
+          Transparency
+        </span>
+
+        <h2>
+          Clear Expectations.<br>
+          Honest Guidance.
+        </h2>
+
+        <p>
+          We believe every author deserves honesty before making creative decisions.
+        </p>
+
+      </div>
+
+      <div class="transparency-grid">
+
+        <!-- LEFT -->
+
+        <div class="transparency-card positive fade-up">
+
+          <div class="transparency-title">
+
+            <i class="fa-solid fa-circle-check"></i>
 
             <h3>
-
-                Professional work.<br>
-
-                Honest expectations.
-
+              What We Provide
             </h3>
+
+          </div>
+
+          <ul>
+
+            <li>Professional publishing guidance</li>
+
+            <li>Story development and editorial support</li>
+
+            <li>Hollywood development evaluation</li>
+
+            <li>Creative positioning</li>
+
+            <li>Marketing consultation</li>
+
+            <li>Producer presentation preparation</li>
+
+            <li>Clear communication throughout the process</li>
+
+          </ul>
 
         </div>
 
-    </div>
+        <!-- RIGHT -->
 
-</section>
+        <div class="transparency-card negative fade-up">
 
-<!-- ========================= -->
-<!-- SCRIPTOR HOUSE VS FILMS -->
-<!-- ========================= -->
-<section class="brand-difference-section">
-
-  <div class="container">
-
-    <div class="brand-difference-header fade-up">
-      <span class="section-tag">
-        Two Connected Paths
-      </span>
-
-      <h2>
-        Scriptor House and Scriptor House Films Serve Different Author Goals
-      </h2>
-
-      <p>
-        Both are connected to the Scriptor House brand, but they support authors in different ways.
-      </p>
-    </div>
-
-    <div class="brand-difference-grid">
-
-      <div class="brand-card fade-up">
-        <span class="brand-label">Main Company</span>
-
-        <h3>Scriptor House</h3>
-
-        <p>
-          Scriptor House supports authors through publishing guidance, manuscript positioning,
-          Hollywood development evaluation, professional presentation, producer outreach,
-          and author strategy.
-        </p>
-
-        <ul>
-          <li>Publishing support</li>
-          <li>Story development</li>
-          <li>Manuscript positioning</li>
-          <li>Producer presentation preparation</li>
-          <li>Industry-facing materials</li>
-        </ul>
-
-        <a href="services.html" class="brand-link">
-          Explore Scriptor House Services
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="brand-card films fade-up">
-        <span class="brand-label">Film Production Pathway</span>
-
-        <h3>Scriptor House Films</h3>
-
-        <p>
-          Scriptor House Films is for authors, writers, and story owners who want to
-          produce their own film and are prepared to finance the production path.
-        </p>
-
-        <ul>
-          <li>Story to development</li>
-          <li>Screenplay direction</li>
-          <li>Production coordination</li>
-          <li>Completed film pathway</li>
-          <li>Marketing and visibility support</li>
-        </ul>
-
-        <a href="https://scriptorhousefilms.com" target="_blank" class="brand-link">
-          Visit Scriptor House Films
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SECURITY NOTICE -->
-<!-- ========================= -->
-<section class="security-section">
-
-    <div class="container">
-
-        <div class="security-card fade-up">
+          <div class="transparency-title">
 
             <i class="fa-solid fa-shield-halved"></i>
 
-            <h2>
-                Stay Safe
-            </h2>
+            <h3>
+              What We Never Promise
+            </h3>
 
-            <p>
-                Always communicate through Scriptor House's official contact channels.
-                If you receive suspicious messages or payment requests claiming to represent us,
-                please contact our team for verification before responding.
-            </p>
+          </div>
+
+          <ul>
+
+            <li>Guaranteed publishing</li>
+
+            <li>Guaranteed producer acceptance</li>
+
+            <li>Guaranteed movie production</li>
+
+            <li>Guaranteed studio interest</li>
+
+            <li>Guaranteed bestseller status</li>
+
+            <li>Guaranteed financial success</li>
+
+            <li>Guaranteed commercial results</li>
+
+          </ul>
 
         </div>
 
+      </div>
+
+      <div class="transparency-footer fade-up">
+
+        <p>
+
+          Our commitment is simple.
+
+        </p>
+
+        <h3>
+
+          Professional work.<br>
+
+          Honest expectations.
+
+        </h3>
+
+      </div>
+
     </div>
 
-</section>
-<!-- ========================= -->
-<!-- FINAL CTA -->
-<!-- ========================= -->
+  </section>
 
-<section class="about-cta-section">
+  <!-- ========================= -->
+  <!-- SCRIPTOR HOUSE VS FILMS -->
+  <!-- ========================= -->
+  <section class="brand-difference-section">
+
+    <div class="container">
+
+      <div class="brand-difference-header fade-up">
+        <span class="section-tag">
+          Two Connected Paths
+        </span>
+
+        <h2>
+          Scriptor House and Scriptor House Films Serve Different Author Goals
+        </h2>
+
+        <p>
+          Both are connected to the Scriptor House brand, but they support authors in different ways.
+        </p>
+      </div>
+
+      <div class="brand-difference-grid">
+
+        <div class="brand-card fade-up">
+          <span class="brand-label">Main Company</span>
+
+          <h3>Scriptor House</h3>
+
+          <p>
+            Scriptor House supports authors through publishing guidance, manuscript positioning,
+            Hollywood development evaluation, professional presentation, producer outreach,
+            and author strategy.
+          </p>
+
+          <ul>
+            <li>Publishing support</li>
+            <li>Story development</li>
+            <li>Manuscript positioning</li>
+            <li>Producer presentation preparation</li>
+            <li>Industry-facing materials</li>
+          </ul>
+
+          <a href="services.html" class="brand-link">
+            Explore Scriptor House Services
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="brand-card films fade-up">
+          <span class="brand-label">Film Production Pathway</span>
+
+          <h3>Scriptor House Films</h3>
+
+          <p>
+            Scriptor House Films is for authors, writers, and story owners who want to
+            produce their own film and are prepared to finance the production path.
+          </p>
+
+          <ul>
+            <li>Story to development</li>
+            <li>Screenplay direction</li>
+            <li>Production coordination</li>
+            <li>Completed film pathway</li>
+            <li>Marketing and visibility support</li>
+          </ul>
+
+          <a href="https://scriptorhousefilms.com" target="_blank" class="brand-link">
+            Visit Scriptor House Films
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- SECURITY NOTICE -->
+  <!-- ========================= -->
+  <section class="security-section">
+
+    <div class="container">
+
+      <div class="security-card fade-up">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h2>
+          Stay Safe
+        </h2>
+
+        <p>
+          Always communicate through Scriptor House's official contact channels.
+          If you receive suspicious messages or payment requests claiming to represent us,
+          please contact our team for verification before responding.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- ========================= -->
+  <!-- FINAL CTA -->
+  <!-- ========================= -->
+
+  <section class="about-cta-section">
 
     <div class="about-cta-bg"></div>
 
     <div class="container">
 
-        <div class="about-cta-content fade-up">
+      <div class="about-cta-content fade-up">
 
-            <span class="section-tag">
-                Let's Begin
-            </span>
+        <span class="section-tag">
+          Let's Begin
+        </span>
 
-            <h2>
+        <h2>
 
-                Your Story
+          Your Story
 
-                <span>Deserves</span>
+          <span>Deserves</span>
 
-                Professional Development.
+          Professional Development.
 
-            </h2>
+        </h2>
 
-            <p>
+        <p>
 
-                Whether you're publishing your first manuscript,
-                exploring film possibilities,
-                or simply looking for honest professional guidance,
-                we're here to help you understand your next step.
+          Whether you're publishing your first manuscript,
+          exploring film possibilities,
+          or simply looking for honest professional guidance,
+          we're here to help you understand your next step.
 
-            </p>
+        </p>
 
-            <div class="about-cta-buttons">
+        <div class="about-cta-buttons">
 
-                <a href="contact.html" class="btn">
-                    Submit Your Manuscript
-                </a>
+          <a href="contact.html" class="btn">
+            Submit Your Manuscript
+          </a>
 
-                <a href="services.html" class="btn btn-outline">
-                    Explore Services
-                </a>
-
-            </div>
+          <a href="services.html" class="btn btn-outline">
+            Explore Services
+          </a>
 
         </div>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-<footer>
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+  <footer>
 
-        <div class="container footer-grid">
+    <div class="container footer-grid">
 
-            <div>
-                <img src="images/logo.png" alt="Scriptor House Logo">
-                <p>
-                    Address Here
-                </p>
-            </div>
+      <div>
+        <img src="asset/logo-nbg.png" alt="Scriptor House Logo">
+        <p>
+          Address Here
+        </p>
+      </div>
 
-            <div>
-                <h4>Quick Links</h4>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="partnership-publishing.html">Partnership Publishing</a>
-                <a href="film-creative-work.html">Film & Creative Work</a>
-                <a href="author-transparency.html">Transparency</a>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Partnership Publishing</a>
+        <a href="book-to-film.html">Book-to-Film</a>
+        <a href="film-creative-work.html">Film & Creative Work</a>
+        <a href="author-transparency.html">Transparency</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contacts</a>
+      </div>
 
-                <a href="faq.html">FAQs</a>
-                <a href="contact.html">Contacts</a>
-            </div>
+      <div>
+        <h4>Follow Us</h4>
 
-            <div>
-                <h4>Follow Us</h4>
-
-                <div class="footer-socials">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-contact">
-                <a href="#" class="btn">Let's Talk</a>
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    info@scriptorhouse.com
-                </p>
-
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    +1 (209) 554-8271
-                </p>
-            </div>
-
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/scriptorhouse" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/scriptorhouse/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCgkE9I_5vwfgI7lJMgqnI3A" target="_blank"><i
+              class="fa-brands fa-youtube"></i></a>
+          <a href="https://x.com/scriptorh" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
+      </div>
 
-        <div class="copyright">
-            Copyright © 2025 by Scriptor House. All Rights Reserved.
-        </div>
+      <div class="footer-contact">
+        <a href="contact.html" class="btn">Let's Talk</a>
 
-</footer>
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          info@scriptorhouse.com
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          +1 (562) 647 0112
+        </p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      Copyright © 2025 by Scriptor House. All Rights Reserved.
+    </div>
+
+  </footer>
   <!-- JS -->
   <script src="js/header.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="js/footer.js"></script>
 
@@ -1026,4 +1026,5 @@
   <script src="about-js/about.js"></script>
 
 </body>
+
 </html>
