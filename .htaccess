@@ -1,0 +1,39 @@
+# ============================================================
+# Scriptor House - Apache Configuration
+# ============================================================
+
+# Enable HTTP range requests (required for HTML5 video seeking)
+<IfModule mod_headers.c>
+  Header set Accept-Ranges bytes
+</IfModule>
+
+# Video MIME types
+AddType video/mp4            .mp4 .m4v
+AddType video/webm           .webm
+AddType video/ogg            .ogv
+AddType video/quicktime      .mov .MOV
+AddType video/3gpp           .3gp
+AddType video/x-m4v          .m4v
+
+# Allow partial content / range requests for video files
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "\.(mp4|webm|ogv|mov|3gp|m4v)$" video_request
+</IfModule>
+
+# Enable CORS for media files (needed in some browser environments)
+<FilesMatch "\.(mp4|webm|ogv|mov|MOV|3gp|m4v)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+  </IfModule>
+</FilesMatch>
+
+# Disable ETags to improve caching reliability
+FileETag None
+
+# Cache-Control for media files
+<FilesMatch "\.(mp4|webm|ogv|3gp|m4v)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=31536000, public"
+  </IfModule>
+</FilesMatch>
