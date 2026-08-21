@@ -64,6 +64,8 @@
   line-height: .92;
   margin-bottom: 32px;
   color: var(--white);
+  /* Reserve 2-line height upfront — prevents wiggle during Typed.js */
+  min-height: calc(112px * 0.92 * 2);
 }
 
 .about-hero-content h1::first-line {

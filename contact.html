@@ -24,9 +24,10 @@
 
   <!-- Contact CSS -->
   <link rel="stylesheet" href="contact-css/contact.css">
+  <link rel="stylesheet" href="css/metallic-themes.css">
 </head>
 
-<body>
+<body class="theme-titanium">
 
   <!-- Ambient Background Glows -->
   <div class="ambient-glows">
@@ -48,7 +49,8 @@
         <a href="about.html">About</a>
         <a href="services.html">Partnership Publishing</a>
         <a href="book-to-film.html">Book-to-Film</a>
-        <a href="film-creative-work.html">Film & Creative Work</a>
+        <a href="film-creative-work.html">Film &amp; Creative Work</a>
+        <a href="reviews.html">Reviews</a>
         <a href="contact.html" class="active">Contacts</a>
       </nav>
 
@@ -148,7 +150,7 @@
 
         <div class="routing-card fade-up">
           <i class="fa-solid fa-book-open"></i>
-          <h3>Publishing & Author Services</h3>
+          <h3>Publishing &amp; Author Services</h3>
           <p>
             For manuscript positioning, partnership publishing, editorial preparation,
             author guidance, and publishing support.
@@ -212,24 +214,30 @@
 
       <div class="premium-form-card fade-up">
 
-        <form>
+        <!-- Form status message banner -->
+        <div id="formStatus" class="form-status-alert" style="display:none;"></div>
+
+        <form id="contactForm" action="send-mail.php" method="POST">
+
+          <!-- Honeypot anti-spam (hidden from users) -->
+          <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important;">
 
           <div class="form-row">
             <label>
               Your Name
-              <input type="text" name="name" placeholder="Enter your name" required>
+              <input type="text" name="name" id="formName" placeholder="Enter your name" required>
             </label>
 
             <label>
               Your Email
-              <input type="email" name="email" placeholder="Enter your email" required>
+              <input type="email" name="email" id="formEmail" placeholder="Enter your email" required>
             </label>
           </div>
 
           <div class="form-row">
             <label>
               Phone Number
-              <input type="tel" name="phone" placeholder="Optional">
+              <input type="tel" name="phone" id="formPhone" placeholder="Optional">
             </label>
 
             <label>
@@ -267,12 +275,12 @@
 
           <label>
             Subject
-            <input type="text" name="subject" placeholder="Brief subject" required>
+            <input type="text" name="subject" id="formSubject" placeholder="Brief subject" required>
           </label>
 
           <label>
             Message
-            <textarea name="message" rows="7" placeholder="Tell us about your inquiry"></textarea>
+            <textarea name="message" id="formMessage" rows="7" placeholder="Tell us about your inquiry"></textarea>
           </label>
 
           <div class="form-disclaimer">
@@ -281,8 +289,9 @@
             production, distribution, royalties, or financial return.
           </div>
 
-          <button type="submit" class="btn">
-            Submit Inquiry
+          <button type="submit" id="submitBtn" class="btn">
+            <span class="btn-text">Submit Inquiry</span>
+            <i class="fa-solid fa-paper-plane btn-icon" style="margin-left:8px;"></i>
           </button>
 
         </form>
@@ -319,8 +328,8 @@
 
         <div class="official-card fade-up">
           <i class="fa-solid fa-phone"></i>
-          <span>Phone</span>
-          <strong>+1 (562) 647 0112</strong>
+          <span>Toll-Free Phone</span>
+          <strong>+1 (800) 776-6810</strong>
         </div>
 
         <div class="official-card fade-up">
@@ -420,7 +429,12 @@
 
       <div>
         <img src="asset/logo-nbg.png" alt="Scriptor House Logo">
-        <p>Address Here</p>
+        <p>
+          <i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:6px;"></i>
+          17434 Bellflower Blvd, Ste 200-188,<br>
+          Bellflower, CA 90706,<br>
+          United States
+        </p>
       </div>
 
       <div>
@@ -429,9 +443,10 @@
         <a href="about.html">About</a>
         <a href="services.html">Partnership Publishing</a>
         <a href="book-to-film.html">Book-to-Film</a>
-        <a href="film-creative-work.html">Film & Creative Work</a>
+        <a href="film-creative-work.html">Film &amp; Creative Work</a>
         <a href="author-transparency.html">Transparency</a>
         <a href="faq.html">FAQs</a>
+        <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contacts</a>
       </div>
 
@@ -448,6 +463,7 @@
       </div>
 
       <div class="footer-contact">
+        <a href="reviews.html">Reviews</a>
         <a href="contact.html" class="btn">Let's Talk</a>
 
         <p>
@@ -456,8 +472,7 @@
         </p>
 
         <p>
-          <i class="fa-solid fa-phone"></i>
-          +1 (562) 647 0112
+          <i class="fa-solid fa-phone"></i> Toll-Free: +1 (800) 776-6810
         </p>
 
         <p>
@@ -469,7 +484,7 @@
     </div>
 
     <div class="copyright">
-      Copyright © 2025 by Scriptor House. All Rights Reserved.
+      Copyright &copy; 2025 by Scriptor House. All Rights Reserved.
     </div>
 
   </footer>
@@ -479,6 +494,7 @@
   <script src="js/main.js"></script>
   <script src="js/footer.js"></script>
   <script src="contact-js/contact.js"></script>
+  <script src="js/theme-switcher.js"></script>
 
 </body>
 

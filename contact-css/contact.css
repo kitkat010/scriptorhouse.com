@@ -46,7 +46,7 @@
     display:flex;
     align-items:center;
 
-    padding:180px 0 120px;
+    padding:115px 0 100px;
 
     background:
     radial-gradient(circle at 80% 20%,
@@ -166,6 +166,9 @@ margin:28px 0;
 letter-spacing:-2px;
 
 max-width:780px;
+
+/* Reserve 2-line height upfront — prevents wiggle during Typed.js */
+min-height: calc(108px * 0.9 * 2);
 
 }
 
@@ -1563,3 +1566,69 @@ opacity:0;
         padding: 35px;
     }
 }
+
+/*======================================================
+  FORM STATUS ALERTS & FEEDBACK
+======================================================*/
+.form-honeypot {
+    display: none !important;
+    position: absolute;
+    left: -9999px;
+}
+
+.form-status-alert {
+    padding: 20px 24px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    animation: alertFadeIn 0.4s ease forwards;
+}
+
+@keyframes alertFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-status-alert i {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.form-status-alert strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.form-status-alert p {
+    margin: 0;
+}
+
+.form-status-success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    color: #4ade80;
+}
+.form-status-success i {
+    color: #22c55e;
+}
+.form-status-success strong {
+    color: #86efac;
+}
+
+.form-status-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #f87171;
+}
+.form-status-error i {
+    color: #ef4444;
+}
+.form-status-error strong {
+    color: #fca5a5;
+}

@@ -67,6 +67,8 @@
   font-size: clamp(56px, 7vw, 108px);
   line-height: .95;
   margin-bottom: 32px;
+  /* Reserve 2-line height upfront — prevents wiggle during Typed.js */
+  min-height: calc(108px * 0.95 * 2);
 }
 
 .transparency-hero-content h1::first-line {

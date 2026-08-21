@@ -85,162 +85,134 @@
   line-height: 1.4;
 }
 
-/* Spotlight Banner Wrap - Taller layout */
-.spotlight-banner-wrap {
+/* Spotlight Banner Wrap — kept for backward compat */
+.spotlight-banner-wrap { display: none; }
+
+
+/* ===========================
+   AWARD INFOGRAPHIC SHOWCASE
+   =========================== */
+.award-showcase-wrap {
   position: relative;
   width: 100vw;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  min-height: 660px;
-  /* Increased vertical space */
-  display: flex;
-  align-items: center;
-  overflow: hidden;
   background: #080808;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  padding: 90px 0 80px;
+  overflow: hidden;
 }
 
-.spotlight-video-bg {
+.award-showcase-wrap::before {
+  content: '';
   position: absolute;
-  inset: 0;
-  z-index: 1;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,200,0,.45), transparent);
+  pointer-events: none;
 }
 
-.spotlight-video-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(4px) brightness(0.65);
-}
-
-/* Gradient: Left is 50% transparent, Right is 0% clear */
-.spotlight-gradient-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: linear-gradient(90deg,
-      rgba(5, 5, 5, 0.5) 0%,
-      rgba(5, 5, 5, 0.25) 50%,
-      rgba(5, 5, 5, 0) 100%);
-}
-
-.spotlight-container {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
-  align-items: center;
-  padding: 140px 0;
-  /* Increased vertical space */
-}
-
-.spotlight-left {
-  max-width: 650px;
-  text-align: left;
-}
-
-.spotlight-left h3 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(32px, 4vw, 48px);
-  color: var(--white);
-  margin-bottom: 24px;
-}
-
-.spotlight-left p {
-  font-size: 16px;
-  color: var(--text);
-  margin-bottom: 20px;
-  line-height: 1.7;
-}
-
-.proof-disclaimer {
-  font-size: 13px !important;
-  color: var(--muted) !important;
-  border-left: 2px solid var(--primary);
-  padding-left: 14px;
-  margin-bottom: 30px !important;
-}
-
-/* Trophy & Badge Container - Dual overlapping trophies */
-.spotlight-right {
+.award-showcase-inner {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 48px;
+}
+
+/* Header block */
+.award-showcase-header {
   text-align: center;
+  max-width: 760px;
 }
 
-.trophy-badge-container {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.spotlight-trophy-img {
-  width: 240px;
-  height: 220px;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6));
-  transition: transform 0.4s ease;
-}
-
-.spotlight-trophy-img:hover {
-  transform: translateY(-8px) scale(1.05);
-}
-
-.spotlight-badge-label {
+.award-showcase-header h3 {
   font-family: "Playfair Display", serif;
-  font-size: 18px;
-  color: var(--primary);
-  letter-spacing: 1px;
-  font-weight: 600;
+  font-size: clamp(28px, 4vw, 46px);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 18px;
+  font-weight: 700;
 }
 
-/* Responsive adjustments */
+.award-showcase-header p {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Infographic frame */
+.award-infographic-frame {
+  width: 100%;
+  max-width: 1060px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,200,0,.18);
+  box-shadow:
+    0 0 0 1px rgba(255,200,0,.06),
+    0 24px 80px rgba(0,0,0,.65),
+    0 0 60px rgba(255,200,0,.04);
+  position: relative;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.award-infographic-frame:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 0 1px rgba(255,200,0,.14),
+    0 30px 100px rgba(0,0,0,.7),
+    0 0 80px rgba(255,200,0,.07);
+}
+
+.award-infographic-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Footer block */
+.award-showcase-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.award-showcase-footer .proof-disclaimer {
+  font-size: 13px;
+  color: var(--muted);
+  border-left: 2px solid var(--primary);
+  padding-left: 14px;
+  text-align: left;
+  max-width: 540px;
+  margin: 0;
+}
+
+.award-showcase-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Responsive */
 @media (max-width: 992px) {
-  .laurel-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .spotlight-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 80px 0;
-  }
-
-  .spotlight-gradient-overlay {
-    background: linear-gradient(to bottom,
-        rgba(5, 5, 5, 0.98) 0%,
-        rgba(5, 5, 5, 0.9) 60%,
-        rgba(5, 5, 5, 0.7) 85%,
-        rgba(5, 5, 5, 0.4) 100%);
-  }
-
-  .spotlight-left {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .proof-disclaimer {
-    border-left: none;
-    border-top: 2px solid var(--primary);
-    padding-left: 0;
-    padding-top: 10px;
-  }
-
-  .spotlight-right {
-    margin-top: 20px;
-  }
+  .laurel-grid { grid-template-columns: repeat(2, 1fr); }
+  .award-showcase-wrap { padding: 60px 0; }
+  .award-infographic-frame { border-radius: 12px; }
 }
 
 @media (max-width: 600px) {
-  .laurel-grid {
-    grid-template-columns: 1fr;
-  }
+  .laurel-grid { grid-template-columns: 1fr; }
+  .award-showcase-ctas { flex-direction: column; align-items: center; }
+  .award-showcase-ctas .btn { width: 100%; text-align: center; }
+  .award-showcase-footer .proof-disclaimer { border-left: none; border-top: 2px solid var(--primary); padding-left: 0; padding-top: 10px; }
 }

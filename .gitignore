@@ -1,0 +1,5 @@
+# Large archives and temporary files
+*.zip
+logs/
+.DS_Store
+Thumbs.db

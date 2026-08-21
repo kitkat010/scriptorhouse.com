@@ -132,6 +132,8 @@
   line-height: .88;
   margin-bottom: 34px;
   color: var(--white);
+  /* Reserve 3-line height upfront — prevents wiggle during Typed.js */
+  min-height: calc(124px * 0.88 * 3);
 }
 
 .film-hero-content h1::first-line {

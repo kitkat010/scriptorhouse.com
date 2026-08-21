@@ -60,6 +60,8 @@
   font-size: clamp(60px, 7vw, 105px);
   line-height: .95;
   margin: 28px 0;
+  /* Reserve 2-line height upfront — prevents wiggle during Typed.js */
+  min-height: calc(105px * 0.95 * 2);
 }
 
 .faq-hero-content h1::first-line {

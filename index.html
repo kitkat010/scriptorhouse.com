@@ -36,9 +36,10 @@
   <link rel="stylesheet" href="css/films.css">
   <link rel="stylesheet" href="css/security.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/metallic-themes.css">
 </head>
 
-<body>
+<body class="theme-titanium">
 
   <!-- Ambient Background Glows -->
   <div class="ambient-glows">
@@ -48,16 +49,6 @@
     <div class="glow-blob glow-4"></div>
   </div>
 
-  <!-- ========================= -->
-  <!-- COUNTDOWN LEADER OVERLAY -->
-  <!-- ========================= -->
-  <div class="countdown-leader-overlay" id="countdownOverlay">
-    <div class="countdown-lines"></div>
-    <div class="countdown-dial">
-      <div class="countdown-sweep"></div>
-      <div class="countdown-number" id="countdownNumber">5</div>
-    </div>
-  </div>
 
   <!-- ========================= -->
   <!-- HEADER -->
@@ -1145,7 +1136,10 @@
       <div>
         <img src="asset/logo-nbg.png" alt="Scriptor House Logo">
         <p>
-          Address Here
+          <i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:6px;"></i>
+          17434 Bellflower Blvd, Ste 200-188,<br>
+          Bellflower, CA 90706,<br>
+          United States
         </p>
       </div>
 
@@ -1197,11 +1191,11 @@
 
   <!-- JS -->
   <script src="js/header.js"></script>
-  <script src="js/hero.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="js/faq.js"></script>
   <script src="js/footer.js"></script>
+  <script src="js/theme-switcher.js"></script>
 
 </body>
 

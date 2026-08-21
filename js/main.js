@@ -47,47 +47,62 @@ window.addEventListener("resize", () => {
 });
 
 
-// Typed.js Library Wrapper
+// Typed.js Library Wrapper - wait for fonts before measuring heading heights
 document.addEventListener("DOMContentLoaded", () => {
   const typewriterElements = document.querySelectorAll(".typewriter");
 
-  typewriterElements.forEach((el) => {
-    // Read the text strings or HTML from the element itself
-    const originalHTML = el.innerHTML.trim();
-    const strings = [originalHTML];
+  const initTyped = () => {
+    typewriterElements.forEach((el) => {
+      const originalHTML = el.innerHTML.trim();
+      const strings = [originalHTML];
 
-    // Homepage loops infinitely, sub-pages type once
-    const isHomepage = !!document.getElementById("heroVideo");
-    const loop = isHomepage;
-    const backDelay = 2500;
+      const isHomepage = !!document.getElementById("heroVideo");
+      const loop = isHomepage;
+      const backDelay = 2500;
 
-    if (typeof Typed !== 'undefined') {
-      // Clear content before Typed.js starts to prevent layout flash
-      el.innerHTML = "";
-
-      new Typed(el, {
-        strings: strings,
-        typeSpeed: 50,
-        backSpeed: 30,
-        backDelay: backDelay,
-        loop: loop,
-        contentType: 'html',
-        showCursor: true,
-        cursorChar: '|',
-        onComplete: (self) => {
-          if (!loop) {
-            // Hide and remove the cursor after typing finishes
-            setTimeout(() => {
-              const cursor = el.nextElementSibling;
-              if (cursor && cursor.classList.contains("typed-cursor")) {
-                cursor.style.transition = "opacity 0.5s ease";
-                cursor.style.opacity = "0";
-                setTimeout(() => cursor.remove(), 500);
-              }
-            }, 800);
-          }
+      if (typeof Typed !== 'undefined') {
+        // Measure height NOW — fonts are guaranteed loaded via document.fonts.ready
+        // This locks the h1 space so the page never reflows while typing
+        const naturalHeight = el.getBoundingClientRect().height;
+        if (naturalHeight > 0) {
+          el.style.minHeight = naturalHeight + 'px';
         }
-      });
-    }
-  });
+
+        el.innerHTML = "";
+
+        new Typed(el, {
+          strings: strings,
+          typeSpeed: 50,
+          backSpeed: 30,
+          backDelay: backDelay,
+          loop: loop,
+          contentType: 'html',
+          showCursor: true,
+          cursorChar: '|',
+          onComplete: (self) => {
+            if (!loop) {
+              setTimeout(() => {
+                const cursor = el.nextElementSibling;
+                if (cursor && cursor.classList.contains("typed-cursor")) {
+                  cursor.style.transition = "opacity 0.5s ease";
+                  cursor.style.opacity = "0";
+                  setTimeout(() => cursor.remove(), 500);
+                }
+              }, 800);
+            }
+          }
+        });
+      }
+    });
+  };
+
+  // document.fonts.ready guarantees Playfair Display is applied before we
+  // measure. Without this, offsetHeight reflects the fallback font and the
+  // locked min-height is wrong, causing the visible wiggle.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(initTyped);
+  } else {
+    // Older-browser fallback: small delay to let fonts settle
+    setTimeout(initTyped, 200);
+  }
 });

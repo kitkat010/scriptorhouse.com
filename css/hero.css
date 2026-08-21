@@ -205,6 +205,8 @@
   line-height: 1.02;
   color: var(--white);
   margin-bottom: 30px;
+  /* Reserve full h1 height upfront — prevents page wiggle during Typed.js animation */
+  min-height: calc(92px * 1.02 * 1); /* 1 line at max size */
 }
 
 .hero-content h1 .highlight {
