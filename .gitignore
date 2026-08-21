@@ -3,3 +3,7 @@
 logs/
 .DS_Store
 Thumbs.db
+
+# Videos over 100MB (Exceeds GitHub limit unless using Git LFS)
+videos/Mike McCarthy - Video Testimony.MOV
+videos/Manuel Pelaez - short version.MOV

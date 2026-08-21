@@ -164,9 +164,25 @@ function grToggle(btn) {
     : 'Read more <i class="fa-solid fa-chevron-down"></i>';
 }
 
+/* ── Single video active player handler ── */
+function initVideoPlayers() {
+  const allVideos = document.querySelectorAll('video');
+  allVideos.forEach(vid => {
+    vid.addEventListener('play', () => {
+      allVideos.forEach(otherVid => {
+        if (otherVid !== vid && !otherVid.paused) {
+          otherVid.pause();
+        }
+      });
+    });
+  });
+}
+
 /* ── Init all carousels on DOM ready ── */
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.rv-carousel').forEach(el => new RvCarousel(el));
   initHeroQuoteAnimation();
+  initVideoPlayers();
 });
+
 
