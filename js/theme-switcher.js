@@ -1,85 +1,89 @@
 /**
- * Scriptor House - Live Metallic Theme Switcher
- * Allows real-time previewing and switching between metallic and luxury background styles.
+ * Scriptor House - Live Theme Switcher
+ * Two tabs: Background Themes + Color Palettes
  */
 
 (function () {
   'use strict';
 
-  const THEMES = [
-    { id: 'theme-titanium', label: 'Titanium', icon: 'fa-solid fa-shield-halved' },
-    { id: 'theme-obsidian', label: 'Obsidian', icon: 'fa-solid fa-gem' },
-    { id: 'theme-chrome', label: 'Chrome', icon: 'fa-solid fa-wand-magic-sparkles' },
-    { id: 'theme-carbon', label: 'Carbon Mesh', icon: 'fa-solid fa-layer-group' },
-    { id: 'theme-bronze', label: 'Bronze Ore', icon: 'fa-solid fa-coins' },
-    { id: 'theme-damask', label: 'Royal Filigree', icon: 'fa-solid fa-crown' },
-    { id: 'theme-hexgrid', label: 'Hex Matrix', icon: 'fa-solid fa-cubes' },
-    { id: 'theme-nebula', label: 'Cosmic Nebula', icon: 'fa-solid fa-meteor' },
-    { id: 'theme-original', label: 'Original', icon: 'fa-solid fa-rotate-left' }
+  /* ── Background Themes ── */
+  const BG_THEMES = [
+    { id: 'theme-titanium',  label: 'Titanium',      icon: 'fa-solid fa-shield-halved' },
+    { id: 'theme-obsidian',  label: 'Obsidian',      icon: 'fa-solid fa-gem' },
+    { id: 'theme-chrome',    label: 'Chrome',        icon: 'fa-solid fa-wand-magic-sparkles' },
+    { id: 'theme-carbon',    label: 'Carbon Mesh',   icon: 'fa-solid fa-layer-group' },
+    { id: 'theme-bronze',    label: 'Bronze Ore',    icon: 'fa-solid fa-coins' },
+    { id: 'theme-damask',    label: 'Royal Filigree',icon: 'fa-solid fa-crown' },
+    { id: 'theme-hexgrid',   label: 'Hex Matrix',    icon: 'fa-solid fa-cubes' },
+    { id: 'theme-nebula',    label: 'Cosmic Nebula', icon: 'fa-solid fa-meteor' },
+    { id: 'theme-original',  label: 'Original',      icon: 'fa-solid fa-rotate-left' }
   ];
 
-  function getActiveTheme() {
-    for (const t of THEMES) {
-      if (document.body.classList.contains(t.id)) {
-        return t.id;
-      }
-    }
-    const saved = localStorage.getItem('sh_preview_theme');
-    if (saved && THEMES.some(t => t.id === saved)) {
-      return saved;
-    }
-    return 'theme-titanium';
-  }
+  /* ── Color Palettes ── */
+  const PALETTES = [
+    { id: 'palette-gold',    label: 'Gold',           swatch: '#FFC800', icon: 'fa-solid fa-star' },
+    { id: 'palette-crimson', label: 'Royal Crimson',  swatch: '#C0392B', icon: 'fa-solid fa-heart' },
+    { id: 'palette-sapphire',label: 'Sapphire Elite', swatch: '#2E86DE', icon: 'fa-solid fa-droplet' },
+    { id: 'palette-silver',  label: 'Platinum Silver',swatch: '#D8D8D8', icon: 'fa-solid fa-circle' },
+    { id: 'palette-emerald', label: 'Emerald Scholar',swatch: '#27AE60', icon: 'fa-solid fa-leaf' },
+    { id: 'palette-amber',   label: 'Amber Prestige', swatch: '#E67E22', icon: 'fa-solid fa-fire' },
+    { id: 'palette-violet',  label: 'Cosmic Violet',  swatch: '#8E44AD', icon: 'fa-solid fa-moon' },
+  ];
 
-  function applyTheme(themeId) {
-    THEMES.forEach(t => document.body.classList.remove(t.id));
-    document.body.classList.add(themeId);
-    localStorage.setItem('sh_preview_theme', themeId);
+  const ALL_THEMES = [...BG_THEMES, ...PALETTES];
 
-    // Update active button state
-    document.querySelectorAll('.sh-theme-btn').forEach(btn => {
-      if (btn.getAttribute('data-theme') === themeId) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+  /* ── Apply background theme ── */
+  function applyBgTheme(id) {
+    BG_THEMES.forEach(t => document.body.classList.remove(t.id));
+    document.body.classList.add(id);
+    localStorage.setItem('sh_bg_theme', id);
+    document.querySelectorAll('[data-bg-theme]').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-bg-theme') === id);
     });
   }
 
+  /* ── Apply color palette ── */
+  function applyPalette(id) {
+    PALETTES.forEach(p => document.body.classList.remove(p.id));
+    document.body.classList.add(id);
+    localStorage.setItem('sh_palette', id);
+    document.querySelectorAll('[data-palette]').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-palette') === id);
+    });
+  }
+
+  /* ── Init ── */
   function initThemeSwitcher() {
-    let activeTheme = '';
-    for (const t of THEMES) {
-      if (document.body.classList.contains(t.id)) {
-        activeTheme = t.id;
-        break;
-      }
-    }
 
-    const saved = localStorage.getItem('sh_preview_theme');
-    if (saved && THEMES.some(t => t.id === saved)) {
-      activeTheme = saved;
-    }
+    // Restore saved preferences
+    const savedBg = localStorage.getItem('sh_bg_theme') || 'theme-titanium';
+    const savedPalette = localStorage.getItem('sh_palette') || 'palette-gold';
 
-    if (activeTheme) {
-      THEMES.forEach(t => document.body.classList.remove(t.id));
-      document.body.classList.add(activeTheme);
-    } else {
-      activeTheme = 'theme-titanium';
-      document.body.classList.add(activeTheme);
-    }
+    BG_THEMES.forEach(t => document.body.classList.remove(t.id));
+    document.body.classList.add(savedBg);
+    PALETTES.forEach(p => document.body.classList.remove(p.id));
+    document.body.classList.add(savedPalette);
 
-    // Build switcher DOM
-    const container = document.createElement('div');
-    container.id = 'sh-theme-switcher';
-    container.setAttribute('aria-label', 'Metallic Theme Switcher');
-
-    let buttonsHtml = THEMES.map(t => `
-      <button type="button" class="sh-theme-btn ${t.id === activeTheme ? 'active' : ''}" data-theme="${t.id}" title="${t.label} Background">
+    // Build HTML
+    const bgButtons = BG_THEMES.map(t => `
+      <button type="button" class="sh-theme-btn ${t.id === savedBg ? 'active' : ''}" data-bg-theme="${t.id}" title="${t.label} Background">
         <span class="sh-theme-indicator"></span>
         <i class="${t.icon}"></i>
         <span>${t.label}</span>
       </button>
     `).join('');
+
+    const paletteButtons = PALETTES.map(p => `
+      <button type="button" class="sh-palette-btn ${p.id === savedPalette ? 'active' : ''}" data-palette="${p.id}" title="${p.label}" style="--swatch:${p.swatch}">
+        <span class="sh-swatch-dot"></span>
+        <i class="${p.icon}"></i>
+        <span>${p.label}</span>
+      </button>
+    `).join('');
+
+    const container = document.createElement('div');
+    container.id = 'sh-theme-switcher';
+    container.setAttribute('aria-label', 'Theme Switcher');
 
     container.innerHTML = `
       <div class="sh-switcher-panel">
@@ -87,7 +91,16 @@
           <i class="fa-solid fa-palette"></i>
           <span>Theme Preview</span>
         </div>
-        ${buttonsHtml}
+        <div class="sh-tabs">
+          <button class="sh-tab active" data-tab="bg"><i class="fa-solid fa-image"></i> Background</button>
+          <button class="sh-tab" data-tab="palette"><i class="fa-solid fa-swatchbook"></i> Color Palette</button>
+        </div>
+        <div class="sh-tab-content" id="sh-tab-bg">
+          ${bgButtons}
+        </div>
+        <div class="sh-tab-content sh-hidden" id="sh-tab-palette">
+          ${paletteButtons}
+        </div>
       </div>
       <button type="button" class="sh-switcher-toggle-btn" title="Toggle Theme Bar">
         <i class="fa-solid fa-palette"></i>
@@ -96,14 +109,27 @@
 
     document.body.appendChild(container);
 
-    // Add event listeners
-    container.querySelectorAll('.sh-theme-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const themeId = btn.getAttribute('data-theme');
-        applyTheme(themeId);
+    // Tab switching
+    container.querySelectorAll('.sh-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        container.querySelectorAll('.sh-tab').forEach(t => t.classList.remove('active'));
+        container.querySelectorAll('.sh-tab-content').forEach(c => c.classList.add('sh-hidden'));
+        tab.classList.add('active');
+        document.getElementById(`sh-tab-${tab.getAttribute('data-tab')}`).classList.remove('sh-hidden');
       });
     });
 
+    // Background theme buttons
+    container.querySelectorAll('[data-bg-theme]').forEach(btn => {
+      btn.addEventListener('click', () => applyBgTheme(btn.getAttribute('data-bg-theme')));
+    });
+
+    // Palette buttons
+    container.querySelectorAll('[data-palette]').forEach(btn => {
+      btn.addEventListener('click', () => applyPalette(btn.getAttribute('data-palette')));
+    });
+
+    // Toggle open/close
     const toggleBtn = container.querySelector('.sh-switcher-toggle-btn');
     toggleBtn.addEventListener('click', () => {
       container.classList.toggle('collapsed');
