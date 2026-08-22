@@ -367,141 +367,431 @@ body.theme-original {
 }
 
 /* ==========================================================================
-   COLOR PALETTE THEMES
-   Overrides --primary and related accent variables site-wide
+   COLOR PALETTE THEMES (Curated from Reference Images)
+   Applies accents, gradients, card backgrounds, borders, glows & buttons
    ========================================================================== */
 
-/* Default: Gold (built into :root, no override needed) */
-body.palette-gold {
+/* Shared Card & Component Transitions */
+.why-card, .service-card, .comparison-card, .process-card, 
+.transparency-card, .trust-card, .output-warning-card, .laurel-card, 
+.security-card, .hero-visual-card, .award-pillar, .faq-item,
+.review-card, .video-testimonial-card, .video-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* --------------------------------------------------------------------------
+   PALETTE 1: CLASSIC LUXURY GOLD (Original Scriptor House)
+   #FFC800 / #D6A700 / #050505
+   -------------------------------------------------------------------------- */
+body.palette-classic-gold {
   --primary: #FFC800;
   --primary-dark: #d6a700;
 }
 
-/* 🔴 Royal Crimson */
-body.palette-crimson {
-  --primary: #E74C3C;
-  --primary-dark: #C0392B;
+/* --------------------------------------------------------------------------
+   PALETTE 2: MIDNIGHT & AMBER (Image 1: #FCA311 & #14213D)
+   Vibrant Amber Glow with Deep Midnight Blue Shadows
+   -------------------------------------------------------------------------- */
+body.palette-midnight-gold {
+  --primary: #FCA311;
+  --primary-dark: #d88200;
 }
-body.palette-crimson .sh-theme-btn.active,
-body.palette-crimson .sh-palette-btn.active {
-  background: linear-gradient(135deg, rgba(231,76,60,0.24), rgba(231,76,60,0.08));
-  border-color: rgba(231,76,60,0.7);
-  color: #E74C3C;
-  box-shadow: 0 0 14px rgba(231,76,60,0.28);
-}
-body.palette-crimson .sh-theme-btn.active .sh-theme-indicator,
-body.palette-crimson .sh-palette-btn.active .sh-swatch-dot {
-  background: #E74C3C;
-  box-shadow: 0 0 8px #E74C3C;
-}
-body.palette-crimson .sh-switcher-title { color: #E74C3C; }
-body.palette-crimson .sh-switcher-toggle-btn { box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(231,76,60,0.18); }
-body.palette-crimson .sh-switcher-toggle-btn:hover { color: #E74C3C; border-color: rgba(231,76,60,0.5); }
+body.palette-midnight-gold .glow-1 { background: #14213D !important; opacity: 0.22 !important; }
+body.palette-midnight-gold .glow-2 { background: #FCA311 !important; opacity: 0.12 !important; }
+body.palette-midnight-gold .glow-3 { background: #E5E5E5 !important; opacity: 0.08 !important; }
 
-/* 🔵 Sapphire Elite */
-body.palette-sapphire {
-  --primary: #2E86DE;
-  --primary-dark: #1a6dbf;
+body.palette-midnight-gold .section-tag {
+  background: rgba(20, 33, 61, 0.65) !important;
+  border-color: rgba(252, 163, 17, 0.45) !important;
+  color: #FCA311 !important;
+  box-shadow: 0 4px 16px rgba(20, 33, 61, 0.5) !important;
 }
-body.palette-sapphire .sh-theme-btn.active,
-body.palette-sapphire .sh-palette-btn.active {
-  background: linear-gradient(135deg, rgba(46,134,222,0.24), rgba(46,134,222,0.08));
-  border-color: rgba(46,134,222,0.7);
-  color: #2E86DE;
-  box-shadow: 0 0 14px rgba(46,134,222,0.28);
+body.palette-midnight-gold .btn {
+  background: linear-gradient(135deg, #FCA311, #d88200) !important;
+  color: #050505 !important;
+  box-shadow: 0 10px 25px rgba(252, 163, 17, 0.28) !important;
 }
-body.palette-sapphire .sh-theme-btn.active .sh-theme-indicator,
-body.palette-sapphire .sh-palette-btn.active .sh-swatch-dot {
-  background: #2E86DE;
-  box-shadow: 0 0 8px #2E86DE;
+body.palette-midnight-gold .btn:hover {
+  box-shadow: 0 14px 30px rgba(252, 163, 17, 0.45) !important;
 }
-body.palette-sapphire .sh-switcher-title { color: #2E86DE; }
-body.palette-sapphire .sh-switcher-toggle-btn { box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(46,134,222,0.18); }
-body.palette-sapphire .sh-switcher-toggle-btn:hover { color: #2E86DE; border-color: rgba(46,134,222,0.5); }
+body.palette-midnight-gold .btn-outline {
+  background: transparent !important;
+  border-color: rgba(252, 163, 17, 0.45) !important;
+  color: #FCA311 !important;
+}
+body.palette-midnight-gold .btn-outline:hover {
+  background: #FCA311 !important;
+  color: #050505 !important;
+  box-shadow: 0 8px 24px rgba(252, 163, 17, 0.3) !important;
+}
 
-/* ⚪ Platinum Silver */
-body.palette-silver {
-  --primary: #D8D8D8;
-  --primary-dark: #b0b0b0;
+/* Midnight & Amber Cards */
+body.palette-midnight-gold .why-card,
+body.palette-midnight-gold .service-card,
+body.palette-midnight-gold .comparison-card,
+body.palette-midnight-gold .process-card,
+body.palette-midnight-gold .transparency-card,
+body.palette-midnight-gold .trust-card,
+body.palette-midnight-gold .output-warning-card,
+body.palette-midnight-gold .laurel-card,
+body.palette-midnight-gold .security-card,
+body.palette-midnight-gold .hero-visual-card,
+body.palette-midnight-gold .award-pillar,
+body.palette-midnight-gold .faq-item,
+body.palette-midnight-gold .review-card,
+body.palette-midnight-gold .video-testimonial-card {
+  background: linear-gradient(145deg, rgba(20, 33, 61, 0.38) 0%, rgba(8, 12, 20, 0.72) 100%) !important;
+  border-color: rgba(252, 163, 17, 0.16) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(20, 33, 61, 0.3) !important;
 }
-body.palette-silver .sh-theme-btn.active,
-body.palette-silver .sh-palette-btn.active {
-  background: linear-gradient(135deg, rgba(216,216,216,0.2), rgba(216,216,216,0.07));
-  border-color: rgba(216,216,216,0.65);
-  color: #E8E8E8;
-  box-shadow: 0 0 14px rgba(216,216,216,0.22);
+body.palette-midnight-gold .why-card:hover,
+body.palette-midnight-gold .service-card:hover,
+body.palette-midnight-gold .comparison-card:hover,
+body.palette-midnight-gold .process-card:hover,
+body.palette-midnight-gold .transparency-card:hover,
+body.palette-midnight-gold .trust-card:hover,
+body.palette-midnight-gold .output-warning-card:hover,
+body.palette-midnight-gold .laurel-card:hover,
+body.palette-midnight-gold .security-card:hover,
+body.palette-midnight-gold .hero-visual-card:hover,
+body.palette-midnight-gold .award-pillar:hover,
+body.palette-midnight-gold .faq-item:hover,
+body.palette-midnight-gold .review-card:hover,
+body.palette-midnight-gold .video-testimonial-card:hover {
+  border-color: rgba(252, 163, 17, 0.55) !important;
+  background: linear-gradient(145deg, rgba(20, 33, 61, 0.55) 0%, rgba(12, 18, 30, 0.85) 100%) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 26px rgba(252, 163, 17, 0.22), 0 0 35px rgba(20, 33, 61, 0.5) !important;
 }
-body.palette-silver .sh-theme-btn.active .sh-theme-indicator,
-body.palette-silver .sh-palette-btn.active .sh-swatch-dot {
-  background: #D8D8D8;
-  box-shadow: 0 0 8px #D8D8D8;
+body.palette-midnight-gold .award-infographic-frame {
+  border-color: rgba(252, 163, 17, 0.3) !important;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 45px rgba(20, 33, 61, 0.6) !important;
 }
-body.palette-silver .sh-switcher-title { color: #D8D8D8; }
-body.palette-silver .sh-switcher-toggle-btn { box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(216,216,216,0.15); }
-body.palette-silver .sh-switcher-toggle-btn:hover { color: #D8D8D8; border-color: rgba(216,216,216,0.4); }
+body.palette-midnight-gold .sh-switcher-title { color: #FCA311; }
 
-/* 🟢 Emerald Scholar */
-body.palette-emerald {
-  --primary: #27AE60;
-  --primary-dark: #1e8449;
+/* --------------------------------------------------------------------------
+   PALETTE 3: SPRUCE & SAGE (Image 2: #8EB69B, #235347, #0B2B26)
+   Forest Emerald, Deep Spruce Pine & Sage Leaf
+   -------------------------------------------------------------------------- */
+body.palette-spruce-sage {
+  --primary: #8EB69B;
+  --primary-dark: #235347;
 }
-body.palette-emerald .sh-theme-btn.active,
-body.palette-emerald .sh-palette-btn.active {
-  background: linear-gradient(135deg, rgba(39,174,96,0.24), rgba(39,174,96,0.08));
-  border-color: rgba(39,174,96,0.7);
-  color: #27AE60;
-  box-shadow: 0 0 14px rgba(39,174,96,0.28);
-}
-body.palette-emerald .sh-theme-btn.active .sh-theme-indicator,
-body.palette-emerald .sh-palette-btn.active .sh-swatch-dot {
-  background: #27AE60;
-  box-shadow: 0 0 8px #27AE60;
-}
-body.palette-emerald .sh-switcher-title { color: #27AE60; }
-body.palette-emerald .sh-switcher-toggle-btn { box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(39,174,96,0.18); }
-body.palette-emerald .sh-switcher-toggle-btn:hover { color: #27AE60; border-color: rgba(39,174,96,0.5); }
+body.palette-spruce-sage .glow-1 { background: #235347 !important; opacity: 0.25 !important; }
+body.palette-spruce-sage .glow-2 { background: #8EB69B !important; opacity: 0.14 !important; }
+body.palette-spruce-sage .glow-3 { background: #163832 !important; opacity: 0.2 !important; }
 
-/* 🟠 Amber Prestige */
-body.palette-amber {
-  --primary: #E67E22;
-  --primary-dark: #ca6f1e;
+body.palette-spruce-sage .section-tag {
+  background: rgba(11, 43, 38, 0.65) !important;
+  border-color: rgba(142, 182, 155, 0.45) !important;
+  color: #8EB69B !important;
+  box-shadow: 0 4px 16px rgba(11, 43, 38, 0.5) !important;
 }
-body.palette-amber .sh-theme-btn.active,
-body.palette-amber .sh-palette-btn.active {
-  background: linear-gradient(135deg, rgba(230,126,34,0.24), rgba(230,126,34,0.08));
-  border-color: rgba(230,126,34,0.7);
-  color: #E67E22;
-  box-shadow: 0 0 14px rgba(230,126,34,0.28);
+body.palette-spruce-sage .btn {
+  background: linear-gradient(135deg, #8EB69B, #235347) !important;
+  color: #04120e !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 25px rgba(142, 182, 155, 0.25) !important;
 }
-body.palette-amber .sh-theme-btn.active .sh-theme-indicator,
-body.palette-amber .sh-palette-btn.active .sh-swatch-dot {
-  background: #E67E22;
-  box-shadow: 0 0 8px #E67E22;
+body.palette-spruce-sage .btn:hover {
+  box-shadow: 0 14px 30px rgba(142, 182, 155, 0.4) !important;
 }
-body.palette-amber .sh-switcher-title { color: #E67E22; }
-body.palette-amber .sh-switcher-toggle-btn { box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(230,126,34,0.18); }
-body.palette-amber .sh-switcher-toggle-btn:hover { color: #E67E22; border-color: rgba(230,126,34,0.5); }
+body.palette-spruce-sage .btn-outline {
+  background: transparent !important;
+  border-color: rgba(142, 182, 155, 0.45) !important;
+  color: #8EB69B !important;
+}
+body.palette-spruce-sage .btn-outline:hover {
+  background: #8EB69B !important;
+  color: #04120e !important;
+  box-shadow: 0 8px 24px rgba(142, 182, 155, 0.3) !important;
+}
 
-/* 🟣 Cosmic Violet */
-body.palette-violet {
-  --primary: #9B59B6;
-  --primary-dark: #7d3c98;
+/* Spruce & Sage Cards */
+body.palette-spruce-sage .why-card,
+body.palette-spruce-sage .service-card,
+body.palette-spruce-sage .comparison-card,
+body.palette-spruce-sage .process-card,
+body.palette-spruce-sage .transparency-card,
+body.palette-spruce-sage .trust-card,
+body.palette-spruce-sage .output-warning-card,
+body.palette-spruce-sage .laurel-card,
+body.palette-spruce-sage .security-card,
+body.palette-spruce-sage .hero-visual-card,
+body.palette-spruce-sage .award-pillar,
+body.palette-spruce-sage .faq-item,
+body.palette-spruce-sage .review-card,
+body.palette-spruce-sage .video-testimonial-card {
+  background: linear-gradient(145deg, rgba(22, 56, 50, 0.35) 0%, rgba(8, 22, 19, 0.75) 100%) !important;
+  border-color: rgba(142, 182, 155, 0.16) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(22, 56, 50, 0.25) !important;
 }
-body.palette-violet .sh-theme-btn.active,
-body.palette-violet .sh-palette-btn.active {
-  background: linear-gradient(135deg, rgba(155,89,182,0.24), rgba(155,89,182,0.08));
-  border-color: rgba(155,89,182,0.7);
-  color: #9B59B6;
-  box-shadow: 0 0 14px rgba(155,89,182,0.28);
+body.palette-spruce-sage .why-card:hover,
+body.palette-spruce-sage .service-card:hover,
+body.palette-spruce-sage .comparison-card:hover,
+body.palette-spruce-sage .process-card:hover,
+body.palette-spruce-sage .transparency-card:hover,
+body.palette-spruce-sage .trust-card:hover,
+body.palette-spruce-sage .output-warning-card:hover,
+body.palette-spruce-sage .laurel-card:hover,
+body.palette-spruce-sage .security-card:hover,
+body.palette-spruce-sage .hero-visual-card:hover,
+body.palette-spruce-sage .award-pillar:hover,
+body.palette-spruce-sage .faq-item:hover,
+body.palette-spruce-sage .review-card:hover,
+body.palette-spruce-sage .video-testimonial-card:hover {
+  border-color: rgba(142, 182, 155, 0.6) !important;
+  background: linear-gradient(145deg, rgba(35, 83, 71, 0.5) 0%, rgba(11, 43, 38, 0.85) 100%) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 28px rgba(142, 182, 155, 0.22), 0 0 35px rgba(35, 83, 71, 0.4) !important;
 }
-body.palette-violet .sh-theme-btn.active .sh-theme-indicator,
-body.palette-violet .sh-palette-btn.active .sh-swatch-dot {
-  background: #9B59B6;
-  box-shadow: 0 0 8px #9B59B6;
+body.palette-spruce-sage .award-infographic-frame {
+  border-color: rgba(142, 182, 155, 0.32) !important;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 45px rgba(22, 56, 50, 0.5) !important;
 }
-body.palette-violet .sh-switcher-title { color: #9B59B6; }
-body.palette-violet .sh-switcher-toggle-btn { box-shadow: 0 8px 20px rgba(0,0,0,0.5), 0 0 10px rgba(155,89,182,0.18); }
-body.palette-violet .sh-switcher-toggle-btn:hover { color: #9B59B6; border-color: rgba(155,89,182,0.5); }
+body.palette-spruce-sage .sh-switcher-title { color: #8EB69B; }
+
+/* --------------------------------------------------------------------------
+   PALETTE 4: TERRACOTTA & SLATE (Image 3: #FFB162, #A35139, #2C3B4D)
+   Warm Ochre, Terracotta Clay & Architectural Slate
+   -------------------------------------------------------------------------- */
+body.palette-terracotta-slate {
+  --primary: #FFB162;
+  --primary-dark: #A35139;
+}
+body.palette-terracotta-slate .glow-1 { background: #2C3B4D !important; opacity: 0.25 !important; }
+body.palette-terracotta-slate .glow-2 { background: #FFB162 !important; opacity: 0.13 !important; }
+body.palette-terracotta-slate .glow-3 { background: #A35139 !important; opacity: 0.16 !important; }
+
+body.palette-terracotta-slate .section-tag {
+  background: rgba(44, 59, 77, 0.65) !important;
+  border-color: rgba(255, 177, 98, 0.45) !important;
+  color: #FFB162 !important;
+  box-shadow: 0 4px 16px rgba(44, 59, 77, 0.5) !important;
+}
+body.palette-terracotta-slate .btn {
+  background: linear-gradient(135deg, #FFB162, #A35139) !important;
+  color: #120c08 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 25px rgba(255, 177, 98, 0.28) !important;
+}
+body.palette-terracotta-slate .btn:hover {
+  box-shadow: 0 14px 30px rgba(255, 177, 98, 0.45) !important;
+}
+body.palette-terracotta-slate .btn-outline {
+  background: transparent !important;
+  border-color: rgba(255, 177, 98, 0.45) !important;
+  color: #FFB162 !important;
+}
+body.palette-terracotta-slate .btn-outline:hover {
+  background: #FFB162 !important;
+  color: #120c08 !important;
+  box-shadow: 0 8px 24px rgba(255, 177, 98, 0.3) !important;
+}
+
+/* Terracotta & Slate Cards */
+body.palette-terracotta-slate .why-card,
+body.palette-terracotta-slate .service-card,
+body.palette-terracotta-slate .comparison-card,
+body.palette-terracotta-slate .process-card,
+body.palette-terracotta-slate .transparency-card,
+body.palette-terracotta-slate .trust-card,
+body.palette-terracotta-slate .output-warning-card,
+body.palette-terracotta-slate .laurel-card,
+body.palette-terracotta-slate .security-card,
+body.palette-terracotta-slate .hero-visual-card,
+body.palette-terracotta-slate .award-pillar,
+body.palette-terracotta-slate .faq-item,
+body.palette-terracotta-slate .review-card,
+body.palette-terracotta-slate .video-testimonial-card {
+  background: linear-gradient(145deg, rgba(44, 59, 77, 0.35) 0%, rgba(27, 38, 50, 0.7) 100%) !important;
+  border-color: rgba(255, 177, 98, 0.16) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(44, 59, 77, 0.25) !important;
+}
+body.palette-terracotta-slate .why-card:hover,
+body.palette-terracotta-slate .service-card:hover,
+body.palette-terracotta-slate .comparison-card:hover,
+body.palette-terracotta-slate .process-card:hover,
+body.palette-terracotta-slate .transparency-card:hover,
+body.palette-terracotta-slate .trust-card:hover,
+body.palette-terracotta-slate .output-warning-card:hover,
+body.palette-terracotta-slate .laurel-card:hover,
+body.palette-terracotta-slate .security-card:hover,
+body.palette-terracotta-slate .hero-visual-card:hover,
+body.palette-terracotta-slate .award-pillar:hover,
+body.palette-terracotta-slate .faq-item:hover,
+body.palette-terracotta-slate .review-card:hover,
+body.palette-terracotta-slate .video-testimonial-card:hover {
+  border-color: rgba(255, 177, 98, 0.58) !important;
+  background: linear-gradient(145deg, rgba(56, 74, 96, 0.52) 0%, rgba(35, 48, 64, 0.85) 100%) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 28px rgba(255, 177, 98, 0.22), 0 0 35px rgba(44, 59, 77, 0.45) !important;
+}
+body.palette-terracotta-slate .award-infographic-frame {
+  border-color: rgba(255, 177, 98, 0.3) !important;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 45px rgba(44, 59, 77, 0.5) !important;
+}
+body.palette-terracotta-slate .sh-switcher-title { color: #FFB162; }
+
+/* --------------------------------------------------------------------------
+   PALETTE 5: CYBER FLAME & CARBON (Image 4: #E85002, #C10801, #333333)
+   High-Octane Cinematic Orange & Flame Gradient
+   -------------------------------------------------------------------------- */
+body.palette-cyber-orange {
+  --primary: #E85002;
+  --primary-dark: #C10801;
+}
+body.palette-cyber-orange .glow-1 { background: #C10801 !important; opacity: 0.22 !important; }
+body.palette-cyber-orange .glow-2 { background: #E85002 !important; opacity: 0.14 !important; }
+body.palette-cyber-orange .glow-3 { background: #646464 !important; opacity: 0.1 !important; }
+
+body.palette-cyber-orange .section-tag {
+  background: rgba(51, 51, 51, 0.65) !important;
+  border-color: rgba(232, 80, 2, 0.5) !important;
+  color: #E85002 !important;
+  box-shadow: 0 4px 16px rgba(193, 8, 1, 0.35) !important;
+}
+body.palette-cyber-orange .btn {
+  background: linear-gradient(135deg, #F16001, #C10801) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 25px rgba(232, 80, 2, 0.35) !important;
+}
+body.palette-cyber-orange .btn:hover {
+  box-shadow: 0 14px 32px rgba(232, 80, 2, 0.55) !important;
+}
+body.palette-cyber-orange .btn-outline {
+  background: transparent !important;
+  border-color: rgba(232, 80, 2, 0.5) !important;
+  color: #E85002 !important;
+}
+body.palette-cyber-orange .btn-outline:hover {
+  background: linear-gradient(135deg, #F16001, #C10801) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(232, 80, 2, 0.35) !important;
+}
+
+/* Cyber Flame Cards */
+body.palette-cyber-orange .why-card,
+body.palette-cyber-orange .service-card,
+body.palette-cyber-orange .comparison-card,
+body.palette-cyber-orange .process-card,
+body.palette-cyber-orange .transparency-card,
+body.palette-cyber-orange .trust-card,
+body.palette-cyber-orange .output-warning-card,
+body.palette-cyber-orange .laurel-card,
+body.palette-cyber-orange .security-card,
+body.palette-cyber-orange .hero-visual-card,
+body.palette-cyber-orange .award-pillar,
+body.palette-cyber-orange .faq-item,
+body.palette-cyber-orange .review-card,
+body.palette-cyber-orange .video-testimonial-card {
+  background: linear-gradient(145deg, rgba(51, 51, 51, 0.35) 0%, rgba(15, 15, 15, 0.8) 100%) !important;
+  border-color: rgba(232, 80, 2, 0.16) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(51, 51, 51, 0.3) !important;
+}
+body.palette-cyber-orange .why-card:hover,
+body.palette-cyber-orange .service-card:hover,
+body.palette-cyber-orange .comparison-card:hover,
+body.palette-cyber-orange .process-card:hover,
+body.palette-cyber-orange .transparency-card:hover,
+body.palette-cyber-orange .trust-card:hover,
+body.palette-cyber-orange .output-warning-card:hover,
+body.palette-cyber-orange .laurel-card:hover,
+body.palette-cyber-orange .security-card:hover,
+body.palette-cyber-orange .hero-visual-card:hover,
+body.palette-cyber-orange .award-pillar:hover,
+body.palette-cyber-orange .faq-item:hover,
+body.palette-cyber-orange .review-card:hover,
+body.palette-cyber-orange .video-testimonial-card:hover {
+  border-color: rgba(232, 80, 2, 0.6) !important;
+  background: linear-gradient(145deg, rgba(65, 65, 65, 0.5) 0%, rgba(20, 20, 20, 0.9) 100%) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 30px rgba(232, 80, 2, 0.25), 0 0 35px rgba(193, 8, 1, 0.3) !important;
+}
+body.palette-cyber-orange .award-infographic-frame {
+  border-color: rgba(232, 80, 2, 0.35) !important;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 45px rgba(232, 80, 2, 0.3) !important;
+}
+body.palette-cyber-orange .sh-switcher-title { color: #E85002; }
+
+/* --------------------------------------------------------------------------
+   PALETTE 6: TANGERINE & ESPRESSO (Image 5: #FF6D29, #453027, #161316)
+   Warm Espresso Chocolate & Modern Tangerine
+   -------------------------------------------------------------------------- */
+body.palette-tangerine-espresso {
+  --primary: #FF6D29;
+  --primary-dark: #A83C08;
+}
+body.palette-tangerine-espresso .glow-1 { background: #453027 !important; opacity: 0.28 !important; }
+body.palette-tangerine-espresso .glow-2 { background: #FF6D29 !important; opacity: 0.14 !important; }
+body.palette-tangerine-espresso .glow-3 { background: #161316 !important; opacity: 0.2 !important; }
+
+body.palette-tangerine-espresso .section-tag {
+  background: rgba(69, 48, 39, 0.65) !important;
+  border-color: rgba(255, 109, 41, 0.45) !important;
+  color: #FF6D29 !important;
+  box-shadow: 0 4px 16px rgba(69, 48, 39, 0.5) !important;
+}
+body.palette-tangerine-espresso .btn {
+  background: linear-gradient(135deg, #FF6D29, #A83C08) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 25px rgba(255, 109, 41, 0.3) !important;
+}
+body.palette-tangerine-espresso .btn:hover {
+  box-shadow: 0 14px 30px rgba(255, 109, 41, 0.48) !important;
+}
+body.palette-tangerine-espresso .btn-outline {
+  background: transparent !important;
+  border-color: rgba(255, 109, 41, 0.45) !important;
+  color: #FF6D29 !important;
+}
+body.palette-tangerine-espresso .btn-outline:hover {
+  background: #FF6D29 !important;
+  color: #161316 !important;
+  box-shadow: 0 8px 24px rgba(255, 109, 41, 0.3) !important;
+}
+
+/* Tangerine & Espresso Cards */
+body.palette-tangerine-espresso .why-card,
+body.palette-tangerine-espresso .service-card,
+body.palette-tangerine-espresso .comparison-card,
+body.palette-tangerine-espresso .process-card,
+body.palette-tangerine-espresso .transparency-card,
+body.palette-tangerine-espresso .trust-card,
+body.palette-tangerine-espresso .output-warning-card,
+body.palette-tangerine-espresso .laurel-card,
+body.palette-tangerine-espresso .security-card,
+body.palette-tangerine-espresso .hero-visual-card,
+body.palette-tangerine-espresso .award-pillar,
+body.palette-tangerine-espresso .faq-item,
+body.palette-tangerine-espresso .review-card,
+body.palette-tangerine-espresso .video-testimonial-card {
+  background: linear-gradient(145deg, rgba(69, 48, 39, 0.4) 0%, rgba(22, 19, 22, 0.75) 100%) !important;
+  border-color: rgba(255, 109, 41, 0.16) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(69, 48, 39, 0.25) !important;
+}
+body.palette-tangerine-espresso .why-card:hover,
+body.palette-tangerine-espresso .service-card:hover,
+body.palette-tangerine-espresso .comparison-card:hover,
+body.palette-tangerine-espresso .process-card:hover,
+body.palette-tangerine-espresso .transparency-card:hover,
+body.palette-tangerine-espresso .trust-card:hover,
+body.palette-tangerine-espresso .output-warning-card:hover,
+body.palette-tangerine-espresso .laurel-card:hover,
+body.palette-tangerine-espresso .security-card:hover,
+body.palette-tangerine-espresso .hero-visual-card:hover,
+body.palette-tangerine-espresso .award-pillar:hover,
+body.palette-tangerine-espresso .faq-item:hover,
+body.palette-tangerine-espresso .review-card:hover,
+body.palette-tangerine-espresso .video-testimonial-card:hover {
+  border-color: rgba(255, 109, 41, 0.58) !important;
+  background: linear-gradient(145deg, rgba(85, 59, 48, 0.55) 0%, rgba(30, 24, 30, 0.88) 100%) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 28px rgba(255, 109, 41, 0.22), 0 0 35px rgba(69, 48, 39, 0.45) !important;
+}
+body.palette-tangerine-espresso .award-infographic-frame {
+  border-color: rgba(255, 109, 41, 0.3) !important;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 45px rgba(69, 48, 39, 0.5) !important;
+}
+body.palette-tangerine-espresso .sh-switcher-title { color: #FF6D29; }
+
 
 /* ==========================================================================
    SWITCHER TABS + PALETTE BUTTON STYLES
@@ -541,8 +831,8 @@ body.palette-violet .sh-switcher-toggle-btn:hover { color: #9B59B6; border-color
 }
 
 .sh-tab.active {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.25);
   color: var(--primary, #FFC800);
 }
 
@@ -560,7 +850,7 @@ body.palette-violet .sh-switcher-toggle-btn:hover { color: #9B59B6; border-color
 .sh-palette-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   padding: 7px 12px;
   border-radius: 30px;
   border: 1px solid rgba(255,255,255,0.08);
@@ -581,18 +871,19 @@ body.palette-violet .sh-switcher-toggle-btn:hover { color: #9B59B6; border-color
 }
 
 .sh-palette-btn.active {
-  border-color: color-mix(in srgb, var(--swatch) 70%, transparent);
-  background: color-mix(in srgb, var(--swatch) 18%, transparent);
+  border-color: color-mix(in srgb, var(--swatch) 75%, transparent);
+  background: color-mix(in srgb, var(--swatch) 20%, transparent);
   color: var(--swatch);
-  box-shadow: 0 0 14px color-mix(in srgb, var(--swatch) 35%, transparent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--swatch) 40%, transparent);
 }
 
-.sh-swatch-dot {
-  width: 8px;
-  height: 8px;
+.sh-swatch-split {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--swatch, #FFC800);
-  box-shadow: 0 0 5px var(--swatch, #FFC800);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
   flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.25);
 }
+
 
