@@ -1,0 +1,173 @@
+/* ===========================
+   SCRIPTOR HOUSE FILMS
+=========================== */
+
+.films-section {
+    background:
+        linear-gradient(
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.88)
+        ),
+        url("../images/film-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.films-content {
+    max-width: 700px;
+}
+
+.films-content h2 {
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 35px;
+}
+
+.films-content p {
+    font-size: 17px;
+    color: var(--text);
+    margin-bottom: 28px;
+    line-height: 2;
+}
+
+/* ===========================
+   RIGHT SIDE IMAGE
+=========================== */
+
+.films-image {
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+    min-height: 620px;
+
+    background: var(--gray);
+
+    box-shadow:
+        0 40px 80px rgba(0,0,0,.45);
+}
+
+.films-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 620px;
+    object-fit: cover;
+
+    transition: .7s ease;
+}
+
+.films-image:hover img {
+    transform: scale(1.06);
+}
+
+.films-image::before {
+    content: "";
+
+    position: absolute;
+    inset: 20px;
+
+    border: 1px solid rgba(255,200,0,.35);
+    border-radius: 25px;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.films-section .center-button {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.films-section .btn {
+    min-width: 320px;
+}
+
+/* ===========================
+   GOLD GLOW
+=========================== */
+
+.films-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    background:
+        rgba(255,200,0,.06);
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    top: -250px;
+    right: -250px;
+
+    pointer-events: none;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px) {
+
+    .films-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .films-content {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media(max-width:768px) {
+
+    .films-image,
+    .films-image img {
+        min-height: 420px;
+    }
+
+    .films-content p {
+        font-size: 15px;
+    }
+
+    .films-section .btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media(max-width:500px) {
+
+    .films-image,
+    .films-image img {
+        min-height: 300px;
+    }
+
+    .films-content h2 {
+        font-size: 40px;
+    }
+}

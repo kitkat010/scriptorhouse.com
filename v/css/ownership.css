@@ -1,0 +1,152 @@
+/* ===========================
+   OWNERSHIP SECTION
+=========================== */
+
+.ownership-section {
+    background:
+        linear-gradient(
+            to bottom,
+            #111111,
+            #080808
+        );
+}
+
+.ownership-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 90px;
+    align-items: center;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.ownership-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ownership-circle {
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,200,0,.18),
+            rgba(255,200,0,.04)
+        );
+
+    border:
+        1px solid rgba(255,200,0,.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 80px rgba(255,200,0,.15);
+}
+
+.ownership-circle i {
+    font-size: 120px;
+    color: var(--primary);
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.ownership-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+.ownership-content p {
+    margin-bottom: 24px;
+    font-size: 17px;
+}
+
+/* ===========================
+   BOX
+=========================== */
+
+.ownership-box {
+    margin-top: 45px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 30px;
+
+    padding: 40px;
+}
+
+.ownership-box h3 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.ownership-box ul {
+    list-style: none;
+}
+
+.ownership-box li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.ownership-box li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+    .ownership-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .ownership-content{
+        text-align:center;
+    }
+}
+
+@media(max-width:768px){
+
+    .ownership-circle{
+        width:280px;
+        height:280px;
+    }
+
+    .ownership-circle i{
+        font-size:80px;
+    }
+
+    .ownership-box{
+        padding:30px;
+        text-align:left;
+    }
+}

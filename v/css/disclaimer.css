@@ -1,0 +1,107 @@
+/* ===========================
+   DISCLAIMER SECTION
+=========================== */
+
+.disclaimer-section {
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #080808 100%
+        );
+
+    border-top: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.disclaimer-section .container {
+    max-width: 1100px;
+    text-align: center;
+}
+
+/* ===========================
+   POLICY LINKS
+=========================== */
+
+.policy-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.policy-links a {
+    color: var(--primary);
+    font-weight: 700;
+    transition: .3s;
+    position: relative;
+}
+
+.policy-links a:hover {
+    color: var(--white);
+}
+
+.policy-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary);
+    transition: .3s;
+}
+
+.policy-links a:hover::after {
+    width: 100%;
+}
+
+/* ===========================
+   DISCLAIMER TEXT
+=========================== */
+
+.disclaimer-section p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 2;
+    margin-bottom: 28px;
+}
+
+.disclaimer-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===========================
+   HIGHLIGHT BOX
+=========================== */
+
+.disclaimer-section .container {
+    background: rgba(255,255,255,.02);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 35px;
+    padding: 70px;
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px) {
+
+    .disclaimer-section .container {
+        padding: 45px 30px;
+    }
+
+    .policy-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .disclaimer-section p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,95 @@
+.transparency-section {
+  background:
+    radial-gradient(circle at 80% 35%, rgba(255, 200, 0, .08), transparent 30%),
+    #080808;
+}
+
+.transparency-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.transparency-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.transparency-content p {
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.transparency-content .btn {
+  margin-top: 20px;
+}
+
+.transparency-card {
+  padding: 48px;
+  border-radius: 36px;
+  background:
+    linear-gradient(145deg, rgba(255, 200, 0, .14), rgba(255, 255, 255, .035));
+  border: 1px solid rgba(255, 200, 0, .25);
+  box-shadow: var(--shadow);
+}
+
+.transparency-card h3 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: var(--primary);
+}
+
+.transparency-card ul {
+  list-style: none;
+  display: grid;
+  gap: 20px;
+}
+
+.transparency-card li {
+  position: relative;
+  padding-left: 38px;
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.transparency-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--primary);
+  color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+@media (max-width: 992px) {
+  .transparency-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .transparency-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .transparency-card {
+    padding: 32px;
+  }
+
+  .transparency-card h3 {
+    font-size: 28px;
+  }
+}

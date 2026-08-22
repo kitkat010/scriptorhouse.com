@@ -1,0 +1,205 @@
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    background: #0a0a0a;
+    color: rgba(255, 255, 255, .72);
+    padding: 90px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.footer-grid img {
+    width: 190px;
+    margin-bottom: 25px;
+    /* Keep logo visible on dark bg */
+    filter: brightness(1);
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.footer-grid p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, .52);
+    line-height: 1.8;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+.footer-grid h4 {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.footer-grid h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.footer-grid a {
+    display: block;
+    color: rgba(255, 255, 255, .55);
+    margin-bottom: 14px;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
+.footer-grid a:hover {
+    color: var(--primary);
+    transform: translateX(6px);
+}
+
+/* ===========================
+   SOCIAL ICONS
+=========================== */
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer-socials a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, .65);
+    font-size: 18px;
+    transition: all .35s ease;
+}
+
+.footer-socials a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #111;
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.footer-contact .btn {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    margin-bottom: 28px;
+}
+
+.footer-contact .btn:hover {
+    background: var(--primary);
+    color: #111;
+}
+
+.footer-contact p {
+    color: rgba(255, 255, 255, .52);
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+.footer-contact p i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+/* ===========================
+   COPYRIGHT
+=========================== */
+
+.copyright {
+    margin-top: 70px;
+    padding: 26px;
+    background: #050505;
+    color: var(--primary);
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 992px) {
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    footer {
+        padding-top: 70px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .footer-grid img {
+        margin: 0 auto 25px;
+    }
+
+    .footer-grid h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-grid a:hover {
+        transform: none;
+    }
+
+    .footer-contact .btn {
+        width: 100%;
+    }
+
+}
