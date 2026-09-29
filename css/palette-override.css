@@ -1,61 +1,62 @@
 /*
  * ==========================================================================
- * SCRIPTOR HOUSE — ESPRESSO & CARAMEL LATTE (WARM MODERN LUXURY)
+ * SCRIPTOR HOUSE — BURNT SIENNA MACCHIATO (COFFEE LUXURY)
  * Palette Reference:
- *   #2B1D17 — Espresso (Primary Section & Page Background)
- *   #20140F — Deep Roasted Espresso (Alternating Section Background)
- *   #3E281F — Dark Mocha (Card Surface Background)
- *   #503429 — Elevated Mocha (Card Hover Surface)
- *   #6B4A3A — Mocha (Secondary Borders / Button Hover Gradient)
- *   #C48A5A — Caramel (Primary Accents / Buttons / Icons / Checkmarks)
- *   #E7D6C1 — Latte (Soft Body Text / Sub-labels)
- *   #FAF6F0 — Cream (Crisp Typography / Headings)
+ *   #261309 — Deep Espresso (Primary Section & Page Background)
+ *   #1C0D05 — Roasted Black Espresso (Alternating Section Background)
+ *   #3A1E0F — Dark Mocha (Card Surface Background)
+ *   #4E2811 — Elevated Mocha (Card Hover Surface)
+ *   #A05510 — Rich Espresso Brown (Secondary Borders / Button Hover Gradient)
+ *   #F0922A — Burnt Sienna (Primary Accents / Buttons / Icons / Checkmarks)
+ *   #EBD2C3 — Warm Latte (Soft Body Text / Sub-labels)
+ *   #FAF3EE — Cream (Crisp Typography / Headings)
  *
  * Applies to: index.html & services.html
  * ==========================================================================
  */
 
 /* ─────────────────────────────────────────────────────
-   1. GLOBAL FOUNDATION & BODY (WARM ESPRESSO LUXURY)
+   1. GLOBAL FOUNDATION & BODY (DEEP ESPRESSO LUXURY)
    ───────────────────────────────────────────────────── */
 body {
-  background-color: #2B1D17;
-  color: rgba(231, 214, 193, 0.88);
+  background-color: #261309;
+  color: rgba(235, 210, 195, 0.88);
 }
 
 /* ─────────────────────────────────────────────────────
    2. HERO SECTION — CINEMATIC DARK
    ───────────────────────────────────────────────────── */
-.hero-section {
-  background: #1F130E !important;
+.hero-section,
+.services-hero-section {
+  background: transparent !important;
 }
 
 .hero-content h1 {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 .hero-content h1 .highlight,
 .hero-content h1 strong {
-  color: #C48A5A !important;
+  color: #F0922A !important;
 }
 
 .hero-content p {
-  color: rgba(231, 214, 193, 0.85) !important;
+  color: rgba(235, 210, 195, 0.85) !important;
 }
 
 .hero-stats span {
-  color: #C48A5A !important;
+  color: #F0922A !important;
 }
 
 .hero-stats p {
-  color: rgba(231, 214, 193, 0.72) !important;
+  color: rgba(235, 210, 195, 0.72) !important;
 }
 
 .hero-visual-card {
-  background: rgba(62, 40, 31, 0.88) !important;
-  border: 1px solid rgba(196, 138, 90, 0.35) !important;
+  background: rgba(58, 30, 15, 0.88) !important;
+  border: 1px solid rgba(240, 146, 42, 0.35) !important;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65) !important;
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -63,9 +64,9 @@ body {
    ───────────────────────────────────────────────────── */
 .section-tag {
   display: inline-block !important;
-  color: #C48A5A !important;
-  background: rgba(196, 138, 90, 0.12) !important;
-  border: 1px solid rgba(196, 138, 90, 0.30) !important;
+  color: #F0922A !important;
+  background: rgba(240, 146, 42, 0.12) !important;
+  border: 1px solid rgba(240, 146, 42, 0.30) !important;
   font-size: 12px !important;
   font-weight: 800 !important;
   letter-spacing: 3px !important;
@@ -97,13 +98,13 @@ body {
 .book-anatomy-section h2,
 .services-transparency-section h2,
 .services-cta-section h2 {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 /* Highlighted spans in section headings */
 h1 .highlight, h2 .highlight, h3 .highlight,
 h1 strong, h2 strong, h3 strong {
-  color: #C48A5A !important;
+  color: #F0922A !important;
 }
 
 /* Section body paragraphs (Outside of Cards) */
@@ -123,11 +124,14 @@ h1 strong, h2 strong, h3 strong {
 .comparison-section > .container > p,
 .book-anatomy-section > .container > p,
 .services-transparency-section > .container > p {
-  color: rgba(231, 214, 193, 0.85) !important;
+  color: rgba(235, 210, 195, 0.85) !important;
 }
 
 /* ─────────────────────────────────────────────────────
-   4. SECTION BACKGROUNDS (WARM ESPRESSO RHYTHM)
+   4. SECTION BACKGROUNDS (LIVE CINEMATIC BACKGROUND COMPATIBLE)
+   Allows the animated cinematic canvas, projector beams, film grain,
+   floating bokeh dust, and ambient glows to flow seamlessly through
+   the page without flat solid blocks covering them.
    ───────────────────────────────────────────────────── */
 .trust-section,
 .why-matters-section,
@@ -135,8 +139,9 @@ h1 strong, h2 strong, h3 strong {
 .proof-section,
 .publishing-position-section,
 .services-transparency-section {
-  background-color: #2B1D17 !important;
+  background-color: transparent !important;
   background-image: none !important;
+  position: relative;
 }
 
 .what-section,
@@ -146,31 +151,35 @@ h1 strong, h2 strong, h3 strong {
 .faq-section,
 .comparison-section,
 .book-anatomy-section {
-  background-color: #20140F !important;
+  background-color: rgba(28, 13, 5, 0.35) !important;
   background-image: none !important;
+  position: relative;
 }
 
 .industry-section,
 .transparency-section,
 .final-cta-section,
 .services-cta-section {
-  background-color: #261812 !important;
+  background-color: rgba(33, 16, 7, 0.45) !important;
   background-image: none !important;
+  position: relative;
 }
 
 /* Award Showcase banner */
 .award-showcase-wrap {
-  background-color: #20140F !important;
-  border-top: 1px solid rgba(196, 138, 90, 0.20) !important;
-  border-bottom: 1px solid rgba(196, 138, 90, 0.20) !important;
+  background-color: rgba(28, 13, 5, 0.65) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(240, 146, 42, 0.20) !important;
+  border-bottom: 1px solid rgba(240, 146, 42, 0.20) !important;
 }
 
 .award-showcase-wrap::before {
-  background: linear-gradient(90deg, transparent, rgba(196, 138, 90, 0.65), transparent) !important;
+  background: linear-gradient(90deg, transparent, rgba(240, 146, 42, 0.65), transparent) !important;
 }
 
 /* ─────────────────────────────────────────────────────
-   5. ALL CARDS — DARK MOCHA (#3E281F) WITH CARAMEL TRIM
+   5. ALL CARDS — FROSTED DARK MOCHA GLASS WITH BURNT SIENNA TRIM
    ───────────────────────────────────────────────────── */
 
 /* Unified Card Container Styling */
@@ -191,8 +200,10 @@ h1 strong, h2 strong, h3 strong {
 .output-quote,
 .output-question,
 .trust-question {
-  background: #3E281F !important;
-  border: 1px solid rgba(196, 138, 90, 0.24) !important;
+  background: rgba(58, 30, 15, 0.85) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(240, 146, 42, 0.24) !important;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.50) !important;
   border-radius: 28px;
 }
@@ -207,9 +218,9 @@ h1 strong, h2 strong, h3 strong {
 .laurel-card:hover,
 .faq-item:hover,
 .comparison-card:hover {
-  background: #503429 !important;
-  border-color: rgba(196, 138, 90, 0.55) !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 25px rgba(196, 138, 90, 0.15) !important;
+  background: rgba(78, 40, 17, 0.92) !important;
+  border-color: rgba(240, 146, 42, 0.55) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 25px rgba(240, 146, 42, 0.18) !important;
   transform: translateY(-5px);
 }
 
@@ -229,7 +240,7 @@ h1 strong, h2 strong, h3 strong {
 .laurel-text,
 .award-pillar h4,
 .output-question span {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 /* Card Body Text / Paragraphs */
@@ -246,7 +257,7 @@ h1 strong, h2 strong, h3 strong {
 .award-pillar p,
 .output-proof-statement p,
 .output-quote p {
-  color: rgba(231, 214, 193, 0.88) !important;
+  color: rgba(235, 210, 195, 0.88) !important;
 }
 
 /* Card Accent Labels & Numbers */
@@ -259,7 +270,7 @@ h1 strong, h2 strong, h3 strong {
 .trust-question span,
 .laurel-icon,
 .typed-cursor {
-  color: #C48A5A !important;
+  color: #F0922A !important;
 }
 
 /* Card Icons */
@@ -268,32 +279,79 @@ h1 strong, h2 strong, h3 strong {
 .process-card i,
 .award-pillar i,
 .trust-card i {
-  color: #C48A5A !important;
+  color: #F0922A !important;
 }
 
 .why-icon {
-  background: rgba(196, 138, 90, 0.16) !important;
-  border: 1px solid rgba(196, 138, 90, 0.28) !important;
+  background: rgba(240, 146, 42, 0.16) !important;
+  border: 1px solid rgba(240, 146, 42, 0.28) !important;
 }
 
 /* ─────────────────────────────────────────────────────
    7. SPECIFIC COMPONENT REFINEMENTS
    ───────────────────────────────────────────────────── */
 
-/* Comparison Section (Index) */
+/* Comparison Section (Index & Services) */
 .comparison-card.old-way,
-.comparison-card.new-way {
-  background: #3E281F !important;
-  border: 1px solid rgba(196, 138, 90, 0.25) !important;
+.comparison-card.traditional,
+.comparison-card.self {
+  background: rgba(46, 23, 11, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(240, 146, 42, 0.25) !important;
 }
 
-.comparison-card.new-way {
-  border-color: rgba(196, 138, 90, 0.55) !important;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.50), 0 0 25px rgba(196, 138, 90, 0.15) !important;
+.comparison-card.new-way,
+.comparison-card.partnership {
+  background: linear-gradient(160deg, rgba(74, 38, 18, 0.94), rgba(46, 22, 10, 0.98)) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid rgba(240, 146, 42, 0.65) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.60), 0 0 35px rgba(240, 146, 42, 0.22) !important;
+}
+
+.comparison-card h3 {
+  color: #FAF3EE !important;
+}
+
+.comparison-card .comparison-label {
+  color: #F0922A !important;
+}
+
+.comparison-card .comparison-badge {
+  background: linear-gradient(135deg, #F0922A, #C86914) !important;
+  color: #1A0D08 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 15px rgba(240, 146, 42, 0.45) !important;
+  border: none !important;
+}
+
+/* Comparison card list items: ALL CRISP WHITE FOR HIGH READABILITY */
+.comparison-card li,
+.comparison-card.partnership li,
+.comparison-card.traditional li,
+.comparison-card.self li,
+.comparison-card.old-way li,
+.comparison-card.new-way li,
+.partnership li {
+  color: #FAF3EE !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  font-weight: 500 !important;
+}
+
+/* Comparison card checkmarks: RADIANT GLOWING ORANGE */
+.comparison-card li::before,
+.comparison-card.partnership li::before,
+.partnership li::before,
+.comparison-card.traditional li::before,
+.comparison-card.self li::before {
+  color: #F0922A !important;
+  font-weight: 900 !important;
 }
 
 .comparison-arrow {
-  color: #C48A5A !important;
+  color: #F0922A !important;
   font-size: 42px !important;
   display: flex !important;
   align-items: center !important;
@@ -313,7 +371,7 @@ h1 strong, h2 strong, h3 strong {
 
 .what-checklist li,
 .transparency-card li {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
   font-size: 16px !important;
   font-weight: 600 !important;
   position: relative !important;
@@ -329,8 +387,8 @@ h1 strong, h2 strong, h3 strong {
   top: 1px !important;
   width: 26px !important;
   height: 26px !important;
-  background: #C48A5A !important;
-  color: #1A100C !important;
+  background: #F0922A !important;
+  color: #FAF3EE !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
@@ -349,91 +407,96 @@ h1 strong, h2 strong, h3 strong {
   font-weight: 700 !important;
   margin-top: 12px !important;
   line-height: 1.35 !important;
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 /* Trust Question & Output Question */
 .trust-question,
 .output-question {
-  color: #FAF6F0 !important;
-  background: #3E281F !important;
-  border: 1px solid rgba(196, 138, 90, 0.35) !important;
+  color: #FAF3EE !important;
+  background: #3A1E0F !important;
+  border: 1px solid rgba(240, 146, 42, 0.35) !important;
 }
 
 .trust-card::before {
-  background: linear-gradient(90deg, #C48A5A, #6B4A3A) !important;
+  background: linear-gradient(90deg, #F0922A, #A05510) !important;
 }
 
 /* FAQ Open State */
 .faq-item.open {
-  background: #503429 !important;
-  border-color: rgba(196, 138, 90, 0.50) !important;
+  background: #4E2811 !important;
+  border-color: rgba(240, 146, 42, 0.50) !important;
 }
 
 /* Ownership Circle (Shield Icon) */
 .ownership-circle {
-  background: radial-gradient(circle, rgba(196, 138, 90, 0.25), rgba(62, 40, 31, 0.75)) !important;
-  border: 1px solid rgba(196, 138, 90, 0.45) !important;
-  color: #C48A5A !important;
+  background: radial-gradient(circle, rgba(240, 146, 42, 0.25), rgba(58, 30, 15, 0.75)) !important;
+  border: 1px solid rgba(240, 146, 42, 0.45) !important;
+  color: #F0922A !important;
 }
 
 .ownership-circle i {
-  color: #C48A5A !important;
+  color: #F0922A !important;
 }
 
 /* Spotlight Banner inside Proof Section */
 .spotlight-banner-wrap {
-  background: #1F130E !important;
+  background: rgba(46, 22, 11, 0.85) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(240, 146, 42, 0.35) !important;
+  border-radius: 28px;
 }
 
 .spotlight-left h3 {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 .spotlight-left p {
-  color: rgba(231, 214, 193, 0.85) !important;
+  color: rgba(235, 210, 195, 0.85) !important;
 }
 
 /* Films & Security Sections (Cinematic Anchors) */
 .films-section,
 .security-section {
-  background: #1F130E !important;
+  background: transparent !important;
+  position: relative;
 }
 
 .films-section h2, .films-section h3, .films-section p,
 .security-section h2, .security-section h3, .security-section p {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 .security-card {
-  background: rgba(62, 40, 31, 0.85) !important;
-  border: 1px solid rgba(196, 138, 90, 0.28) !important;
+  background: rgba(58, 30, 15, 0.85) !important;
+  border: 1px solid rgba(240, 146, 42, 0.28) !important;
 }
 
 .security-card h3 {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 .security-card p {
-  color: rgba(231, 214, 193, 0.85) !important;
+  color: rgba(235, 210, 195, 0.85) !important;
 }
 
 /* Final CTA Section Box */
 .final-cta-section .cta-box,
 .services-cta-section .cta-box {
-  background: #3E281F !important;
-  border: 1px solid rgba(196, 138, 90, 0.35) !important;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65), 0 0 30px rgba(196, 138, 90, 0.12) !important;
+  background: #3A1E0F !important;
+  border: 1px solid rgba(240, 146, 42, 0.35) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65), 0 0 30px rgba(240, 146, 42, 0.12) !important;
 }
 
 .final-cta-section .cta-box h2,
 .services-cta-section .cta-box h2 {
-  color: #FAF6F0 !important;
+  color: #FAF3EE !important;
 }
 
 .final-cta-section .cta-box p,
 .services-cta-section .cta-box p {
-  color: rgba(231, 214, 193, 0.85) !important;
+  color: rgba(235, 210, 195, 0.85) !important;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -445,6 +508,81 @@ body.palette-spruce-sage,
 body.palette-terracotta-slate,
 body.palette-cyber-orange,
 body.palette-tangerine-espresso {
-  --primary: #C48A5A !important;
-  --primary-dark: #6B4A3A !important;
+  --primary: #F0922A !important;
+  --primary-dark: #A05510 !important;
 }
+
+/* ─────────────────────────────────────────────────────
+   9. PUZZLE GRID — PUBLISHING POSITIONING (Services Page)
+   Interlocking 2x2 Puzzle Grid with Radiant Bright Orange Cards
+   ───────────────────────────────────────────────────── */
+.publishing-puzzle-grid {
+  border: 1px solid rgba(240, 146, 42, 0.35) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Bright Orange Puzzle Cards (01 Editorial Care & 04 Long-Term Value) */
+.puzzle-card.gold {
+  background: linear-gradient(145deg, #F0922A, #DE7512) !important;
+  color: #140701 !important;
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.12) !important;
+}
+
+.puzzle-card.gold span {
+  color: #4D2200 !important;
+  font-weight: 900 !important;
+  font-size: 15px !important;
+  letter-spacing: 3px !important;
+}
+
+.puzzle-card.gold h3 {
+  color: #140701 !important;
+  font-weight: 800 !important;
+}
+
+.puzzle-card.gold p {
+  color: rgba(20, 7, 1, 0.92) !important;
+  font-weight: 500 !important;
+}
+
+/* Dark Mocha Glass Puzzle Cards (02 Visual Presentation & 03 Clear Positioning) */
+.puzzle-card.dark {
+  background: rgba(38, 18, 8, 0.92) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(240, 146, 42, 0.25) !important;
+  color: #FAF3EE !important;
+}
+
+.puzzle-card.dark span {
+  color: #F0922A !important;
+  font-weight: 900 !important;
+  font-size: 15px !important;
+  letter-spacing: 3px !important;
+}
+
+.puzzle-card.dark h3 {
+  color: #FAF3EE !important;
+  font-weight: 800 !important;
+}
+
+.puzzle-card.dark p {
+  color: rgba(235, 210, 195, 0.88) !important;
+}
+
+/* Puzzle Connectors (Interlocking Tabs & Cutouts) */
+.puzzle-card.gold::after,
+.puzzle-card.gold::before {
+  background: #261208 !important;
+}
+
+.puzzle-card.dark::after,
+.puzzle-card.dark::before {
+  background: linear-gradient(145deg, #F0922A, #DE7512) !important;
+}
+
+.publishing-position-note {
+  border-left: 4px solid #F0922A !important;
+  color: #FAF3EE !important;
+}
+

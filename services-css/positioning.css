@@ -1,7 +1,7 @@
 .publishing-position-section {
   background:
-    radial-gradient(circle at 50% 35%, rgba(255,177,98, .08), transparent 35%),
-    #080808;
+    radial-gradient(circle at 50% 35%, rgba(240, 146, 42, .08), transparent 45%),
+    transparent;
   overflow: hidden;
 }
 
@@ -95,27 +95,27 @@
 
 /* colors */
 .puzzle-card.gold {
-  background: linear-gradient(145deg, #ffd54a, #f5be18);
-  color: #111;
+  background: linear-gradient(145deg, #F0922A, #DE7512);
+  color: #140701;
 }
 
 .puzzle-card.dark {
-  background: rgba(15, 15, 15, 0.65); /* Match dark transparent glass */
+  background: rgba(38, 18, 8, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(240, 146, 42, 0.25);
 }
 
 /* connector colors */
 .puzzle-card.gold::after,
 .puzzle-card.gold::before {
-  background: #080808;
+  background: #261208;
 }
 
 .puzzle-card.dark::after,
 .puzzle-card.dark::before {
-  background: var(--primary);
+  background: linear-gradient(145deg, #F0922A, #DE7512);
 }
 
 .puzzle-card span {
@@ -127,7 +127,7 @@
 }
 
 .puzzle-card.gold span {
-  color: #7a5200;
+  color: #4D2200;
 }
 
 .puzzle-card.dark span {
@@ -140,7 +140,8 @@
 }
 
 .puzzle-card.gold h3 {
-  color: #111;
+  color: #140701;
+  font-weight: 800;
 }
 
 .puzzle-card.dark h3 {
@@ -153,11 +154,12 @@
 }
 
 .puzzle-card.gold p {
-  color: #2f2f2f;
+  color: rgba(20, 7, 1, 0.90);
+  font-weight: 500;
 }
 
 .puzzle-card.dark p {
-  color: rgba(255,255,255,.74);
+  color: rgba(235, 210, 195, 0.85);
 }
 
 /* ===========================

@@ -109,8 +109,8 @@ footer {
 }
 
 .footer-socials a:hover {
-    background: #C48A5A;
-    border-color: #C48A5A;
+    background: #F0922A;
+    border-color: #F0922A;
     color: #1A100C;
     transform: translateY(-5px);
 }
@@ -121,13 +121,13 @@ footer {
 
 .footer-contact .btn {
     background: transparent;
-    color: #C48A5A;
-    border: 2px solid #C48A5A;
+    color: #F0922A;
+    border: 2px solid #F0922A;
     margin-bottom: 28px;
 }
 
 .footer-contact .btn:hover {
-    background: #C48A5A;
+    background: #F0922A;
     color: #1A100C;
 }
 
@@ -150,7 +150,7 @@ footer {
     margin-top: 70px;
     padding: 26px;
     background: #140C08;
-    color: #C48A5A;
+    color: #F0922A;
     text-align: center;
     font-size: 14px;
     border-top: 1px solid rgba(196, 138, 90, 0.15);

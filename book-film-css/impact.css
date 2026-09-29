@@ -86,7 +86,7 @@
 
 .after{
 
-    background:linear-gradient(145deg,#ffd54a,#f5be18);
+    background:linear-gradient(145deg, #F0922A, #A05510);
 
     color:#111;
 
@@ -287,8 +287,8 @@ background-size:100% 100%;
 
     background:linear-gradient(
         145deg,
-        #ffd54a,
-        #f5be18
+        #F0922A,
+        #A05510
     );
 
     display:flex;

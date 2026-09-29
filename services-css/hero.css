@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   background:
-    radial-gradient(circle at 85% 35%, rgba(255,177,98,.15), transparent 30%),
-    linear-gradient(to bottom, #050505, #0c0c0c);
+    radial-gradient(circle at 85% 35%, rgba(240,146,42,.14), transparent 45%),
+    transparent;
   overflow: hidden;
 }
 

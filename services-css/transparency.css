@@ -1,7 +1,7 @@
 .services-transparency-section {
   background:
-    radial-gradient(circle at 50% 35%, rgba(255,177,98, .08), transparent 34%),
-    #0b0b0b;
+    radial-gradient(circle at 50% 35%, rgba(240, 146, 42, .08), transparent 45%),
+    transparent;
   overflow: hidden;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .services-transparency-card.gold {
-  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  background: linear-gradient(145deg, #F0922A, #A05510);
   color: #111;
   box-shadow: 0 25px 60px rgba(255,177,98,.18);
 }

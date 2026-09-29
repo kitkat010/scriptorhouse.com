@@ -3,11 +3,12 @@
 ======================================================*/
 
 :root{
-    --contact-gold:#f4c542;
-    --contact-gold-light:#ffd76a;
-    --contact-dark:#070707;
-    --contact-card:#111111;
-    --contact-border:rgba(255,255,255,.08);
+    --contact-gold:#F0922A;
+    --contact-gold-light:#FFB060;
+    --contact-gold-dark:#A05510;
+    --contact-dark:#120904;
+    --contact-card:rgba(58, 30, 15, 0.85);
+    --contact-border:rgba(240, 146, 42, 0.24);
 }
 
 /*======================================================
@@ -50,18 +51,13 @@
 
     background:
     radial-gradient(circle at 80% 20%,
-    rgba(244,197,66,.14),
-    transparent 35%),
-
-    radial-gradient(circle at 20% 80%,
-    rgba(255,255,255,.04),
+    rgba(240,146,42,.15),
     transparent 40%),
 
-    linear-gradient(
-    180deg,
-    #050505,
-    #0b0b0b 60%,
-    #090909);
+    radial-gradient(circle at 20% 80%,
+    rgba(240,146,42,.06),
+    transparent 45%),
+    transparent;
 
 }
 
@@ -100,8 +96,8 @@
     background:
 
     radial-gradient(circle at 75% 25%,
-    rgba(244,197,66,.18),
-    transparent 28%);
+    rgba(240,146,42,.18),
+    transparent 32%);
 
     animation:glowMove 10s ease-in-out infinite;
 
@@ -259,7 +255,7 @@ box-shadow:
 
 0 40px 90px rgba(0,0,0,.45),
 
-0 0 60px rgba(244,197,66,.12);
+0 0 60px rgba(240,146,42,.15);
 
 position:relative;
 
@@ -284,7 +280,7 @@ height:220px;
 background:
 
 radial-gradient(circle,
-rgba(244,197,66,.28),
+rgba(240,146,42,.28),
 transparent);
 
 }
@@ -312,7 +308,7 @@ margin-bottom:30px;
 
 box-shadow:
 
-0 25px 45px rgba(244,197,66,.25);
+0 25px 45px rgba(240,146,42,.25);
 
 }
 
@@ -392,12 +388,7 @@ background:var(--contact-gold);
 
 padding:120px 0;
 
-background:
-
-linear-gradient(
-180deg,
-#090909,
-#050505);
+background:transparent;
 
 }
 
@@ -503,7 +494,7 @@ transition:.45s;
 
 transform:translateY(-14px);
 
-border-color:rgba(244,197,66,.30);
+border-color:rgba(240,146,42,.35);
 
 box-shadow:
 
@@ -582,7 +573,7 @@ gap:18px;
 }
 
 /*======================================================
- GOLD CARD
+ FEATURED FILMS CARD (Burnt Sienna Luxury)
 ======================================================*/
 
 .routing-card.films{
@@ -591,30 +582,54 @@ background:
 
 linear-gradient(
 145deg,
-#f4c542,
-#ddb53a);
+rgba(74, 38, 18, 0.94),
+rgba(46, 22, 10, 0.98));
 
-color:#111;
+color:#FAF3EE;
+
+border: 1.5px solid rgba(240, 146, 42, 0.65);
+
+box-shadow: 0 18px 45px rgba(0, 0, 0, 0.60), 0 0 35px rgba(240, 146, 42, 0.22);
 
 }
 
-.routing-card.films i,
+.routing-card.films i{
 
-.routing-card.films h3,
+color:var(--contact-gold);
 
-.routing-card.films p,
+}
+
+.routing-card.films h3{
+
+color:#FAF3EE;
+
+}
+
+.routing-card.films p{
+
+color:rgba(235, 210, 195, 0.88);
+
+}
 
 .routing-card.films a{
 
-color:#111;
+color:var(--contact-gold);
+
+font-weight:700;
+
+}
+
+.routing-card.films a:hover{
+
+color:var(--contact-gold-light);
 
 }
 
 .routing-card.films:hover{
 
-box-shadow:
+border-color:rgba(240, 146, 42, 0.85);
 
-0 35px 90px rgba(244,197,66,.28);
+box-shadow: 0 30px 80px rgba(0, 0, 0, 0.70), 0 0 45px rgba(240, 146, 42, 0.35);
 
 }
 
@@ -629,14 +644,14 @@ CONTACT FORM SECTION
 
     background:
     radial-gradient(circle at 15% 20%,
-    rgba(244,197,66,.08),
+    rgba(240,146,42,.08),
     transparent 30%),
 
     radial-gradient(circle at 85% 70%,
     rgba(255,255,255,.03),
     transparent 35%),
 
-    linear-gradient(180deg,#050505,#090909);
+    transparent;
 
 }
 
@@ -865,13 +880,13 @@ FOCUS
 .premium-form-card textarea:focus,
 .premium-form-card select:focus{
 
-    border-color:rgba(244,197,66,.5);
+    border-color:rgba(240,146,42,.55);
 
     background:rgba(255,255,255,.065);
 
     box-shadow:
 
-    0 0 0 5px rgba(244,197,66,.08);
+    0 0 0 5px rgba(240,146,42,.12);
 
 }
 
@@ -902,7 +917,9 @@ FILM ROUTING PANEL
     overflow: hidden;
     
     border-radius: 22px;
-    background: linear-gradient(135deg, #f4c542, #ddb53a);
+    background: linear-gradient(135deg, rgba(74, 38, 18, 0.96), rgba(46, 22, 10, 0.98));
+    border: 1px solid rgba(240, 146, 42, 0.55);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55), 0 0 25px rgba(240, 146, 42, 0.18);
     transition: max-height 0.45s ease, opacity 0.35s ease, padding 0.45s ease;
 }
 
@@ -917,7 +934,7 @@ FILM ROUTING PANEL
 
     font-size:42px;
 
-    color:#111;
+    color:var(--contact-gold);
 
 }
 
@@ -925,7 +942,7 @@ FILM ROUTING PANEL
 
     flex:1;
 
-    color:#111;
+    color:#FAF3EE;
 
     line-height:1.7;
 
@@ -939,13 +956,15 @@ FILM ROUTING PANEL
 
     border-radius:14px;
 
-    background:#111;
+    background:linear-gradient(135deg, #F0922A, #C86914);
 
-    color:#fff;
+    color:#1A0D08;
 
     text-decoration:none;
 
-    font-weight:700;
+    font-weight:800;
+
+    box-shadow: 0 4px 15px rgba(240, 146, 42, 0.35);
 
     transition:.3s;
 
@@ -954,6 +973,8 @@ FILM ROUTING PANEL
 .film-routing-message a:hover{
 
     transform:translateY(-3px);
+
+    box-shadow: 0 6px 20px rgba(240, 146, 42, 0.5);
 
 }
 
@@ -1247,7 +1268,7 @@ opacity:0;
 
 .official-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(244, 197, 66, .3);
+    border-color: rgba(240, 146, 42, .45);
 }
 
 .official-card i {
@@ -1283,7 +1304,7 @@ opacity:0;
 ======================================================*/
 .contact-security-section {
     padding: 120px 0;
-    background: linear-gradient(180deg, #050505, #090909);
+    background: transparent;
 }
 
 .contact-security-grid {
@@ -1368,7 +1389,7 @@ opacity:0;
 ======================================================*/
 .contact-cta-section {
     padding: 140px 0;
-    background: radial-gradient(circle at 50% 50%, rgba(244, 197, 66, 0.08), transparent 60%), #090909;
+    background: radial-gradient(circle at 50% 50%, rgba(240, 146, 42, 0.10), transparent 60%), transparent;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -1396,17 +1417,18 @@ opacity:0;
     display: inline-flex;
     padding: 18px 40px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
     border-radius: 18px;
-    background: var(--contact-gold);
-    color: #111;
+    background: linear-gradient(135deg, #F0922A, #C86914);
+    color: #1A0D08;
     text-decoration: none;
+    box-shadow: 0 10px 25px rgba(240, 146, 42, 0.35);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-cta-content .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(244, 197, 66, 0.2);
+    box-shadow: 0 15px 35px rgba(240, 146, 42, 0.5);
 }
 
 /*======================================================
@@ -1414,7 +1436,7 @@ opacity:0;
 ======================================================*/
 .official-contact-section {
     padding: 120px 0;
-    background: #050505;
+    background: transparent;
 }
 
 .official-contact-header {
@@ -1437,8 +1459,10 @@ opacity:0;
 .official-card {
     padding: 42px;
     border-radius: 28px;
-    background: #111111;
-    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(58, 30, 15, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(240, 146, 42, 0.24);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1448,8 +1472,8 @@ opacity:0;
 
 .official-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(244, 197, 66, .35);
-    box-shadow: 0 30px 70px rgba(0,0,0,.45);
+    border-color: rgba(240, 146, 42, .55);
+    box-shadow: 0 30px 70px rgba(0,0,0,.45), 0 0 25px rgba(240, 146, 42, 0.15);
 }
 
 .official-card i {
@@ -1477,7 +1501,7 @@ opacity:0;
 ======================================================*/
 .contact-security-section {
     padding: 140px 0;
-    background: linear-gradient(180deg, #050505, #090909);
+    background: transparent;
 }
 
 .contact-security-grid {

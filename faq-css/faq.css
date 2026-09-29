@@ -100,7 +100,7 @@
   width: 240px;
   height: 240px;
   border-radius: 40px;
-  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  background: linear-gradient(145deg, #F0922A, #A05510);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,7 +426,7 @@
     font-size:14px;
 }
 .breadcrumb a{ color:rgba(255,255,255,.7); transition:.3s ease; }
-.breadcrumb a:hover{ color:var(--contact-gold); }
+.breadcrumb a:hover{ color:var(--primary); }
 
 /*======================================================
 RESPONSIVE - HERO

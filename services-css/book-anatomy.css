@@ -4,8 +4,8 @@
 
 .book-anatomy-section {
   background:
-    radial-gradient(circle at 50% 35%, rgba(255,177,98, .08), transparent 36%),
-    #080808;
+    radial-gradient(circle at 50% 35%, rgba(240, 146, 42, .08), transparent 45%),
+    transparent;
   overflow: hidden;
 }
 
@@ -347,7 +347,7 @@
   padding: 48px;
   border-radius: 36px;
   background:
-    linear-gradient(145deg, #ffd54a, #f5be18);
+    linear-gradient(145deg, #F0922A, #A05510);
   color: #111;
   box-shadow: 0 25px 60px rgba(255,177,98,.18);
   border: 1px solid rgba(255,255,255,.2);

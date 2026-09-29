@@ -147,7 +147,7 @@
   height: 120px;
   border-radius: 50%;
   padding: 4px;
-  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  background: linear-gradient(145deg, #F0922A, #A05510);
 }
 
 .noel-photo img {
@@ -230,7 +230,7 @@
 .featured-facts div {
   padding: 24px;
   border-radius: 22px;
-  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  background: linear-gradient(145deg, #F0922A, #A05510);
   color: #111;
 }
 

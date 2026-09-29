@@ -194,7 +194,7 @@
 
 .process-folder.active {
   background:
-    linear-gradient(145deg, #ffd54a, #f5be18);
+    linear-gradient(145deg, #F0922A, #A05510);
 
   color: #111;
 
@@ -207,7 +207,7 @@
 }
 
 .process-folder.active .folder-tab {
-  background: #ffd54a;
+  background: #F0922A;
   border-color: rgba(255,255,255,.26);
   transform: translateY(-2px);
 }

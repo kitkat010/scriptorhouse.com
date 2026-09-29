@@ -6,13 +6,9 @@
 
     background:
     radial-gradient(circle at center,
-    rgba(255,177,98,.14),
-    transparent 38%),
-    linear-gradient(
-        to bottom,
-        #080808,
-        #030303
-    );
+    rgba(240,146,42,.14),
+    transparent 45%),
+    transparent;
 
     text-align:center;
 

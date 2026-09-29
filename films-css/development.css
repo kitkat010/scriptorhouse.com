@@ -111,7 +111,7 @@
 
 .board-card:nth-child(1),
 .board-card:nth-child(4) {
-  background: linear-gradient(145deg, #ffd54a, #f5be18);
+  background: linear-gradient(145deg, #F0922A, #A05510);
   color: #111;
 }
 

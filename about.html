@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="about-css/security.css">
   <link rel="stylesheet" href="about-css/final-cta.css">
   <link rel="stylesheet" href="css/metallic-themes.css">
+  <link rel="stylesheet" href="css/cinematic-bg.css">
 </head>
 
 <body class="">
@@ -648,17 +649,12 @@
             reflecting the bridge from written story to cinematic presentation.
           </p>
 
-          <div class="film-video">
-
-            <!-- Replace this image with actual trailer iframe later -->
+          <div class="film-video" id="filmVideoThumb" role="button" tabindex="0" aria-label="Watch film" style="cursor:pointer;" onclick="window.location.href='film-creative-work.html#featured-work'">
             <img src="images/16x9.jpg" alt="Education of a Teacher Trailer">
 
             <button class="play-button" aria-label="Play trailer">
               <i class="fa-solid fa-play"></i>
             </button>
-
-          </div>
-
           <div class="film-info-box">
 
             <div>
@@ -670,8 +666,12 @@
               </p>
             </div>
 
-            <a href="film-creative-work.html" class="btn">
+            <a href="film-creative-work.html#featured-work" class="btn">
               Explore Film
+            </a>
+
+            <a href="https://scriptorhousefilms.com" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="fa-solid fa-film"></i> Scriptor House Films
             </a>
 
           </div>
@@ -1032,7 +1032,9 @@
 
   <!-- About JS -->
   <script src="about-js/about.js"></script>
-  <script src="js/theme-switcher.js"></script>
+
+  <script src="js/cinematic-bg.js"></script>
+
 
 </body>
 

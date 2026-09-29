@@ -68,7 +68,7 @@
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: #C48A5A;
+    color: #F0922A;
 }
 
 .nav-menu a::after {
@@ -80,7 +80,7 @@
     width: 0;
     height: 2px;
 
-    background: #C48A5A;
+    background: #F0922A;
     transition: .3s;
 }
 
@@ -99,11 +99,11 @@
 
 .site-header.scrolled .nav-menu a:hover,
 .site-header.scrolled .nav-menu a.active {
-    color: #C48A5A;
+    color: #F0922A;
 }
 
 .site-header.scrolled .nav-menu a::after {
-    background: #C48A5A;
+    background: #F0922A;
 }
 
 /* ===========================
@@ -111,7 +111,7 @@
 =========================== */
 
 .header-cta {
-    background: linear-gradient(135deg, #C48A5A, #6B4A3A);
+    background: linear-gradient(135deg, #F0922A, #6B4A3A);
     color: #1A100C;
     padding: 14px 26px;
     border-radius: 100px;
