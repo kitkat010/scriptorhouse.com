@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   background:
-    radial-gradient(circle at 85% 35%, rgba(255,200,0,.15), transparent 30%),
+    radial-gradient(circle at 85% 35%, rgba(255,177,98,.15), transparent 30%),
     linear-gradient(to bottom, #050505, #0c0c0c);
   overflow: hidden;
 }
@@ -98,7 +98,7 @@
 
 .stack-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 200, 0, 0.35);
+  border-color: rgba(255,177,98, 0.35);
   background: rgba(20, 20, 20, 0.75);
 }
 

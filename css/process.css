@@ -50,7 +50,7 @@
   transition: .4s ease;
 
   box-shadow:
-    0 20px 45px rgba(255,200,0,.15);
+    0 20px 45px rgba(255,177,98,.15);
 
 }
 
@@ -59,7 +59,7 @@
   transform: translateY(-10px);
 
   box-shadow:
-    0 30px 60px rgba(255,200,0,.28);
+    0 30px 60px rgba(255,177,98,.28);
 
 }
 

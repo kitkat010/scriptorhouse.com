@@ -77,12 +77,12 @@
     background:
         linear-gradient(
             145deg,
-            rgba(255,200,0,.15),
-            rgba(255,200,0,.05)
+            rgba(255,177,98,.15),
+            rgba(255,177,98,.05)
         );
 
     border:
-        1px solid rgba(255,200,0,.25);
+        1px solid rgba(255,177,98,.25);
 }
 
 .comparison-label {

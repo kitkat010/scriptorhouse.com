@@ -1,6 +1,6 @@
 .output-section {
   background:
-    radial-gradient(circle at 50% 35%, rgba(255, 200, 0, .12), transparent 35%),
+    radial-gradient(circle at 50% 35%, rgba(255,177,98, .12), transparent 35%),
     linear-gradient(to bottom, #080808, #030303);
   overflow: hidden;
   position: relative;
@@ -62,8 +62,8 @@
 
 .output-warning-card:hover {
   transform: translateY(-10px);
-  border-color: rgba(255, 200, 0, .35);
-  background: rgba(255, 200, 0, .06);
+  border-color: rgba(255,177,98, .35);
+  background: rgba(255,177,98, .06);
 }
 
 .output-warning-card span {
@@ -87,8 +87,8 @@
   padding: 45px;
   border-radius: 32px;
   background:
-    linear-gradient(145deg, rgba(255, 200, 0, .14), rgba(255, 200, 0, .04));
-  border: 1px solid rgba(255, 200, 0, .28);
+    linear-gradient(145deg, rgba(255,177,98, .14), rgba(255,177,98, .04));
+  border: 1px solid rgba(255,177,98, .28);
   box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
   font-family: "Playfair Display", serif;
 }
@@ -152,7 +152,7 @@
   font-family: "Playfair Display", serif;
   font-size: 130px;
   line-height: 1;
-  color: rgba(255, 200, 0, .25);
+  color: rgba(255,177,98, .25);
 }
 
 .output-quote p {

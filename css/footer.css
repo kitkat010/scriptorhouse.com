@@ -3,10 +3,10 @@
 =========================== */
 
 footer {
-    background: #0a0a0a;
-    color: rgba(255, 255, 255, .72);
+    background: #1F130E;
+    color: rgba(231, 214, 193, 0.75);
     padding: 90px 0 0;
-    border-top: 1px solid rgba(255, 255, 255, .06);
+    border-top: 1px solid rgba(196, 138, 90, 0.20);
 }
 
 /* ===========================
@@ -37,7 +37,7 @@ footer {
 
 .footer-grid p {
     font-size: 15px;
-    color: rgba(255, 255, 255, .52);
+    color: rgba(231, 214, 193, 0.65);
     line-height: 1.8;
 }
 
@@ -46,7 +46,7 @@ footer {
 =========================== */
 
 .footer-grid h4 {
-    color: var(--white);
+    color: #FAF6F0;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: .5px;
@@ -73,7 +73,7 @@ footer {
 
 .footer-grid a {
     display: block;
-    color: rgba(255, 255, 255, .55);
+    color: rgba(231, 214, 193, 0.68);
     margin-bottom: 14px;
     font-size: 15px;
     transition: all .3s ease;
@@ -98,20 +98,20 @@ footer {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, .06);
-    border: 1px solid rgba(255, 255, 255, .1);
+    background: rgba(250, 246, 240, 0.08);
+    border: 1px solid rgba(250, 246, 240, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, .65);
+    color: rgba(231, 214, 193, 0.75);
     font-size: 18px;
     transition: all .35s ease;
 }
 
 .footer-socials a:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: #111;
+    background: #C48A5A;
+    border-color: #C48A5A;
+    color: #1A100C;
     transform: translateY(-5px);
 }
 
@@ -121,18 +121,18 @@ footer {
 
 .footer-contact .btn {
     background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: #C48A5A;
+    border: 2px solid #C48A5A;
     margin-bottom: 28px;
 }
 
 .footer-contact .btn:hover {
-    background: var(--primary);
-    color: #111;
+    background: #C48A5A;
+    color: #1A100C;
 }
 
 .footer-contact p {
-    color: rgba(255, 255, 255, .52);
+    color: rgba(231, 214, 193, 0.65);
     margin-bottom: 14px;
     font-size: 15px;
 }
@@ -149,11 +149,11 @@ footer {
 .copyright {
     margin-top: 70px;
     padding: 26px;
-    background: #050505;
-    color: var(--primary);
+    background: #140C08;
+    color: #C48A5A;
     text-align: center;
     font-size: 14px;
-    border-top: 1px solid rgba(255, 255, 255, .06);
+    border-top: 1px solid rgba(196, 138, 90, 0.15);
 }
 
 /* ===========================

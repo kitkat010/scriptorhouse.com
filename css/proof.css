@@ -60,8 +60,8 @@
 
 .laurel-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 200, 0, 0.25);
-  background: rgba(255, 200, 0, 0.03);
+  border-color: rgba(255,177,98, 0.25);
+  background: rgba(255,177,98, 0.03);
 }
 
 .laurel-icon {
@@ -179,7 +179,7 @@
   height: 160px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 8px 32px rgba(255,200,0,0.25));
+  filter: drop-shadow(0 8px 32px rgba(255,177,98,0.25));
   transition: transform 0.4s ease;
 }
 
@@ -224,7 +224,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255,200,0,.45), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,177,98,.45), transparent);
   pointer-events: none;
 }
 
@@ -265,11 +265,11 @@
   max-width: 1060px;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255,200,0,.18);
+  border: 1px solid rgba(255,177,98,.18);
   box-shadow:
-    0 0 0 1px rgba(255,200,0,.06),
+    0 0 0 1px rgba(255,177,98,.06),
     0 24px 80px rgba(0,0,0,.65),
-    0 0 60px rgba(255,200,0,.04);
+    0 0 60px rgba(255,177,98,.04);
   position: relative;
   transition: transform .4s ease, box-shadow .4s ease;
 }
@@ -277,9 +277,9 @@
 .award-infographic-frame:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 0 0 1px rgba(255,200,0,.14),
+    0 0 0 1px rgba(255,177,98,.14),
     0 30px 100px rgba(0,0,0,.7),
-    0 0 80px rgba(255,200,0,.07);
+    0 0 80px rgba(255,177,98,.07);
 }
 
 .award-infographic-img {

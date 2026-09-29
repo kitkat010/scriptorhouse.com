@@ -48,14 +48,14 @@
 
 .why-card:hover {
     transform: translateY(-12px);
-    border-color: rgba(255,200,0,.35);
+    border-color: rgba(255,177,98,.35);
 }
 
 .why-icon {
     width: 70px;
     height: 70px;
 
-    background: rgba(255,200,0,.15);
+    background: rgba(255,177,98,.15);
 
     border-radius: 20px;
 

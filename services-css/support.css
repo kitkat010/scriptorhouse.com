@@ -57,7 +57,7 @@
   background: linear-gradient(145deg, #ffd54a, #f5be18);
   color: #111;
   transform: translateX(10px);
-  box-shadow: 0 20px 45px rgba(255,200,0,.16);
+  box-shadow: 0 20px 45px rgba(255,177,98,.16);
 }
 
 .support-item span {

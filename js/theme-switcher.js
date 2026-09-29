@@ -20,50 +20,7 @@
   ];
 
   /* ── Color Palettes (Curated from Reference Images) ── */
-  const PALETTES = [
-    { 
-      id: 'palette-classic-gold', 
-      label: 'Classic Gold', 
-      swatch: '#FFC800', 
-      sub: '#050505',
-      icon: 'fa-solid fa-star' 
-    },
-    { 
-      id: 'palette-midnight-gold', 
-      label: 'Midnight & Amber', 
-      swatch: '#FCA311', 
-      sub: '#14213D',
-      icon: 'fa-solid fa-moon' 
-    },
-    { 
-      id: 'palette-spruce-sage', 
-      label: 'Spruce & Sage', 
-      swatch: '#8EB69B', 
-      sub: '#0B2B26',
-      icon: 'fa-solid fa-leaf' 
-    },
-    { 
-      id: 'palette-terracotta-slate', 
-      label: 'Terracotta & Slate', 
-      swatch: '#FFB162', 
-      sub: '#2C3B4D',
-      icon: 'fa-solid fa-feather-pointed' 
-    },
-    { 
-      id: 'palette-cyber-orange', 
-      label: 'Cyber Flame', 
-      swatch: '#E85002', 
-      sub: '#333333',
-      icon: 'fa-solid fa-fire-flame-curved' 
-    },
-    { 
-      id: 'palette-tangerine-espresso', 
-      label: 'Tangerine Espresso', 
-      swatch: '#FF6D29', 
-      sub: '#453027',
-      icon: 'fa-solid fa-mug-hot' 
-    }
-  ];
+  const PALETTES = [];
 
   /* ── Apply background theme ── */
   function applyBgTheme(id) {
@@ -87,25 +44,23 @@
 
   /* ── Init ── */
   function initThemeSwitcher() {
-    // Restore saved preferences
-    const savedBg = localStorage.getItem('sh_bg_theme') || 'theme-titanium';
-    let savedPalette = localStorage.getItem('sh_palette') || 'palette-classic-gold';
+    // ⚠️ Palette auto-apply DISABLED during palette reset
+    // Clear any saved palette from localStorage so old gold/dark doesn't persist
+    localStorage.removeItem('sh_palette');
+    localStorage.removeItem('sh_bg_theme');
 
-    // Backwards compatibility migration
-    if (savedPalette === 'palette-gold') savedPalette = 'palette-classic-gold';
-    if (savedPalette === 'palette-amber') savedPalette = 'palette-midnight-gold';
-    if (savedPalette === 'palette-emerald') savedPalette = 'palette-spruce-sage';
-    if (savedPalette === 'palette-crimson') savedPalette = 'palette-cyber-orange';
-    if (!PALETTES.some(p => p.id === savedPalette)) savedPalette = 'palette-classic-gold';
-
+    // Remove ALL palette and theme classes from body to ensure clean state
     BG_THEMES.forEach(t => document.body.classList.remove(t.id));
-    document.body.classList.add(savedBg);
     PALETTES.forEach(p => document.body.classList.remove(p.id));
-    document.body.classList.add(savedPalette);
+    // Also clear any known old class names directly
+    ['palette-classic-gold','palette-midnight-gold','palette-spruce-sage',
+     'palette-terracotta-slate','palette-cyber-orange','palette-tangerine-espresso'].forEach(c => {
+      document.body.classList.remove(c);
+    });
 
     // Build HTML
     const bgButtons = BG_THEMES.map(t => `
-      <button type="button" class="sh-theme-btn ${t.id === savedBg ? 'active' : ''}" data-bg-theme="${t.id}" title="${t.label} Background">
+      <button type="button" class="sh-theme-btn" data-bg-theme="${t.id}" title="${t.label} Background">
         <span class="sh-theme-indicator"></span>
         <i class="${t.icon}"></i>
         <span>${t.label}</span>
@@ -127,17 +82,10 @@
     container.innerHTML = `
       <div class="sh-switcher-panel">
         <div class="sh-switcher-title">
-          <i class="fa-solid fa-palette"></i>
-          <span>Theme Preview</span>
+          <i class="fa-solid fa-image"></i>
+          <span>Background</span>
         </div>
-        <div class="sh-tabs">
-          <button class="sh-tab active" data-tab="palette"><i class="fa-solid fa-swatchbook"></i> Color Palettes</button>
-          <button class="sh-tab" data-tab="bg"><i class="fa-solid fa-image"></i> Background</button>
-        </div>
-        <div class="sh-tab-content" id="sh-tab-palette">
-          ${paletteButtons}
-        </div>
-        <div class="sh-tab-content sh-hidden" id="sh-tab-bg">
+        <div class="sh-tab-content" id="sh-tab-bg">
           ${bgButtons}
         </div>
       </div>
@@ -148,7 +96,6 @@
 
     document.body.appendChild(container);
 
-    // Tab switching
     container.querySelectorAll('.sh-tab').forEach(tab => {
       tab.addEventListener('click', () => {
         container.querySelectorAll('.sh-tab').forEach(t => t.classList.remove('active'));

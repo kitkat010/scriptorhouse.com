@@ -1,15 +1,15 @@
 :root {
-  --primary: #FFC800;
-  --primary-dark: #d6a700;
-  --black: #050505;
-  --dark: #101010;
-  --gray: #1c1c1c;
-  --light-gray: #2b2b2b;
-  --white: #ffffff;
-  --text: #d8d8d8;
-  --muted: #9c9c9c;
-  --border: rgba(255, 255, 255, 0.08);
-  --shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+  --primary: #C48A5A;
+  --primary-dark: #6B4A3A;
+  --black: #1A100C;
+  --dark: #2B1D17;
+  --gray: #6B4A3A;
+  --light-gray: #4D352A;
+  --white: #FAF6F0;
+  --text: rgba(231, 214, 193, 0.85);
+  --muted: rgba(231, 214, 193, 0.60);
+  --border: rgba(196, 138, 90, 0.22);
+  --shadow: 0 25px 70px rgba(0, 0, 0, 0.60);
   --transition: all 0.35s ease;
 }
 
@@ -28,25 +28,13 @@ body, p, span, li, a, button, input, textarea, select, small {
 }
 
 body {
-  background: linear-gradient(135deg, #050505, #0c0a04, #040508, #080808);
-  background-size: 300% 300%;
-  animation: gradient-shift 22s ease infinite;
+  background: #2B1D17;
   color: var(--white);
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+/* gradient-shift removed — light solid background theme */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
@@ -88,12 +76,16 @@ section {
 
 .section-tag {
   display: inline-block;
-  color: var(--primary);
-  font-size: 13px;
+  color: #C48A5A;
+  background: rgba(196, 138, 90, 0.12);
+  border: 1px solid rgba(196, 138, 90, 0.30);
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 24px;
+  padding: 5px 16px;
+  border-radius: 100px;
 }
 
 .btn {
@@ -102,27 +94,32 @@ section {
   justify-content: center;
   padding: 16px 34px;
   border-radius: 100px;
-  background: var(--primary);
-  color: #000;
+  background: linear-gradient(135deg, #C48A5A, #6B4A3A);
+  color: #1A100C;
   font-weight: 800;
   transition: var(--transition);
+  box-shadow: 0 8px 24px rgba(196, 138, 90, 0.32);
 }
 
 .btn:hover {
-  background: var(--primary-dark);
+  background: linear-gradient(135deg, #6B4A3A, #2B1D17);
+  color: #FAF6F0;
   transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(255, 200, 0, 0.25);
+  box-shadow: 0 18px 40px rgba(43, 29, 23, 0.50);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--white);
-  border: 1px solid rgba(255, 200, 0, 0.45);
+  color: #C48A5A;
+  border: 2px solid rgba(196, 138, 90, 0.55);
+  box-shadow: none;
 }
 
 .btn-outline:hover {
-  background: var(--primary);
-  color: #000;
+  background: linear-gradient(135deg, #C48A5A, #6B4A3A);
+  color: #1A100C;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(196, 138, 90, 0.32);
 }
 
 .fade-up {
@@ -206,21 +203,21 @@ section {
   width: min(600px, 80vw);
   height: min(600px, 80vw);
   border-radius: 50%;
-  filter: blur(140px);
-  opacity: 0.16; /* Increased opacity from 0.08 to make searchlight movement visible and atmospheric */
+  filter: blur(160px);
+  opacity: 0.22;
   pointer-events: none;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
 }
 
 .glow-1 {
-  background: var(--primary);
+  background: #FFB162;
   top: -10%;
   left: -10%;
   animation: float-slow 14s infinite alternate ease-in-out;
 }
 
 .glow-2 {
-  background: #ffffff;
+  background: #C9C1B1;
   bottom: 10%;
   right: -10%;
   animation: float-slow 16s infinite alternate-reverse ease-in-out;
@@ -228,13 +225,13 @@ section {
 }
 
 .glow-3 {
-  background: var(--primary);
+  background: #A35139;
   top: 40%;
   left: 60%;
   width: 400px;
   height: 400px;
-  filter: blur(120px);
-  opacity: 0.08;
+  filter: blur(140px);
+  opacity: 0.14;
   animation: float-slow 11s infinite alternate ease-in-out;
   animation-delay: -5s;
 }
@@ -252,14 +249,14 @@ section {
 }
 
 .glow-4 {
-  background: radial-gradient(circle, rgba(255, 200, 0, 0.16) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 177, 98, 0.18) 0%, transparent 70%);
   top: -10%;
   left: -10%;
   width: 90vw;
   height: 90vw;
   filter: blur(120px);
   animation: spotlight-sweep 15s infinite ease-in-out alternate;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
   pointer-events: none;
 }
 
@@ -372,9 +369,9 @@ section {
   border-radius: 38px;
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(255, 200, 0, 0.22);
-  box-shadow: var(--shadow);
-  background: #111;
+  border: 1px solid rgba(44, 59, 77, 0.18);
+  box-shadow: 0 20px 55px rgba(27, 38, 50, 0.15);
+  background: #C9C1B1;
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -386,8 +383,8 @@ section {
 
 .hero-visual-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 200, 0, 0.45);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 200, 0, 0.1);
+  border-color: rgba(255, 177, 98, 0.6);
+  box-shadow: 0 30px 80px rgba(27, 38, 50, 0.22), 0 0 25px rgba(255, 177, 98, 0.2);
 }
 
 .hero-visual-card img {
@@ -411,16 +408,16 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, transparent 65%);
+  background: linear-gradient(to top, rgba(27, 38, 50, 0.88) 0%, transparent 65%);
 }
 
 .hero-visual-overlay span {
   font-family: "Playfair Display", serif;
-  color: var(--primary);
+  color: #FFB162;
   font-size: clamp(34px, 4vw, 54px);
   line-height: 1.05;
 }
 
 .hero-visual-overlay span.white-text {
-  color: var(--white);
+  color: #EEE9DF;
 }

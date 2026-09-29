@@ -1,0 +1,450 @@
+/*
+ * ==========================================================================
+ * SCRIPTOR HOUSE — ESPRESSO & CARAMEL LATTE (WARM MODERN LUXURY)
+ * Palette Reference:
+ *   #2B1D17 — Espresso (Primary Section & Page Background)
+ *   #20140F — Deep Roasted Espresso (Alternating Section Background)
+ *   #3E281F — Dark Mocha (Card Surface Background)
+ *   #503429 — Elevated Mocha (Card Hover Surface)
+ *   #6B4A3A — Mocha (Secondary Borders / Button Hover Gradient)
+ *   #C48A5A — Caramel (Primary Accents / Buttons / Icons / Checkmarks)
+ *   #E7D6C1 — Latte (Soft Body Text / Sub-labels)
+ *   #FAF6F0 — Cream (Crisp Typography / Headings)
+ *
+ * Applies to: index.html & services.html
+ * ==========================================================================
+ */
+
+/* ─────────────────────────────────────────────────────
+   1. GLOBAL FOUNDATION & BODY (WARM ESPRESSO LUXURY)
+   ───────────────────────────────────────────────────── */
+body {
+  background-color: #2B1D17;
+  color: rgba(231, 214, 193, 0.88);
+}
+
+/* ─────────────────────────────────────────────────────
+   2. HERO SECTION — CINEMATIC DARK
+   ───────────────────────────────────────────────────── */
+.hero-section {
+  background: #1F130E !important;
+}
+
+.hero-content h1 {
+  color: #FAF6F0 !important;
+}
+
+.hero-content h1 .highlight,
+.hero-content h1 strong {
+  color: #C48A5A !important;
+}
+
+.hero-content p {
+  color: rgba(231, 214, 193, 0.85) !important;
+}
+
+.hero-stats span {
+  color: #C48A5A !important;
+}
+
+.hero-stats p {
+  color: rgba(231, 214, 193, 0.72) !important;
+}
+
+.hero-visual-card {
+  background: rgba(62, 40, 31, 0.88) !important;
+  border: 1px solid rgba(196, 138, 90, 0.35) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65) !important;
+  color: #FAF6F0 !important;
+}
+
+/* ─────────────────────────────────────────────────────
+   3. SECTION TAGS & OUTSIDE SECTION HEADINGS
+   ───────────────────────────────────────────────────── */
+.section-tag {
+  display: inline-block !important;
+  color: #C48A5A !important;
+  background: rgba(196, 138, 90, 0.12) !important;
+  border: 1px solid rgba(196, 138, 90, 0.30) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  padding: 5px 16px !important;
+  border-radius: 100px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Section Headings (Outside of Cards) */
+.trust-header h2,
+.what-content h2,
+.industry-header h2,
+.proof-header h2,
+.why-header h2,
+.transparency-content h2,
+.ownership-content h2,
+.services-header h2,
+.process-header h2,
+.output-header h2,
+.faq-header h2,
+.final-cta-section h2,
+.award-showcase-header h3,
+.recognized-heading h3,
+.security-content h2,
+/* Services page section headings */
+.publishing-position-section h2,
+.comparison-section h2,
+.book-anatomy-section h2,
+.services-transparency-section h2,
+.services-cta-section h2 {
+  color: #FAF6F0 !important;
+}
+
+/* Highlighted spans in section headings */
+h1 .highlight, h2 .highlight, h3 .highlight,
+h1 strong, h2 strong, h3 strong {
+  color: #C48A5A !important;
+}
+
+/* Section body paragraphs (Outside of Cards) */
+.trust-header p,
+.what-content p,
+.industry-header p,
+.proof-header p,
+.why-header p,
+.transparency-content p,
+.ownership-content p,
+.services-header p,
+.process-header p,
+.output-header p,
+.faq-header p,
+.award-showcase-header p,
+.publishing-position-section > .container > p,
+.comparison-section > .container > p,
+.book-anatomy-section > .container > p,
+.services-transparency-section > .container > p {
+  color: rgba(231, 214, 193, 0.85) !important;
+}
+
+/* ─────────────────────────────────────────────────────
+   4. SECTION BACKGROUNDS (WARM ESPRESSO RHYTHM)
+   ───────────────────────────────────────────────────── */
+.trust-section,
+.why-matters-section,
+.process-section,
+.proof-section,
+.publishing-position-section,
+.services-transparency-section {
+  background-color: #2B1D17 !important;
+  background-image: none !important;
+}
+
+.what-section,
+.ownership-section,
+.services-section,
+.output-section,
+.faq-section,
+.comparison-section,
+.book-anatomy-section {
+  background-color: #20140F !important;
+  background-image: none !important;
+}
+
+.industry-section,
+.transparency-section,
+.final-cta-section,
+.services-cta-section {
+  background-color: #261812 !important;
+  background-image: none !important;
+}
+
+/* Award Showcase banner */
+.award-showcase-wrap {
+  background-color: #20140F !important;
+  border-top: 1px solid rgba(196, 138, 90, 0.20) !important;
+  border-bottom: 1px solid rgba(196, 138, 90, 0.20) !important;
+}
+
+.award-showcase-wrap::before {
+  background: linear-gradient(90deg, transparent, rgba(196, 138, 90, 0.65), transparent) !important;
+}
+
+/* ─────────────────────────────────────────────────────
+   5. ALL CARDS — DARK MOCHA (#3E281F) WITH CARAMEL TRIM
+   ───────────────────────────────────────────────────── */
+
+/* Unified Card Container Styling */
+.why-card,
+.service-card,
+.process-card,
+.transparency-card,
+.trust-card,
+.output-warning-card,
+.laurel-card,
+.faq-item,
+.comparison-card,
+.what-checklist,
+.industry-card,
+.industry-item,
+.award-pillar,
+.award-pillars,
+.output-quote,
+.output-question,
+.trust-question {
+  background: #3E281F !important;
+  border: 1px solid rgba(196, 138, 90, 0.24) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.50) !important;
+  border-radius: 28px;
+}
+
+/* Card Hover Interactions */
+.why-card:hover,
+.service-card:hover,
+.process-card:hover,
+.transparency-card:hover,
+.trust-card:hover,
+.output-warning-card:hover,
+.laurel-card:hover,
+.faq-item:hover,
+.comparison-card:hover {
+  background: #503429 !important;
+  border-color: rgba(196, 138, 90, 0.55) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 25px rgba(196, 138, 90, 0.15) !important;
+  transform: translateY(-5px);
+}
+
+/* ─────────────────────────────────────────────────────
+   6. CARD TYPOGRAPHY & INTERNAL ELEMENTS (CREAM & LATTE)
+   ───────────────────────────────────────────────────── */
+
+/* Card Titles / Headings */
+.why-card h3,
+.service-card h3,
+.process-card h3,
+.transparency-card h3,
+.trust-card h3,
+.comparison-card h3,
+.faq-item h3,
+.faq-question,
+.laurel-text,
+.award-pillar h4,
+.output-question span {
+  color: #FAF6F0 !important;
+}
+
+/* Card Body Text / Paragraphs */
+.why-card p,
+.service-card p,
+.process-card p,
+.transparency-card p,
+.trust-card p,
+.output-warning-card p,
+.faq-item p,
+.faq-answer,
+.faq-answer p,
+.laurel-festival,
+.award-pillar p,
+.output-proof-statement p,
+.output-quote p {
+  color: rgba(231, 214, 193, 0.88) !important;
+}
+
+/* Card Accent Labels & Numbers */
+.comparison-label,
+.output-warning-card span,
+.output-question strong,
+.output-quote cite,
+.stat-number,
+.industry-stat-number,
+.trust-question span,
+.laurel-icon,
+.typed-cursor {
+  color: #C48A5A !important;
+}
+
+/* Card Icons */
+.why-icon i,
+.service-card i,
+.process-card i,
+.award-pillar i,
+.trust-card i {
+  color: #C48A5A !important;
+}
+
+.why-icon {
+  background: rgba(196, 138, 90, 0.16) !important;
+  border: 1px solid rgba(196, 138, 90, 0.28) !important;
+}
+
+/* ─────────────────────────────────────────────────────
+   7. SPECIFIC COMPONENT REFINEMENTS
+   ───────────────────────────────────────────────────── */
+
+/* Comparison Section (Index) */
+.comparison-card.old-way,
+.comparison-card.new-way {
+  background: #3E281F !important;
+  border: 1px solid rgba(196, 138, 90, 0.25) !important;
+}
+
+.comparison-card.new-way {
+  border-color: rgba(196, 138, 90, 0.55) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.50), 0 0 25px rgba(196, 138, 90, 0.15) !important;
+}
+
+.comparison-arrow {
+  color: #C48A5A !important;
+  font-size: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Checklists (What-we-do & Transparency cards) */
+.what-checklist,
+.transparency-card {
+  padding: 40px !important;
+}
+
+.what-checklist ul,
+.transparency-card ul {
+  list-style: none !important;
+}
+
+.what-checklist li,
+.transparency-card li {
+  color: #FAF6F0 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  position: relative !important;
+  padding-left: 40px !important;
+  line-height: 1.6 !important;
+}
+
+.what-checklist li::before,
+.transparency-card li::before {
+  content: "✓" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 1px !important;
+  width: 26px !important;
+  height: 26px !important;
+  background: #C48A5A !important;
+  color: #1A100C !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+/* Output Warning Cards (01, 02, 03, etc.) */
+.output-warning-card {
+  min-height: 180px !important;
+}
+
+.output-warning-card p {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin-top: 12px !important;
+  line-height: 1.35 !important;
+  color: #FAF6F0 !important;
+}
+
+/* Trust Question & Output Question */
+.trust-question,
+.output-question {
+  color: #FAF6F0 !important;
+  background: #3E281F !important;
+  border: 1px solid rgba(196, 138, 90, 0.35) !important;
+}
+
+.trust-card::before {
+  background: linear-gradient(90deg, #C48A5A, #6B4A3A) !important;
+}
+
+/* FAQ Open State */
+.faq-item.open {
+  background: #503429 !important;
+  border-color: rgba(196, 138, 90, 0.50) !important;
+}
+
+/* Ownership Circle (Shield Icon) */
+.ownership-circle {
+  background: radial-gradient(circle, rgba(196, 138, 90, 0.25), rgba(62, 40, 31, 0.75)) !important;
+  border: 1px solid rgba(196, 138, 90, 0.45) !important;
+  color: #C48A5A !important;
+}
+
+.ownership-circle i {
+  color: #C48A5A !important;
+}
+
+/* Spotlight Banner inside Proof Section */
+.spotlight-banner-wrap {
+  background: #1F130E !important;
+}
+
+.spotlight-left h3 {
+  color: #FAF6F0 !important;
+}
+
+.spotlight-left p {
+  color: rgba(231, 214, 193, 0.85) !important;
+}
+
+/* Films & Security Sections (Cinematic Anchors) */
+.films-section,
+.security-section {
+  background: #1F130E !important;
+}
+
+.films-section h2, .films-section h3, .films-section p,
+.security-section h2, .security-section h3, .security-section p {
+  color: #FAF6F0 !important;
+}
+
+.security-card {
+  background: rgba(62, 40, 31, 0.85) !important;
+  border: 1px solid rgba(196, 138, 90, 0.28) !important;
+}
+
+.security-card h3 {
+  color: #FAF6F0 !important;
+}
+
+.security-card p {
+  color: rgba(231, 214, 193, 0.85) !important;
+}
+
+/* Final CTA Section Box */
+.final-cta-section .cta-box,
+.services-cta-section .cta-box {
+  background: #3E281F !important;
+  border: 1px solid rgba(196, 138, 90, 0.35) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65), 0 0 30px rgba(196, 138, 90, 0.12) !important;
+}
+
+.final-cta-section .cta-box h2,
+.services-cta-section .cta-box h2 {
+  color: #FAF6F0 !important;
+}
+
+.final-cta-section .cta-box p,
+.services-cta-section .cta-box p {
+  color: rgba(231, 214, 193, 0.85) !important;
+}
+
+/* ─────────────────────────────────────────────────────
+   8. CLEAN THEME OVERRIDE SAFEGUARDS
+   ───────────────────────────────────────────────────── */
+body.palette-classic-gold,
+body.palette-midnight-gold,
+body.palette-spruce-sage,
+body.palette-terracotta-slate,
+body.palette-cyber-orange,
+body.palette-tangerine-espresso {
+  --primary: #C48A5A !important;
+  --primary-dark: #6B4A3A !important;
+}
